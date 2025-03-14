@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About Me"
 ---
 
-I’m a Technical Editor with a background in engineering and a passion for automation, emerging technologies, and solving complex problems. I specialize in technical writing and editing with a focus on automation, transforming traditional workflows by leveraging Large Language Models (LLMs), Python scripting, and Docs-as-Code methodologies.
+I’m a Technical Editor with a background in engineering and a passion for automation, emerging technologies, and solving complex problems. I specialize in technical writing and editing with a focus on automation, transforming traditional workflows by leveraging Large Language Models (LLMs), Python scripting, and Docs-as-Code methodologies. Want proof? Check [this](https://github.com/tannerjallen) out.
 
 ## What I Do
 
