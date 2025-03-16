@@ -12,9 +12,7 @@ export const SITE = {
   showArchives: false,
   showBackButton: true, // show back button in post detail
   editPost: {
-    url: "https://github.com/tannerjallen/tannerjallen.com",
-    text: "Suggest Changes",
-    appendFilePath: false,
+    disabled: true
   },
   dynamicOgImage: true,
 } as const;
