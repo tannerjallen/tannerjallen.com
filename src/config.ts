@@ -12,7 +12,10 @@ export const SITE = {
   showArchives: false,
   showBackButton: true, // show back button in post detail
   editPost: {
-    disabled: true
+    disabled: true,
+    url: "",
+    text: "",
+    appendFilePath: false,
   },
   dynamicOgImage: true,
 } as const;
