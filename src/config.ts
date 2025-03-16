@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://tannerjallen.com/",
   desc: "A blog about software engineering, web development, and other tech topics.",
   title: "Tanner J. Allen",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "astropaper-og.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
