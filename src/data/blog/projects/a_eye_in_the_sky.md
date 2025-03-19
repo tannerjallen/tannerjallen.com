@@ -72,21 +72,21 @@ My first idea was to use a Wi-Fi camera feed to keep an eye on Rupert's activiti
 
 After setting up the RTSP video feed successfully, I processed the data to classify the couch and Rupert. I started with [Ultralytics YOLO11](https://github.com/ultralytics/ultralytics) real-time object detection model. This model consumes video data frame-by-fame and classifies known objects.
 
-This model detects dog **and** couch objects, making it ideal for this use case. I started with having the model detect the couch.
+This model detects dog **and** couch objects, making it ideal for this use case.
 
-I started with having it detect rupert and track his position. In addition to having it draw a rectangle boundary around him, I also wrote the script to detect his centroid. This seemed like a little more conservative way to represent his actual position. Here's the model following him around:
+I started with having it detect Rupert and track his position. In addition to having it draw a rectangle boundary around him, I added some logic to calculate his boundary's centroid. This seemed like a more conservative way to represent his actual position. Here's the model following him around:
 
 ![YOLO11 Tracking Rupert](@/assets/images/dog_cam/dog_detect.gif)
 **<div style="text-align: center;">We Found The Dog!</div>**
 
 ### Honey, Where is the Couch?
 
-Now that I'm tracking my ~~son~~—I swear I'm not *that* type of dog owner. I transitioned to figuring out how to establish a boundary (a lesson I'm still trying to learn in all aspects of my life). YOLO11 successfully classified the couch and constructed a boundary around it right out of the box.
+Now that I'm tracking my ~~son~~—I swear I'm not *that* type of dog owner. I transitioned to figuring out how to establish a boundary (a lesson I'm still trying to learn in all aspects of my life). YOLO11 successfully classified the couch and constructed a boundary out of the box.
 
 ![YOLO11 Detecting the Couch](@/assets/images/dog_cam/couch_classification.png)
 **<div style="text-align: center;">YOLO11 Model Detects Couch and Draws Boundary</div>**
 
-The blue boundary the model draws was a little too liberal for this use case—I didn't want to detect when Rupert was lying on the floor near the couch or was walking behind it. I only wanted it to detect when he was actually **on** the couch, so I refined this to a tighter detection zone focused on the couch's seating surface. The red boundary is the danger zone Rupert is not allowed in.
+The blue boundary the model draws was a little too liberal for this use case—I didn't want to detect when Rupert was lying on the floor near the couch or was walking behind it. I only wanted it to detect when he was actually **on** the couch, so I refined boundary to a tighter detection zone focused on just the couch's seating surface. The red boundary is the danger zone Rupert is not allowed in.
 
 ### So, What Are You Gonna Do About It?
 
@@ -94,18 +94,18 @@ Now that I had a functioning way to detect Rupert's position and an imaginary no
 
 The transmitter had three contact pads for each of the collar's functions: beep, vibrate, or shock.
 
-Since I strongly question the ethics of allowing an object detection model to administer a shock to my pup without a human-in-the-loop, I focused on the beep function alone.
+Since I strongly question the ethics of allowing an object detection model to administer a shock to my pup, I decided to only use the beep function.
 
-These pads transmit a command to the collar to perform the respective when shorted across each other. It's just a switch. On the back of the circuit board, there where contact pads to solder to. After soldering prototype wiring to each side of the beep switch, I moved onto the controls.
+These pads transmit a signal to the collar to perform the respective action when shorted across each other. It's just a switch. On the back of the circuit board, there were contact pads to solder to. After soldering prototype wiring to each side of the beep switch, I moved onto the controls.
 
 The wiring from the transmitter connects to the emitter and collector pins of an NPN transistor (2N2222). A Raspberry Pi 4 GPIO pin with a 1kOhm resistor in series connects to the transistor's gate. This allows me to control the training collar transmitter with the Raspberry Pi 4.
 
 ![Transmitter and Raspberry Pi Wiring](@/assets/images/dog_cam/transmitter_wiring.png)
-**<div style="text-align: center;">Wiring Diagram </div>**
+**<div style="text-align: center;">Wiring Diagram</div>**
 
-By setting the GPIO pin to high (or just ON in non-technical jargon), the transmitter commanded a beep from the training collar. I wrote up a little Python function to integrate all these systems together.
+By setting the GPIO pin to high (or just ON in non-technical jargon), the transmitter commanded a beep from the training collar. I wrote a simple Python function to integrate these systems together.
 
-When Rupert's is detected in the couch's danger zone, the Raspberry Pi closes the transmitter's switch commanding a beep from the collar. I also implemented some logging to let me know each time the script requested a beep, so I could review the camera footage and confirm it was a legitimate request for validation.
+When Rupert is detected in the couch's danger zone, the Raspberry Pi closes the transmitter's switch commanding a beep from the collar. I also implemented some logging to let me know each time the script requested a beep, so I could review the camera footage and validate it was a legitimate trigger.
 
 ## Did It Work?
 
@@ -114,7 +114,7 @@ After gaining complete confidence in the solution, I left Rupert alone for aroun
 ![Successfully Deterring the Couch-Surfer](@/assets/images/dog_cam/success.gif)
 **<div style="text-align: center;">It Worked!</div>**
 
-Right as he thought about stepping onto the couch, the system administered a beep to let him know something's watching him.
+Right as he thought about jumping on the couch, the system administered a beep to let him know he's being watched.
 
 **Fun fact**: He only attempted to get on the couch once that day. What can I say? My boy's a quick learner!
 
@@ -122,7 +122,7 @@ Right as he thought about stepping onto the couch, the system administered a bee
 
 I know it sounds like this project was a total breeze, but it wasn't necessarily, and I love being transparent about my stupid moments. Here are a few hurdles I encountered:
 
-- I started with a hardcoded couch boundary because I originally used a object detection model without a couch classification ability. After a few days of testing, I noticed the camera would move a little bit, and I also wanted a solution I could easily move somewhere else. It was clear that dynamically classifying the couch would be a huge asset to prevent any camera drift.
+- I started with a hardcoded couch boundary because I originally used an object detection model without a couch classification ability. After a few days of testing, I noticed the camera would move a little bit, and I also wanted a solution I could easily move somewhere else if needed. It was clear that dynamically classifying the couch boundary would be a huge asset to prevent any camera drift over time.
 - The first camera position I used was straight-on from the couch a couple feet off the ground. I wasn't using a fancy depth camera or multiple cameras with advanced post-processing to infer a distance. So, if Rupert strolled between the camera and the couch, it would set a false alarm that he was on the couch when in reality he was just positioned in front of the couch. I relocated the camera to a higher vantage point to prevent any misfires from Rupert just walking between the camera and the couch boundary.
 - A large requirement (from the girlfriend) was to have a very low-key solution. Let's play a game. Spot the dog monitoring camera:
   ![Spot the Camera](@/assets/images/dog_cam/camera.jpeg)
@@ -130,14 +130,16 @@ I know it sounds like this project was a total breeze, but it wasn't necessarily
 
 ## Canine Camera: The Reunion
 
-After using the solution for over a week now, Rupert has not made his way onto the couch at all! The logs report he has only attempted to get on the couch three times with absolutely no attempts the past few days.
+After using the solution for over a week now, Rupert has not made his way onto the couch at all! The logs report he has only attempted to get on the couch five times with absolutely no attempts the past few days.
 
 ![Great Success](@/assets/images/dog_cam/great_success.gif)
 **<div style="text-align: center;">Big Win</div>**
 
-The shelf the camera sits on has also encountered a few bumps from the Roomba shifting the camera's perspective a little bit. If I wasn't using an object detection model for couch classification, this would have required me to recalculate hardcoded couch boundary coordinates. I'm happy I went with the more advanced system that does this all for me and allows me to just move this camera wherever I want.
+The shelf the camera sits on has also encountered a few bumps from the Roomba shifting the camera's perspective a little bit. If I wasn't using an object detection model that dynamically classified the couch boundary, this would have required me to recalculate hardcoded couch boundary coordinates. I'm happy I went with the more advanced system that does this all for me and allows me to just move this camera wherever I want.
 
-He may have lost the couch, but he's still living his best life.
+I learned a bunch about object detection models, and Rupert learned he's expected to behave even when someone's not directly monitoring him!
+
+He may have lost the couch, but I promise he's still living his best life.
 
 ![Crazy Rupert](@/assets/images/dog_cam/crazy_rupert.jpg)
 **<div style="text-align: center;">Look At Those Chompers!</div>**
