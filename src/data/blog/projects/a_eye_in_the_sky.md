@@ -30,7 +30,7 @@ With the new couch came change, and I'm not talking about nickels. His couch-sur
 
 Rupert, being a smart cookie, quickly adjusted to the changes. We gave him his own comfy bed (Costco's finest, highly recommend) to console this abrupt change and make me feel less guilty for abruptly ending his free-reign couch tenure. All was going well. We had a hair-free, pristine couch.
 
-At least, that's what I thought until my girlfriend realized he was couch-surfing while we were away 🫣. Unfortunately, his intelligence gets the best of him when not in our presence, and he learned he can do whatever he wants when unmonitored.
+At least, that's what I thought until my *beautiful* girlfriend (she's holding me at gunpoint, send help) realized he was couch-surfing while we were away. Unfortunately, his intelligence gets the best of him when not in our presence, and he learned he can do whatever he wants when unmonitored.
 
 ![Me At Work While Rupert Sleeps on the Couch](@/assets/images/dog_cam/window_meme.png)
 **<div style="text-align: center;">Forever Jealous Dogs Don't Have to Work</div>**
