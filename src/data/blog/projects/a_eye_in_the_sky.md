@@ -26,7 +26,7 @@ But, he unfortunately **loves** sleeping on the couch...
 ![Rupert's Perfect Sleeping Posture](@/assets/images/dog_cam/sleeping.jpg)
 **<div style="text-align: center;">Rupert's Superior Sleeping Posture</div>**
 
-With the new couch came change, and I'm not talking about nickels. His couch-surfing days were numbered due his relentless shedding. Don't worry, he still has his own couch he can use however he wants in our office, but the new couch? Off-limits.
+With the new couch came change, and I'm not talking about nickels. His couch-surfing days were numbered due to his relentless shedding. Don't worry, he still has his own couch he can use however he wants in our office, but the new couch? Off-limits.
 
 Rupert, being a smart cookie, quickly adjusted to the changes. We gave him his own comfy bed (Costco's finest, highly recommend) to console this abrupt change and make me feel less guilty for abruptly ending his free-reign couch tenure. All was going well. We had a hair-free, pristine couch.
 
