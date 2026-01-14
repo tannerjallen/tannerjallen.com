@@ -3,12 +3,18 @@ layout: ../layouts/AboutLayout.astro
 title: "About Me"
 ---
 
-I’m a Technical Editor with a background in engineering and a passion for automation, emerging technologies, and solving complex problems. I specialize in technical writing and editing with a focus on automation, transforming traditional workflows by leveraging Large Language Models (LLMs), Python scripting, and Docs-as-Code methodologies. Want proof? Check [this](https://github.com/tannerjallen) out.
+I’m a Senior Software Product Support Engineer with a background in engineering and a passion for automation, emerging technologies, and solving complex problems. I focus on diagnostics and tooling that keep fleets reliable and in service. Want proof? Check [this](https://github.com/tannerjallen) out.
 
 ## What I Do
 
-I’m currently a Senior Technical Editor at Tesla, where I support new product launches and firmware updates across Tesla’s vehicle lineup—including some of the most innovative and best-selling vehicles in the world. My work includes:
+I’m currently a Senior Software Product Support Engineer at Tesla, where I support scaling the Robotaxi fleet. My work includes:
 
+- Creating and improving tools and processes used for Robotaxi diagnosis and repair.
+- Defining workflows for automated, real-time diagnostics running onboard and offboard vehicles.
+- Building diagnostic scripts to analyze vehicle logs and guide service technicians.
+- Partnering with service technical operations to define repair procedures and boost repair efficiency.
+- Identifying product improvements that increase reliability, uptime, and reduce service cost.
+- Leading field and remote diagnostics for failures, then coordinating deeper root-cause analysis with design teams.
 - Writing to vehicle firmware and leading the creation of Theory of Operation documents for each vehicle model.
 - Composing user and service-facing messages that appear in millions of vehicles and Tesla’s diagnostic tools.
 - Owning diagnostic content top to bottom for several vehicle subsystems.
@@ -17,9 +23,9 @@ I’m currently a Senior Technical Editor at Tesla, where I support new product 
 
 ## Background & Expertise
 
-I started my career as an engineer, working for the Illinois Department of Transportation and later on the [$1.2 billion Regional Connector project](https://en.wikipedia.org/wiki/Regional_Connector) in downtown Los Angeles. Those experiences taught me the importance of becoming a subject matter expert—a skill that naturally led me to technical editing and writing.
+I started my career as an engineer, working for the Illinois Department of Transportation and later on the [$1.2 billion Regional Connector project](https://en.wikipedia.org/wiki/Regional_Connector) in downtown Los Angeles. Those experiences taught me the importance of becoming a subject matter expert, a skill that naturally led me toward technical writing and eventually into diagnostics and support engineering.
 
-Since joining Tesla, I’ve worked on every major product launch, including:  
+Since joining Tesla, I’ve worked on every major product launch, including:
 ✅ 2021+ Model S  
 ✅ 2021+ Model X  
 ✅ Semi  
@@ -32,13 +38,13 @@ Along the way, I’ve learned from plenty of challenges—including the time I t
 
 ## Skills & Technologies
 
-I put the **technical** in **technical editing**, combining my engineering mindset with automation and modern documentation tools. My expertise includes:
+I lead with fleet-scale diagnostics and service automation, including real-time Robotaxi data analysis, scalable service pipelines, and cross-functional alignment to build reliable systems. I combine an engineering mindset with automation and modern tooling. My expertise includes:
 
-- Docs-as-Code workflows (Markdown, GitHub, single-sourcing content)
-- Python scripting to automate tedious or impossible manual tasks—like exporting a 1,200+ page manual in under a week!
-- [Vale style linter](https://vale.sh/) & LLMs for content editing
-- DITA XML & Oxygen XML Editor
-- New product introduction project management
+- Python scripting and data analysis for diagnostics and automation
+- Vehicle log analysis and diagnostics workflows
+- Real-time and batch tooling for fleet health monitoring
+- Root-cause analysis and cross-functional collaboration
+- Process design for scalable service operations
 
 ## Beyond Work
 
