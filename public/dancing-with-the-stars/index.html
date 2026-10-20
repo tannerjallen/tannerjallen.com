@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ballroom Tracker · DWTS Season 35</title>
+<meta name="description" content="Dancing with the Stars season 35: every judges' score, Google search buzz, and a weighted win simulator.">
+<script>
+  // Match tannerjallen.com's theme preference before first paint.
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="topline">
+      <a class="back" href="/">← tannerjallen.com</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1Z"/></svg>
+      </button>
+    </div>
+    <p class="eyebrow">Dancing with the Stars · Season <span id="seasonNo">35</span></p>
+    <h1>Ballroom <em>Tracker</em></h1>
+    <p class="lede">Every judges' score, each celebrity's Google search buzz, and a simulator that weighs the two to find the likeliest Mirrorball champion.</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap tabs-inner">
+    <a href="#scores" class="active">Scores</a>
+    <a href="#couples">Couples</a>
+    <a href="#buzz">Search buzz</a>
+    <a href="#simulator">Simulator</a>
+    <a href="#data">Data</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="scores" class="section">
+    <div class="section-head">
+      <div>
+        <h2>Scores by week</h2>
+        <p class="sub" id="scoresSub">Judges' scores for every couple, every week.</p>
+      </div>
+      <div class="seg" role="radiogroup" aria-label="Score metric" id="metricSeg">
+        <button role="radio" data-v="avg" aria-checked="true">Avg per judge</button>
+        <button role="radio" data-v="total" aria-checked="false">Total</button>
+        <button role="radio" data-v="rank" aria-checked="false">Rank</button>
+      </div>
+    </div>
+    <div class="card chart-card">
+      <div class="pin-hint">Tap couples to highlight them (up to 3) · hover a line for details</div>
+      <div class="chips" id="pinChips"></div>
+      <div class="chart" id="scoreChart"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Week-by-week score grid</h3>
+        <span class="legend-ramp"><span>low</span><i class="ramp"></i><span>high</span> avg per judge</span>
+      </div>
+      <div class="table-scroll"><table class="grid" id="scoreGrid"></table></div>
+      <p class="foot">† highest of the week · ✕ eliminated that week · scores out of 10 per judge (week totals in the tooltip)</p>
+    </div>
+  </section>
+
+  <section id="couples" class="section">
+    <div class="section-head">
+      <div>
+        <h2>The couples</h2>
+        <p class="sub">Tap a couple for every dance, mark and search trend.</p>
+      </div>
+      <div class="seg" role="radiogroup" aria-label="Sort couples" id="sortSeg">
+        <button role="radio" data-v="avg" aria-checked="true">Avg score</button>
+        <button role="radio" data-v="buzz" aria-checked="false">Buzz</button>
+        <button role="radio" data-v="win" aria-checked="false">Win %</button>
+      </div>
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section id="buzz" class="section">
+    <div class="section-head">
+      <div>
+        <h2>Search buzz</h2>
+        <p class="sub" id="buzzSub">Daily Google search interest in the US.</p>
+      </div>
+    </div>
+    <div class="card chart-card">
+      <div class="chips" id="pinChips2"></div>
+      <div class="chart" id="buzzChart"></div>
+      <p class="foot">Relative interest on one scale (all terms anchored to a shared reference term). Vertical rules mark episode nights.</p>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <h3 id="shareTitle">Share of search during the voting window</h3>
+        <div class="seg small" role="radiogroup" aria-label="Buzz window" id="shareSeg"></div>
+      </div>
+      <div id="shareBars" class="bars"></div>
+    </div>
+  </section>
+
+  <section id="simulator" class="section">
+    <div class="section-head">
+      <div>
+        <h2>Win simulator</h2>
+        <p class="sub">Blend judges' scores with search buzz (a stand-in for fan votes) and play out the rest of the season.</p>
+      </div>
+    </div>
+
+    <div class="card sim-controls">
+      <div class="weight">
+        <div class="weight-labels">
+          <span><b id="wJudges">50%</b> judges' scores</span>
+          <span><b id="wBuzz">50%</b> search buzz</span>
+        </div>
+        <input type="range" id="weight" min="0" max="100" step="5" value="50" aria-label="Weight on judges' scores">
+        <p class="hint">On the show, judges' scores and viewer votes each count 50%. Search buzz is only a proxy for votes. Famous names draw searches that never become votes, so buzz is dampened by default (see Model settings).</p>
+      </div>
+      <details class="advanced">
+        <summary>Model settings</summary>
+        <div class="adv-grid">
+          <label>Finalists
+            <select id="finalists"><option>3</option><option selected>4</option><option>5</option></select>
+          </label>
+          <label>Recent weeks matter
+            <input type="range" id="recency" min="0" max="100" value="40" aria-label="Recency emphasis">
+            <span class="hint-inline"><span>all weeks equally</span><span>mostly latest</span></span>
+          </label>
+          <label>Search → votes
+            <select id="damp">
+              <option value="1">Linear (2× searches = 2× votes)</option>
+              <option value="0.5" selected>Dampened (√, default)</option>
+              <option value="0.25">Strongly dampened</option>
+            </select>
+          </label>
+          <label>Simulations
+            <select id="sims"><option value="2000">2,000</option><option value="10000" selected>10,000</option><option value="30000">30,000</option></select>
+          </label>
+        </div>
+        <p class="hint" id="schedule"></p>
+      </details>
+    </div>
+
+    <div class="sim-grid">
+      <div class="card">
+        <div class="card-head">
+          <h3>Who wins?</h3>
+          <span class="muted small-text" id="simNote"></span>
+        </div>
+        <div class="sim-table" id="simTable"></div>
+        <p class="foot"><b>Monte Carlo</b>: thousands of seasons are played out week by week with realistic noise, and the lowest combined score goes home each week. <b>Simple</b>: one weighted strength score per couple, turned into odds. No randomness, nothing played out.</p>
+      </div>
+      <div class="side-col">
+        <div class="card">
+          <h3>In danger next week</h3>
+          <div id="danger"></div>
+        </div>
+        <div class="card">
+          <h3>Backtest</h3>
+          <p class="sub tight" id="backtestLine"></p>
+          <div class="chart small-chart" id="backtestChart"></div>
+          <div id="backtestWeeks" class="bt-weeks"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="data" class="section">
+    <div class="section-head">
+      <div>
+        <h2>Data</h2>
+        <p class="sub">One source of truth, refreshed after every episode.</p>
+      </div>
+    </div>
+    <div class="card data-card">
+      <ul class="downloads">
+        <li><a href="data.json">data.json</a><span>Everything on this page: cast, per-dance judges' marks, daily search interest</span></li>
+        <li><a href="scores.csv">scores.csv</a><span>One row per dance: week, celebrity, dance style, score, individual judges' marks</span></li>
+        <li><a href="trends_weekly.csv">trends_weekly.csv</a><span>Search interest and share of the remaining field in each voting window</span></li>
+      </ul>
+      <p class="foot" id="sources"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap site-foot">
+  <p>An unofficial fan project, not affiliated with ABC or BBC Studios. Built by <a href="/">Tanner J. Allen</a>.</p>
+</footer>
+
+<div class="tooltip" id="tooltip" role="status" hidden></div>
+
+<dialog id="coupleDialog" class="dialog">
+  <div class="dialog-inner" id="dialogBody"></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
