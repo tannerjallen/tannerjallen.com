@@ -99,7 +99,7 @@
     <div class="card chart-card">
       <div class="chips" id="pinChips2"></div>
       <div class="chart" id="ytChart"></div>
-      <p class="foot">Average views per performance video. Older videos have had more time to collect views, so compare couples within a week. Shown for context; not yet used by the model (see the README).</p>
+      <p class="foot">Average views per performance video. Older videos have had more time to collect views, so compare couples within a week. Videos go up the day after each show, after that night's elimination. The model only uses views if you turn on the YouTube hint in the simulator.</p>
     </div>
     <div class="card">
       <div class="card-head">
@@ -127,6 +127,7 @@
         <input type="range" id="jw" min="40" max="70" step="10" value="50" list="jwStops" aria-label="Judges' weight in the combined score">
         <datalist id="jwStops"><option value="40"></option><option value="50" label="Official rule"></option><option value="60"></option><option value="70"></option></datalist>
         <p class="hint">Officially, judges' scores and viewer votes count equally (50%), so that's the default. Results from seasons 30–34 fit about equally well anywhere from 40% to 70%. Each setting re-estimates the fan votes to match.</p>
+        <label class="toggle" id="ytToggle" hidden><input type="checkbox" id="useYt"> <span><b>Experimental:</b> use YouTube views as a hint for fan votes. Tested on one season only (S34), where it slightly improved elimination calls.</span></label>
       </div>
       <details class="advanced">
         <summary>Model settings</summary>
@@ -179,7 +180,7 @@
     </div>
     <div class="card data-card">
       <ul class="downloads">
-        <li><a href="data.json">data.json</a><span>Everything on this page: cast, per-dance judges' marks, inferred fan votes</span></li>
+        <li><a href="data.json">data.json</a><span>Everything on this page: cast, per-dance judges' marks, inferred fan votes, YouTube views</span></li>
         <li><a href="scores.csv">scores.csv</a><span>One row per dance: week, celebrity, dance style, score, individual judges' marks</span></li>
       </ul>
       <p class="foot" id="sources"></p>

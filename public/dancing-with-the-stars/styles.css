@@ -310,6 +310,8 @@ table.grid td.avgcol { font-weight: 600; text-align: center; padding: 0 6px; }
 .weight-labels b { color: var(--ink); font-size: 18px; }
 input[type="range"] { width: 100%; accent-color: var(--gold); height: 28px; }
 .hint { color: var(--muted); font-size: 12.5px; margin: 4px 0 0; }
+.toggle { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; font-size: 13px; color: var(--ink-2); cursor: pointer; }
+.toggle input { margin-top: 3px; accent-color: var(--gold); }
 .advanced summary { cursor: pointer; color: var(--ink-2); font-size: 13.5px; font-weight: 500; }
 .adv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 12px; }
 .adv-grid label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--ink-2); }
