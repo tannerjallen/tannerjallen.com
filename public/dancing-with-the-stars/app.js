@@ -18,10 +18,11 @@ const state = {
   metric: "avg",
   sort: "avg",
   pins: {},          // name -> slot index (color follows the couple, not its rank)
-  weight: 50,
+  weight: 90,       // backtested on seasons 30-34
   finalists: 4,
   recency: 40,
   damp: 0.5,        // vote share ∝ search share ^ damp
+  shrink: 0.4,      // hedge win odds toward even (backtest: past models were overconfident)
   sims: 10000,
   shareWeek: null,
 };
@@ -111,7 +112,7 @@ function restore() {
   if (!saved) {
     [...M.remaining].sort((a, b) => b.avg - a.avg).slice(0, 3).forEach((c, i) => (state.pins[c.name] = i));
   }
-  state.weight = store.get("dwts-weight", 50);
+  state.weight = store.get("dwts-weight-v2", 90);
   $("#weight").value = state.weight;
 }
 
@@ -298,6 +299,7 @@ function renderAll() {
   renderShare();
   renderSim();
   renderBacktest();
+  renderTested();
   renderFooter();
 }
 
@@ -572,6 +574,7 @@ function runSim() {
   const comp = list.map(s => N * (w * (s.J / Js) + (1 - w) * (Math.exp(s.LT) / Ts)));
   const ex = comp.map(v => Math.exp((v - 1) / 0.25));
   const exS = ex.reduce((a, b) => a + b, 0);
+  const hedge = p => (1 - state.shrink) * p + state.shrink / N;
 
   // Monte Carlo: play out each remaining week; lowest combined share goes home.
   const wins = new Float64Array(N), finals = new Float64Array(N), outNext = new Float64Array(N);
@@ -605,7 +608,7 @@ function runSim() {
   }
   const rows = list.map((s, i) => ({
     c: s.c, J: s.J, T: Math.exp(s.LT), comp: comp[i],
-    win: sims ? wins[i] / sims : 0, simple: ex[i] / exS,
+    win: sims ? hedge(wins[i] / sims) : 0, simple: hedge(ex[i] / exS),
     finale: sims ? finals[i] / sims : 0, outNext: sims ? outNext[i] / sims : 0,
   })).sort((a, b) => b.win - a.win || b.simple - a.simple);
   SIM = { rows, byName: Object.fromEntries(rows.map(r => [r.c.name, r])), sched, sdJ, sdB };
@@ -681,6 +684,44 @@ function renderBacktest() {
   $("#backtestWeeks").innerHTML = cur.map(r => `<div class="bt-week"><span class="lab">Week ${r.week}</span>
     <span>${r.pred.map(n => esc(M.byName[n].couple)).join(", ")}${r.hits === r.gone.length ? "" : ` <span class="muted">(actual: ${r.gone.map(n => esc(M.byName[n].couple)).join(", ")})</span>`}</span>
     <span class="${r.hits === r.gone.length ? "ok" : "no"}" aria-label="${r.hits === r.gone.length ? "correct" : "missed"}">${r.hits === r.gone.length ? "✓" : "✗"}</span></div>`).join("");
+}
+
+/** How this model did on completed seasons (precomputed by pipeline/backtest.py). */
+function renderTested() {
+  const bt = D.backtest, el = $("#tested");
+  if (!bt) { el.hidden = true; return; }
+  const c = bt.config;
+  const tile = (k, v, d) => `<div class="m"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`;
+  const W = 220, H = 46, hi = 0.6;
+  const spark = path => {
+    const sx = i => (path.length < 2 ? W / 2 : (i / (path.length - 1)) * W);
+    const sy = p => H - 4 - (Math.min(p, hi) / hi) * (H - 8);
+    const d = a => a.map((p, i) => `${i ? "L" : "M"}${sx(i).toFixed(1)},${sy(p).toFixed(1)}`).join("");
+    const last = path[path.length - 1];
+    return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+      <path class="field" d="${d(path.map(x => 1 / x.n))}"/><path d="${d(path.map(x => x.p))}"/>
+      <circle cx="${sx(path.length - 1)}" cy="${sy(last.p)}" r="3.5"/></svg>`;
+  };
+  el.innerHTML = `
+    <div class="card-head"><h3>Tested on seasons ${bt.seasons[0].season}–${bt.seasons[bt.seasons.length - 1].season}</h3>
+      <span class="muted small-text">${bt.points} predictions, each using only what had aired so far</span></div>
+    <div class="tested-tiles">
+      ${tile("Favorite won", pct(bt.favorite_won), "share of weeks the model's #1 went on to win")}
+      ${tile("Winner in top 2", pct(bt.winner_top2), "the eventual champion was its #1 or #2")}
+      ${tile("Odds on the winner", pct(bt.p_winner), `average chance it gave the champion · even odds ≈ ${pct(bt.p_even)}`)}
+    </div>
+    <div class="tested-seasons">
+      ${bt.seasons.map(se => {
+        const last = se.path[se.path.length - 1];
+        return `<div class="ts"><div class="ts-head"><b>S${se.season}</b> ${esc(se.winner)} <span class="muted">& ${esc(se.pro.split(" ")[0])}</span></div>
+          <div class="spark">${spark(se.path)}</div>
+          <div class="ts-foot">Before the finale: <b>${pct(last.p)}</b> · ranked #${last.rank} of ${last.n}</div></div>`;
+      }).join("")}
+    </div>
+    <p class="foot">Gold line: the chance the model gave each season's eventual winner, week by week; gray: even odds.
+      Settings used: ${Math.round(c.w * 100)}% judges, √-dampened buzz, ${Math.round(c.shrink * 100)}% hedge toward even odds (today's defaults).
+      <b>Caveat:</b> five seasons is a small sample. When tuned on four seasons and scored on the fifth, the model did no better than even odds,
+      mainly because of upset winners: Iman Shumpert (S30) and Joey Graziadei (S33, the lowest search buzz of his finalists) won on fan votes the data doesn't capture.</p>`;
 }
 
 function rangeText(xs) {
@@ -790,11 +831,12 @@ function bind() {
     cancelAnimationFrame(raf);
     raf = requestAnimationFrame(() => { runSim(); renderSim(); renderBacktest(); renderStats(); renderCards(); });
   };
-  $("#weight").addEventListener("input", e => { state.weight = +e.target.value; store.set("dwts-weight", state.weight); resim(); });
+  $("#weight").addEventListener("input", e => { state.weight = +e.target.value; store.set("dwts-weight-v2", state.weight); resim(); });
   $("#recency").addEventListener("input", e => { state.recency = +e.target.value; resim(); });
   $("#finalists").addEventListener("change", e => { state.finalists = +e.target.value; resim(); });
   $("#sims").addEventListener("change", e => { state.sims = +e.target.value; resim(); });
   $("#damp").addEventListener("change", e => { state.damp = +e.target.value; resim(); });
+  $("#shrink").addEventListener("change", e => { state.shrink = +e.target.value; resim(); });
 
   $("#themeToggle").addEventListener("click", () => {
     const root = document.documentElement;

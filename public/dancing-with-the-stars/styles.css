@@ -347,6 +347,19 @@ input[type="range"] { width: 100%; accent-color: var(--gold); height: 28px; }
 .bt-week .ok { color: var(--good); font-weight: 700; }
 .bt-week .no { color: var(--bad); font-weight: 700; }
 
+/* ---------- tested on past seasons */
+.tested-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+.tested-tiles .m { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+.tested-tiles .k { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
+.tested-tiles .v { font-size: 22px; font-weight: 700; }
+.tested-tiles .d { font-size: 12px; color: var(--ink-2); }
+.tested-seasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.ts { border: 1px solid var(--grid); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+.ts-head { font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts .spark, .ts .spark svg { height: 46px; margin: 6px 0 4px; }
+.ts-foot { font-size: 12px; color: var(--muted); }
+.ts-foot b { color: var(--ink); }
+
 /* ---------- data */
 .downloads { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .downloads li { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
@@ -385,6 +398,7 @@ table.dances .theme { color: var(--muted); font-size: 12px; }
 @media (max-width: 900px) {
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sim-grid { grid-template-columns: 1fr; }
+  .tested-tiles { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .wrap { padding-inline: 16px; }

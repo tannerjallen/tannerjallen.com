@@ -2449,6 +2449,300 @@
  },
  "season": 35,
  "finalists": 4,
- "updated": "2026-10-19T20:59",
- "source": "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35"
+ "updated": "2026-10-19T21:40",
+ "source": "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35",
+ "backtest": {
+  "config": {
+   "w": 0.9,
+   "recency": 0.4,
+   "damp": 0.5,
+   "unc": 1.0,
+   "beta": 0.0,
+   "shrink": 0.4
+  },
+  "points": 40,
+  "favorite_won": 0.575,
+  "winner_top2": 0.725,
+  "p_winner": 0.222,
+  "p_even": 0.125,
+  "heldout_logloss": 2.757,
+  "uniform_logloss": 2.131,
+  "seasons": [
+   {
+    "season": 30,
+    "winner": "Iman Shumpert",
+    "pro": "Daniella Karagach",
+    "path": [
+     {
+      "after_week": 2,
+      "p": 0.0289,
+      "rank": 9,
+      "n": 14
+     },
+     {
+      "after_week": 3,
+      "p": 0.0311,
+      "rank": 10,
+      "n": 13
+     },
+     {
+      "after_week": 4,
+      "p": 0.0394,
+      "rank": 9,
+      "n": 11
+     },
+     {
+      "after_week": 5,
+      "p": 0.0403,
+      "rank": 10,
+      "n": 10
+     },
+     {
+      "after_week": 6,
+      "p": 0.0711,
+      "rank": 5,
+      "n": 9
+     },
+     {
+      "after_week": 7,
+      "p": 0.0689,
+      "rank": 6,
+      "n": 8
+     },
+     {
+      "after_week": 8,
+      "p": 0.0772,
+      "rank": 6,
+      "n": 6
+     },
+     {
+      "after_week": 9,
+      "p": 0.1468,
+      "rank": 3,
+      "n": 4
+     }
+    ]
+   },
+   {
+    "season": 31,
+    "winner": "Charli D'Amelio",
+    "pro": "Mark Ballas",
+    "path": [
+     {
+      "after_week": 1,
+      "p": 0.5121,
+      "rank": 1,
+      "n": 15
+     },
+     {
+      "after_week": 2,
+      "p": 0.2896,
+      "rank": 1,
+      "n": 14
+     },
+     {
+      "after_week": 3,
+      "p": 0.308,
+      "rank": 1,
+      "n": 13
+     },
+     {
+      "after_week": 4,
+      "p": 0.3127,
+      "rank": 1,
+      "n": 11
+     },
+     {
+      "after_week": 5,
+      "p": 0.2887,
+      "rank": 1,
+      "n": 10
+     },
+     {
+      "after_week": 6,
+      "p": 0.3909,
+      "rank": 1,
+      "n": 9
+     },
+     {
+      "after_week": 7,
+      "p": 0.3779,
+      "rank": 1,
+      "n": 8
+     },
+     {
+      "after_week": 8,
+      "p": 0.403,
+      "rank": 1,
+      "n": 6
+     },
+     {
+      "after_week": 9,
+      "p": 0.4039,
+      "rank": 1,
+      "n": 4
+     }
+    ]
+   },
+   {
+    "season": 32,
+    "winner": "Xochitl Gomez",
+    "pro": "Val Chmerkovskiy",
+    "path": [
+     {
+      "after_week": 1,
+      "p": 0.0347,
+      "rank": 7,
+      "n": 13
+     },
+     {
+      "after_week": 2,
+      "p": 0.1647,
+      "rank": 2,
+      "n": 12
+     },
+     {
+      "after_week": 3,
+      "p": 0.1567,
+      "rank": 2,
+      "n": 11
+     },
+     {
+      "after_week": 4,
+      "p": 0.2644,
+      "rank": 1,
+      "n": 10
+     },
+     {
+      "after_week": 5,
+      "p": 0.2847,
+      "rank": 1,
+      "n": 9
+     },
+     {
+      "after_week": 6,
+      "p": 0.3362,
+      "rank": 1,
+      "n": 8
+     },
+     {
+      "after_week": 7,
+      "p": 0.2632,
+      "rank": 1,
+      "n": 7
+     },
+     {
+      "after_week": 8,
+      "p": 0.2719,
+      "rank": 1,
+      "n": 6
+     },
+     {
+      "after_week": 9,
+      "p": 0.3257,
+      "rank": 1,
+      "n": 5
+     }
+    ]
+   },
+   {
+    "season": 33,
+    "winner": "Joey Graziadei",
+    "pro": "Jenna Johnson",
+    "path": [
+     {
+      "after_week": 2,
+      "p": 0.0682,
+      "rank": 6,
+      "n": 11
+     },
+     {
+      "after_week": 3,
+      "p": 0.1872,
+      "rank": 2,
+      "n": 9
+     },
+     {
+      "after_week": 4,
+      "p": 0.2222,
+      "rank": 1,
+      "n": 8
+     },
+     {
+      "after_week": 5,
+      "p": 0.1561,
+      "rank": 4,
+      "n": 7
+     },
+     {
+      "after_week": 6,
+      "p": 0.1894,
+      "rank": 2,
+      "n": 6
+     },
+     {
+      "after_week": 7,
+      "p": 0.1901,
+      "rank": 2,
+      "n": 5
+     }
+    ]
+   },
+   {
+    "season": 34,
+    "winner": "Robert Irwin",
+    "pro": "Witney Carson",
+    "path": [
+     {
+      "after_week": 2,
+      "p": 0.2757,
+      "rank": 1,
+      "n": 12
+     },
+     {
+      "after_week": 3,
+      "p": 0.2086,
+      "rank": 1,
+      "n": 11
+     },
+     {
+      "after_week": 4,
+      "p": 0.1804,
+      "rank": 2,
+      "n": 10
+     },
+     {
+      "after_week": 6,
+      "p": 0.225,
+      "rank": 1,
+      "n": 9
+     },
+     {
+      "after_week": 7,
+      "p": 0.2468,
+      "rank": 1,
+      "n": 8
+     },
+     {
+      "after_week": 8,
+      "p": 0.2437,
+      "rank": 1,
+      "n": 7
+     },
+     {
+      "after_week": 9,
+      "p": 0.2836,
+      "rank": 1,
+      "n": 6
+     },
+     {
+      "after_week": 10,
+      "p": 0.3296,
+      "rank": 1,
+      "n": 5
+     }
+    ]
+   }
+  ]
+ }
 }
