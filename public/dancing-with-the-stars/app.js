@@ -18,14 +18,11 @@ const state = {
   metric: "avg",
   sort: "avg",
   pins: {},          // name -> slot index (color follows the couple, not its rank)
-  weight: 90,       // backtested on seasons 30-34
+  jw: 50,            // judges' weight in the combined score (%); the show's rule
   finalists: 4,
   recency: 40,
-  damp: 0.5,        // vote share ∝ search share ^ damp
-  shrink: 0,        // optional hedge of win odds toward even
-  blend: 50,        // % of win odds from the inferred-votes model (backtested 50/50)
   sims: 10000,
-  shareWeek: null,
+  ytWeek: null,
 };
 
 let D, M, SIM;
@@ -62,7 +59,6 @@ function derive() {
     });
     const sumTotal = rows.reduce((a, r) => a + r.total, 0);
     const sorted = [...rows].sort((a, b) => b.total - a.total);
-    const buzz = D.trends.weekly[w.week] || {};
     const top = sorted[0].total;
     weekStats[w.week] = {
       n: rows.length, top, low: sorted[sorted.length - 1].total,
@@ -70,11 +66,9 @@ function derive() {
     };
     for (const r of rows) {
       const rank = 1 + sorted.filter(o => o.total > r.total).length;
-      const b = buzz[r.name];
       hist[r.name].push({
         week: w.week, theme: w.theme, airdate: w.airdates[0], ...r, rank, n: rows.length,
         jShare: r.total / sumTotal, jRel: (r.total / sumTotal) * rows.length,
-        bShare: b ? b.share : null, bRel: b ? b.share * rows.length : null,
         best: r.total === top, elim: byName[r.name].eliminated_week === w.week,
       });
     }
@@ -113,8 +107,10 @@ function restore() {
   if (!saved) {
     [...M.remaining].sort((a, b) => b.avg - a.avg).slice(0, 3).forEach((c, i) => (state.pins[c.name] = i));
   }
-  state.weight = store.get("dwts-weight-v2", 90);
-  $("#weight").value = state.weight;
+  const jw = store.get("dwts-jw", null);
+  if (D.votes && D.votes.fits[String(jw / 100)]) state.jw = jw;
+  else if (D.votes) state.jw = Math.round(D.votes.default_jw * 100);
+  $("#jw").value = state.jw;
 }
 
 /* ---------------------------------------------------------------- helpers */
@@ -140,7 +136,7 @@ function togglePin(name) {
     state.pins[name] = slot;
   }
   store.set("dwts-pins", state.pins);
-  renderChips(); renderScoreChart(); renderBuzzChart();
+  renderChips(); renderScoreChart(); renderYouTube();
 }
 
 const tip = $("#tooltip");
@@ -295,11 +291,8 @@ function renderAll() {
   renderScoreChart();
   renderGrid();
   renderCards();
-  renderBuzzChart();
-  renderShareSeg();
-  renderShare();
+  renderYouTube();
   renderSim();
-  renderBacktest();
   renderTested();
   renderFooter();
 }
@@ -323,7 +316,7 @@ function renderStats() {
       `<span class="avatars">${tops.map(c => avatar(c, 30)).join("")}</span>${ws.top}<small>/ ${ws.max}</small>`,
       tops.map(c => esc(c.couple)).join(", ")),
     tile("Model favorite", `${avatar(fav.c, 30)}${pct(fav.win)}`,
-      `${esc(fav.c.couple)} · blended model`),
+      `${esc(fav.c.couple)} · Monte Carlo`),
   ].join("");
 }
 
@@ -407,11 +400,6 @@ function renderGrid() {
   $("#scoreGrid").innerHTML = h + "</tbody>";
 }
 
-function latestBuzz(c) {
-  const h = [...M.hist[c.name]].reverse().find(x => x.bShare != null);
-  return h ? h.bShare : null;
-}
-
 function sparkline(c) {
   const h = M.hist[c.name];
   if (!h.length) return "";
@@ -428,10 +416,10 @@ function sparkline(c) {
 
 function renderCards() {
   const winOf = n => SIM.byName[n]?.win ?? 0;
-  const key = { avg: c => c.avg, buzz: c => latestBuzz(c) ?? 0, win: c => winOf(c.name) }[state.sort];
+  const voteOf = n => SIM.byName[n]?.vote?.p50 ?? 0;
+  const key = { avg: c => c.avg, votes: c => voteOf(c.name), win: c => winOf(c.name) }[state.sort];
   const rows = [...M.cast].sort((a, b) => (a.out - b.out) || key(b) - key(a) || b.avg - a.avg);
   $("#cards").innerHTML = rows.map(c => {
-    const buzz = latestBuzz(c);
     return `<button class="ccard ${c.out ? "out" : ""}" data-name="${esc(c.name)}" type="button">
       <div class="photo">${c.photo ? `<img src="${esc(c.photo)}" alt="${esc(c.name)}" loading="lazy">` : `<div class="initials">${esc(c.initials)}</div>`}
         <span class="badge ${c.out ? "" : "in"}">${c.out ? `Out · week ${c.eliminated_week}` : "Still dancing"}</span></div>
@@ -441,72 +429,69 @@ function renderCards() {
         ${sparkline(c)}
         <div class="metrics">
           <div class="m"><div class="k">Avg</div><div class="v">${c.avg.toFixed(1)}</div></div>
-          <div class="m ${c.out ? "" : "hide-sm"}"><div class="k">Buzz</div><div class="v">${buzz == null ? "–" : pct(buzz)}</div></div>
-          ${c.out ? "" : `<div class="m"><div class="k">Win</div><div class="v">${pct(winOf(c.name))}</div></div>`}
+          ${c.out ? `<div class="m"><div class="k">Best</div><div class="v">${c.bestWeek ? c.bestWeek.avg.toFixed(1) : "–"}</div></div>`
+            : `<div class="m hide-sm"><div class="k">Fan vote</div><div class="v">${pct(voteOf(c.name), 1)}</div></div>
+               <div class="m"><div class="k">Win</div><div class="v">${pct(winOf(c.name))}</div></div>`}
         </div>
       </div></button>`;
   }).join("");
 }
 
-function renderBuzzChart() {
-  const el = $("#buzzChart");
-  const { dates, series } = D.trends.daily;
-  if (!dates.length) { el.innerHTML = `<p class="muted">No search data yet.</p>`; return; }
-  const idx = Object.fromEntries(dates.map((d, i) => [d, i]));
-  const ser = M.cast.filter(c => series[c.name]).map(c => ({
+const fmtViews = v => (v >= 1e6 ? `${(v / 1e6).toFixed(v >= 1e7 ? 0 : 1)}M` : v >= 1e3 ? `${Math.round(v / 1e3)}K` : String(v));
+
+/** YouTube views per performance (official DWTS channel). */
+function ytByWeek() {
+  const out = {};
+  for (const v of D.youtube?.videos || []) {
+    const wk = (out[v.week] ||= {});
+    (wk[v.celeb] ||= []).push(v);
+  }
+  return out;
+}
+
+function renderYouTube() {
+  const sec = $("#youtube");
+  const yt = D.youtube;
+  if (!yt || !yt.videos?.length) { sec.hidden = true; $("#ytTab").hidden = true; return; }
+  sec.hidden = false; $("#ytTab").hidden = false;
+  const byWeek = ytByWeek();
+  const weeks = Object.keys(byWeek).map(Number).sort((a, b) => a - b);
+  $("#ytSub").textContent = `Views of each performance video on the official Dancing with the Stars channel · ${yt.matched} of ${yt.performances} performances matched · fetched ${fmtDate(yt.fetched.slice(0, 10))}.`;
+
+  const series = M.cast.map(c => ({
     id: c.name, color: pinColor(c.name),
-    pts: series[c.name].map((v, i) => ({ x: i, y: v, date: dates[i] })),
-  }));
-  const hi = Math.max(...ser.flatMap(s => s.pts.map(p => p.y)));
-  const step = Math.max(1, Math.round(dates.length / (el.clientWidth < 560 ? 4 : 8)));
-  const ticks = dates.map((d, i) => ({ v: i, label: fmtDate(d) })).filter((_, i) => i % step === 0);
-  const events = M.weeks.flatMap(w => w.airdates.slice(0, 1).filter(d => d in idx).map(d => ({ x: idx[d], label: `W${w.week}` })));
-  for (const f of M.futureWeeks) if (f.date in idx) events.push({ x: idx[f.date], label: `W${f.week}` });
-  $("#buzzSub").textContent = `Daily Google search interest (${D.trends.geo}). Fetched ${fmtDate(D.trends.fetched.slice(0, 10))}.`;
-  lineChart(el, {
-    label: "Daily Google search interest",
-    x: { domain: [0, dates.length - 1], ticks },
-    y: { domain: [0, hi * 1.05], ticks: niceTicks(0, hi, 4) },
-    series: ser, events, endLabels: true,
+    pts: weeks.filter(w => byWeek[w][c.name]).map(w => {
+      const vs = byWeek[w][c.name];
+      return { x: w, y: vs.reduce((a, v) => a + v.views, 0) / vs.length, vs };
+    }),
+  })).filter(s => s.pts.length);
+  const ys = series.flatMap(s => s.pts.map(p => p.y));
+  const hi = Math.max(...ys);
+  lineChart($("#ytChart"), {
+    label: "YouTube views per performance by week",
+    x: { domain: [weeks[0], Math.max(weeks[0] + 1, weeks[weeks.length - 1])], ticks: weeks.map(w => ({ v: w, label: `Wk ${w}` })) },
+    y: { domain: [0, hi * 1.05], ticks: niceTicks(0, hi, 4), fmt: fmtViews },
+    series, dots: true, endLabels: true,
     who: id => M.byName[id],
-    endValue: se => `${se.pts[se.pts.length - 1].y.toFixed(0)} today`,
+    endValue: se => `${fmtViews(se.pts[se.pts.length - 1].y)} · wk ${se.pts[se.pts.length - 1].x}`,
     tooltip: (se, p) => {
       const c = M.byName[se.id];
-      return ttHead(c, fmtDate(p.date, { weekday: "short", month: "short", day: "numeric" })) +
-        `<div class="tt-row"><span>Search interest</span><b>${p.y.toFixed(1)}</b></div>`;
+      return ttHead(c, `Week ${p.x}`) + p.vs.map(v => `<div class="tt-row"><span>${esc(v.dance || "Performance")}</span><b>${fmtViews(v.views)}</b></div>
+        <div class="tt-row"><span>likes · comments</span><b>${fmtViews(v.likes)} · ${fmtViews(v.comments)}</b></div>`).join("");
     },
   });
-}
 
-function shareWindows() {
-  const wins = M.weeks.filter(w => D.trends.weekly[w.week]).map(w => ({
-    key: String(w.week), label: `Wk ${w.week}`, title: `Week ${w.week} voting window (${w.airdates.map(d => fmtDate(d)).join(" & ")} + ${D.trends.window_days_after}d)`,
-    rows: Object.entries(D.trends.weekly[w.week]).map(([n, v]) => ({ name: n, share: v.share })),
-  }));
-  if (Object.keys(D.trends.last7 || {}).length) {
-    wins.push({ key: "last7", label: "Last 7 days", title: "Last 7 days, remaining couples",
-      rows: Object.entries(D.trends.last7).map(([n, s]) => ({ name: n, share: s })) });
-  }
-  return wins;
-}
-
-function renderShareSeg() {
-  const wins = shareWindows();
-  if (!state.shareWeek || !wins.find(w => w.key === state.shareWeek)) state.shareWeek = wins.length ? wins[wins.length - 1].key : null;
-  $("#shareSeg").innerHTML = wins.map(w => `<button role="radio" data-v="${w.key}" aria-checked="${w.key === state.shareWeek}">${w.label}</button>`).join("");
-}
-
-function renderShare() {
-  const w = shareWindows().find(x => x.key === state.shareWeek);
-  if (!w) { $("#shareBars").innerHTML = ""; return; }
-  $("#shareTitle").textContent = `Share of search · ${w.title}`;
-  const rows = [...w.rows].sort((a, b) => b.share - a.share);
-  const max = rows[0]?.share || 1;
-  $("#shareBars").innerHTML = rows.map(r => {
-    const c = M.byName[r.name];
-    const elimHere = c.eliminated_week && String(c.eliminated_week) === w.key;
-    return `<div class="bar-row"><div class="who">${avatar(c, 24)}<span>${esc(c.couple)}${elimHere ? ` <span class="muted">✕ out</span>` : ""}</span></div>
-      <div class="bar-track"><div class="bar-fill" style="width:${(r.share / max) * 100}%"></div></div><div class="val">${pct(r.share, 1)}</div></div>`;
+  if (!state.ytWeek || !byWeek[state.ytWeek]) state.ytWeek = weeks[weeks.length - 1];
+  $("#ytSeg").innerHTML = weeks.map(w => `<button role="radio" data-v="${w}" aria-checked="${w === +state.ytWeek}">Wk ${w}</button>`).join("");
+  const wk = byWeek[state.ytWeek];
+  const rows = Object.entries(wk).map(([n, vs]) => ({ c: M.byName[n], views: vs.reduce((a, v) => a + v.views, 0) }));
+  const tot = rows.reduce((a, r) => a + r.views, 0) || 1;
+  rows.sort((a, b) => b.views - a.views);
+  const max = rows[0]?.views || 1;
+  $("#ytBars").innerHTML = rows.map(r => {
+    const elimHere = r.c.eliminated_week === +state.ytWeek;
+    return `<div class="bar-row"><div class="who">${avatar(r.c, 24)}<span>${esc(r.c.couple)}${elimHere ? ` <span class="muted">✕ out</span>` : ""}</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(r.views / max) * 100}%"></div></div><div class="val" title="${r.views.toLocaleString()} views">${pct(r.views / tot, 1)}</div></div>`;
   }).join("");
 }
 
@@ -523,28 +508,21 @@ function rng(seed) {
   };
 }
 
-/** Recency-weighted strength per remaining couple, relative to the field (1 = average). */
+/** Recency-weighted judges' strength per remaining couple, relative to the field (1 = average). */
 function strengths() {
   const k = (state.recency / 100) * 1.6;
   const list = M.remaining.map(c => {
-    const h = M.hist[c.name];
-    let sw = 0, sj = 0, sb = 0, swb = 0;
-    for (const x of h) {
+    let sw = 0, sj = 0;
+    for (const x of M.hist[c.name]) {
       const wt = Math.exp(-k * (M.lastWeek - x.week));
       sw += wt; sj += wt * x.jRel;
-      if (x.bRel > 0) { swb += wt; sb += wt * state.damp * Math.log(x.bRel); }
     }
-    return { c, J: sj / sw, LT: swb ? sb / swb : Math.log(0.5), n: h.length };
+    return { c, J: sj / sw };
   });
   // Pooled week-to-week noise, so one wild week doesn't define a couple.
-  let rj = 0, rb = 0, dof = 0, dofb = 0;
-  for (const s of list) for (const x of M.hist[s.c.name]) {
-    rj += (x.jRel - s.J) ** 2; dof++;
-    if (x.bRel > 0) { rb += (state.damp * Math.log(x.bRel) - s.LT) ** 2; dofb++; }
-  }
-  const sdJ = Math.max(0.04, Math.sqrt(rj / Math.max(1, dof - list.length)));
-  const sdB = Math.max(0.1, Math.sqrt(rb / Math.max(1, dofb - list.length)));
-  return { list, sdJ, sdB };
+  let rj = 0, dof = 0;
+  for (const s of list) for (const x of M.hist[s.c.name]) { rj += (x.jRel - s.J) ** 2; dof++; }
+  return { list, sdJ: Math.max(0.04, Math.sqrt(rj / Math.max(1, dof - list.length))) };
 }
 
 function schedule() {
@@ -559,9 +537,12 @@ function schedule() {
   return fw.map((f, i) => ({ ...f, out: f.finale ? 0 : per[i] }));
 }
 
+/** The fan-vote fit for the chosen judges' weight (precomputed by pipeline/live.py). */
+const voteFit = () => D.votes?.fits[String(state.jw / 100)];
+
 function runSim() {
-  const w = state.weight / 100;
-  const { list, sdJ, sdB } = strengths();
+  const jw = state.jw / 100;
+  const { list, sdJ } = strengths();
   const N = list.length;
   const sched = schedule();
   const rand = rng(35);
@@ -569,104 +550,69 @@ function runSim() {
     let u = 0; while (u === 0) u = rand();
     return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rand());
   };
+  const gumbel = () => { let u = 0; while (u === 0) u = rand(); return -Math.log(-Math.log(u)); };
+  const V = voteFit(), tau = D.votes?.tau ?? 0.02;
+  const vIdx = list.map(s => (V ? D.votes.alive.indexOf(s.c.name) : -1));
+  const haveV = !!V && vIdx.every(i => i >= 0) && D.votes.alive.length === N;
 
-  // Simple: one weighted strength per couple, softmax into odds.
-  const Js = list.reduce((a, s) => a + s.J, 0), Ts = list.reduce((a, s) => a + Math.exp(s.LT), 0);
-  const comp = list.map(s => N * (w * (s.J / Js) + (1 - w) * (Math.exp(s.LT) / Ts)));
-  const ex = comp.map(v => Math.exp((v - 1) / 0.25));
+  // Simple: judges' strength and posterior-mean vote share, one weighted score
+  // per couple turned into odds. Nothing is played out.
+  const vMean = list.map((s, i) => (haveV ? Math.exp(V.mean[vIdx[i]]) : 1));
+  const vS = vMean.reduce((a, b) => a + b, 0), Js = list.reduce((a, s) => a + s.J, 0);
+  const comp = list.map((s, i) => N * (jw * (s.J / Js) + (1 - jw) * (vMean[i] / vS)));
+  const ex = comp.map(v => Math.exp((v - 1) / 0.1));
   const exS = ex.reduce((a, b) => a + b, 0);
-  const hedge = p => (1 - state.shrink) * p + state.shrink / N;
 
-  // Monte Carlo: play out each remaining week; lowest combined share goes home.
+  // Monte Carlo: each simulated season draws every couple's fan strength from
+  // the posterior and its judges' trajectory, then plays out the remaining
+  // weeks. Combined score = jw * judges' share + (1 - jw) * vote share; the
+  // lowest (plus noise) goes home, the highest wins the finale.
   const wins = new Float64Array(N), finals = new Float64Array(N), outNext = new Float64Array(N);
-  const sims = sched.length ? state.sims : 0;
-  const J = new Float64Array(N), L = new Float64Array(N), cj = new Float64Array(N), cb = new Float64Array(N), cc = new Float64Array(N);
+  const sims = sched.length && haveV ? state.sims : 0;
+  const m = haveV ? D.votes.alive.length : 0, z = new Float64Array(m);
+  const J = new Float64Array(N), th = new Float64Array(N), cj = new Float64Array(N), ev = new Float64Array(N), cv = new Float64Array(N), cc = new Float64Array(N);
   for (let s = 0; s < sims; s++) {
+    for (let k = 0; k < m; k++) z[k] = gauss();
     for (let i = 0; i < N; i++) {
-      // Season-level uncertainty per couple: judges' trajectories diverge, and
-      // how search interest converts to real votes is itself unknown.
+      const a = vIdx[i], row = V.chol[a];
+      let t = V.mean[a];
+      for (let k = 0; k <= a; k++) t += row[k] * z[k];
+      th[i] = t;
       J[i] = list[i].J + gauss() * sdJ * 0.75;
-      L[i] = list[i].LT + gauss() * (sdB / Math.sqrt(list[i].n) + 0.35);
     }
     let alive = [...Array(N).keys()];
     for (let wi = 0; wi < sched.length; wi++) {
-      let sj = 0, sb = 0;
-      for (const i of alive) {
-        cj[i] = Math.max(0.05, J[i] + gauss() * sdJ); sj += cj[i];
-        cb[i] = Math.exp(L[i] + gauss() * sdB); sb += cb[i];
-      }
-      for (const i of alive) cc[i] = w * (cj[i] / sj) + (1 - w) * (cb[i] / sb);
+      const na = alive.length;
+      let sj = 0, sv = 0, mx = -Infinity;
+      for (const i of alive) { cj[i] = Math.max(0.05, J[i] + gauss() * sdJ); sj += cj[i]; mx = Math.max(mx, th[i]); }
+      for (const i of alive) { ev[i] = Math.exp(th[i] - mx); sv += ev[i]; }
+      for (const i of alive) cv[i] = na * (jw * (cj[i] / sj) + (1 - jw) * (ev[i] / sv));
       if (sched[wi].finale) {
-        let best = alive[0];
-        for (const i of alive) { finals[i]++; if (cc[i] > cc[best]) best = i; }
+        let best = alive[0], bv = -Infinity;
+        for (const i of alive) { finals[i]++; const x = cv[i] + tau * gumbel(); if (x > bv) { bv = x; best = i; } }
         wins[best]++;
       } else if (sched[wi].out) {
+        for (const i of alive) cc[i] = cv[i] - tau * gumbel();
         alive.sort((a, b) => cc[a] - cc[b]);
         const gone = alive.splice(0, sched[wi].out);
         if (wi === 0) for (const i of gone) outNext[i]++;
       }
     }
   }
-  // Inferred-votes model: fan strength fitted to who has actually gone home
-  // (pipeline/votes.py), combined with judges' scores by the show's 50/50 rule.
-  const V = D.votes;
-  const vIdx = list.map(s => (V ? V.alive.indexOf(s.c.name) : -1));
-  const haveV = !!V && vIdx.every(i => i >= 0) && V.alive.length === N;
-  const winsV = new Float64Array(N), finalsV = new Float64Array(N), outNextV = new Float64Array(N);
-  if (haveV && sims) {
-    const m = V.alive.length, z = new Float64Array(m), th = new Float64Array(N), ev = new Float64Array(N), cv = new Float64Array(N);
-    const gumbel = () => { let u = 0; while (u === 0) u = rand(); return -Math.log(-Math.log(u)); };
-    for (let s = 0; s < sims; s++) {
-      for (let k = 0; k < m; k++) z[k] = gauss();
-      for (let i = 0; i < N; i++) {
-        const a = vIdx[i], row = V.chol[a];
-        let t = V.mean[a];
-        for (let k = 0; k <= a; k++) t += row[k] * z[k];
-        th[i] = t;
-        J[i] = list[i].J + gauss() * sdJ * 0.75;
-      }
-      let alive = [...Array(N).keys()];
-      for (let wi = 0; wi < sched.length; wi++) {
-        const na = alive.length;
-        let sj = 0, sv = 0, mx = -Infinity;
-        for (const i of alive) { cj[i] = Math.max(0.05, J[i] + gauss() * sdJ); sj += cj[i]; mx = Math.max(mx, th[i]); }
-        for (const i of alive) { ev[i] = Math.exp(th[i] - mx); sv += ev[i]; }
-        for (const i of alive) cv[i] = 0.5 * (cj[i] / sj) * na + 0.5 * (ev[i] / sv) * na;
-        if (sched[wi].finale) {
-          let best = alive[0], bv = -Infinity;
-          for (const i of alive) { finalsV[i]++; const x = cv[i] + V.tau * gumbel(); if (x > bv) { bv = x; best = i; } }
-          winsV[best]++;
-        } else if (sched[wi].out) {
-          for (const i of alive) cc[i] = cv[i] - V.tau * gumbel();
-          alive.sort((a, b) => cc[a] - cc[b]);
-          const gone = alive.splice(0, sched[wi].out);
-          if (wi === 0) for (const i of gone) outNextV[i]++;
-        }
-      }
-    }
-  }
-  const lam = haveV ? state.blend / 100 : 0;
-  const mix = (v, b) => lam * v + (1 - lam) * b;
-  const rows = list.map((s, i) => {
-    const buzzWin = sims ? wins[i] / sims : 0, voteWin = haveV && sims ? winsV[i] / sims : null;
-    return {
-      c: s.c, J: s.J, T: Math.exp(s.LT), comp: comp[i],
-      buzzWin: hedge(buzzWin), voteWin: voteWin == null ? null : hedge(voteWin),
-      win: hedge(mix(voteWin ?? 0, buzzWin)), simple: hedge(ex[i] / exS),
-      finale: sims ? mix(finalsV[i] / sims, finals[i] / sims) : 0,
-      outNext: sims ? mix(outNextV[i] / sims, outNext[i] / sims) : 0,
-      vote: haveV ? V.share[s.c.name] : null,
-    };
-  }).sort((a, b) => b.win - a.win || b.simple - a.simple);
-  SIM = { rows, byName: Object.fromEntries(rows.map(r => [r.c.name, r])), sched, sdJ, sdB, haveV };
+  // Hedge toward even odds, as backtested (past models were overconfident).
+  const h = D.votes?.hedge ?? 0, hedge = p => (1 - h) * p + h / N;
+  const rows = list.map((s, i) => ({
+    c: s.c, J: s.J,
+    win: sims ? hedge(wins[i] / sims) : 0, simple: ex[i] / exS,
+    finale: sims ? finals[i] / sims : 0, outNext: sims ? outNext[i] / sims : 0,
+    vote: haveV ? V.share[s.c.name] : null,
+  })).sort((a, b) => b.win - a.win || b.simple - a.simple);
+  SIM = { rows, byName: Object.fromEntries(rows.map(r => [r.c.name, r])), sched, sdJ, haveV };
 }
 
 function renderSim() {
-  $("#wJudges").textContent = `${state.weight}%`;
-  $("#wBuzz").textContent = `${100 - state.weight}%`;
-  $("#bVotes").textContent = `${state.blend}%`;
-  $("#bBuzz").textContent = `${100 - state.blend}%`;
-  $("#blendWrap").hidden = !SIM.haveV;
+  $("#wJudges").textContent = `${state.jw}%`;
+  $("#wVotes").textContent = `${100 - state.jw}%`;
   const sched = SIM.sched;
   $("#schedule").textContent = sched.length
     ? "Assumed schedule: " + sched.map(s => s.finale ? `Finale ${fmtDate(s.date)} (${Math.min(state.finalists, M.remaining.length)} couples)` : `Wk ${s.week} ${fmtDate(s.date)}: ${s.out} out`).join(" · ")
@@ -675,12 +621,12 @@ function renderSim() {
   const maxWin = Math.max(...SIM.rows.map(r => r.win), 0.01);
   const num = v => (v == null ? "–" : pct(v, v < 0.1 ? 1 : 0));
   $("#simTable").innerHTML =
-    `<div class="sim-head"><span></span><span>Couple</span><span>Win odds</span><span class="sub-col" title="Monte Carlo with fan votes inferred from eliminations">Votes model</span><span class="sub-col" title="Monte Carlo with judges + search buzz (slider)">Buzz model</span><span class="sub-col simple-col" title="One weighted score per couple, no simulation">Simple</span><span class="fin">Finale</span></div>` +
+    `<div class="sim-head"><span></span><span>Couple</span><span>Win · Monte Carlo</span><span class="sub-col" title="One weighted score per couple, no simulation">Simple</span><span class="fin">Finale</span></div>` +
     SIM.rows.map((r, i) => `<div class="sim-row ${i === 0 ? "leader" : ""}">
       <span class="rk">${i + 1}</span>
       <span class="who" data-name="${esc(r.c.name)}">${avatar(r.c, 30)}<span>${esc(r.c.couple)}${i === 0 ? ` <span class="crown" aria-label="favorite">♛</span>` : ""}</span></span>
       <span class="cellbar"><span class="bar-track"><span class="bar-fill" style="display:block;width:${(r.win / maxWin) * 100}%"></span></span><b>${pct(r.win, r.win < 0.1 ? 1 : 0)}</b></span>
-      <span class="sub-col">${num(r.voteWin)}</span><span class="sub-col">${num(r.buzzWin)}</span><span class="sub-col simple-col">${num(r.simple)}</span>
+      <span class="sub-col">${num(r.simple)}</span>
       <span class="fin">${pct(r.finale)}</span></div>`).join("");
 
   renderVotes();
@@ -711,53 +657,8 @@ function renderVotes() {
       <b>${pct(v.p50, 1)}</b></div>`;
   }).join("");
   const rounds = D.votes.rounds.length;
+  $("#votesTitle").textContent = `Inferred fan vote · at ${state.jw}% judges`;
   $("#votesNote").textContent = `Estimated from ${rounds} elimination${rounds === 1 ? "" : "s"}: a couple that survives low judges' scores must be getting votes. Bars show the 80% range; the tick marks an even split. Front-runners who have never been near the bottom stay close to even, because their votes haven't been tested yet.`;
-}
-
-/** Given each week's real scores + buzz, who would this weighting have sent home? */
-function backtestAt(wPct) {
-  const w = wPct / 100;
-  const out = [];
-  for (const wk of M.weeks) {
-    const gone = M.cast.filter(c => c.eliminated_week === wk.week).map(c => c.name);
-    if (!gone.length) continue;
-    const rows = Object.keys(wk.scores).map(n => M.hist[n].find(h => h.week === wk.week));
-    const votes = r => (r.bShare || 0) ** state.damp;
-    const sb = rows.reduce((a, r) => a + votes(r), 0) || 1;
-    const scored = rows.map(r => ({ name: r.name, c: w * r.jShare + (1 - w) * votes(r) / sb }))
-      .sort((a, b) => a.c - b.c);
-    const pred = scored.slice(0, gone.length).map(r => r.name);
-    out.push({ week: wk.week, gone, pred, hits: pred.filter(p => gone.includes(p)).length });
-  }
-  return out;
-}
-
-function renderBacktest() {
-  const cur = backtestAt(state.weight);
-  const total = cur.reduce((a, r) => a + r.gone.length, 0);
-  const hits = cur.reduce((a, r) => a + r.hits, 0);
-  if (!total) { $("#backtestLine").textContent = "No eliminations yet to test against."; return; }
-  const curve = Array.from({ length: 21 }, (_, i) => ({ x: i * 5, y: backtestAt(i * 5).reduce((a, r) => a + r.hits, 0) }));
-  const best = Math.max(...curve.map(p => p.y));
-  const bestW = curve.filter(p => p.y === best).map(p => p.x);
-  $("#backtestLine").innerHTML = `At <b>${state.weight}% judges</b>, the bottom-ranked couple matched the real elimination <b>${hits} of ${total}</b> times. Best fit so far: ${best}/${total} at ${rangeText(bestW)} judges.`;
-
-  const el = $("#backtestChart");
-  lineChart(el, {
-    label: "Correct elimination calls by weighting",
-    height: 150, margin: { l: 28, r: 12, b: 26, t: 10 },
-    x: { domain: [0, 100], ticks: [0, 25, 50, 75, 100].map(v => ({ v, label: v === 0 ? "All buzz" : v === 100 ? "All judges" : `${v}%` })) },
-    y: { domain: [0, total], ticks: niceTicks(0, total, Math.min(total, 3)).filter(Number.isInteger) },
-    series: [{ id: "bt", color: "var(--bar)", pts: curve }],
-    events: [{ x: state.weight }], dots: false,
-    tooltip: (_, p) => `<div class="tt-row"><span>${p.x}% judges</span><b>${p.y} of ${total} correct</b></div>`,
-  });
-  const ev = el.querySelector(".event");
-  if (ev) ev.setAttribute("class", "cur-weight");
-
-  $("#backtestWeeks").innerHTML = cur.map(r => `<div class="bt-week"><span class="lab">Week ${r.week}</span>
-    <span>${r.pred.map(n => esc(M.byName[n].couple)).join(", ")}${r.hits === r.gone.length ? "" : ` <span class="muted">(actual: ${r.gone.map(n => esc(M.byName[n].couple)).join(", ")})</span>`}</span>
-    <span class="${r.hits === r.gone.length ? "ok" : "no"}" aria-label="${r.hits === r.gone.length ? "correct" : "missed"}">${r.hits === r.gone.length ? "✓" : "✗"}</span></div>`).join("");
 }
 
 /** How this model did on completed seasons (precomputed by pipeline/backtest.py). */
@@ -793,24 +694,14 @@ function renderTested() {
       }).join("")}
     </div>
     <p class="foot">Gold line: the chance the model gave each season's eventual winner, week by week; gray: even odds.
-      Model: today's defaults, a ${Math.round(c.blend * 100)}/${100 - Math.round(c.blend * 100)} blend of the votes model and the buzz model (${Math.round(c.buzz.w * 100)}% judges).
-      <b>Caveat:</b> five seasons is a small sample. Tuned on four seasons and scored on the fifth, the blend only just beat even odds
-      (log-loss ${bt.heldout_logloss} vs ${bt.uniform_logloss}). Upset winners like Iman Shumpert (S30) still catch it out.</p>`;
-}
-
-function rangeText(xs) {
-  const runs = [];
-  for (const x of xs) {
-    const last = runs[runs.length - 1];
-    if (last && x - last[1] === 5) last[1] = x; else runs.push([x, x]);
-  }
-  return runs.map(([a, b]) => (a === b ? `${a}%` : `${a}–${b}%`)).join(", ");
+      Model: today's defaults (fan votes inferred from eliminations, ${Math.round(c.jw * 100)}% judges, ${Math.round(c.hedge * 100)}% hedge toward even odds).
+      Tuned on four seasons and scored on the fifth, it beat even odds (log-loss ${bt.heldout_logloss} vs ${bt.uniform_logloss}, lower is better).
+      <b>Caveat:</b> five seasons is a small sample, and upset winners like Iman Shumpert (S30) still catch it out.</p>`;
 }
 
 function renderFooter() {
-  const t = D.trends;
   const dt = new Date(D.updated);
-  $("#sources").innerHTML = `Scores from <a href="${esc(D.source)}">Wikipedia</a>; search interest from Google Trends (${esc(t.geo)}, voting window = episode day + ${t.window_days_after} day). Photos via Wikimedia Commons. Updated ${dt.toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.`;
+  $("#sources").innerHTML = `Scores and results from <a href="${esc(D.source)}">Wikipedia</a>.${D.youtube ? " Performance views from the official Dancing with the Stars YouTube channel." : ""} Photos via Wikimedia Commons. Updated ${dt.toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.`;
 }
 
 /* ------------------------------------------------------------------ dialog */
@@ -819,7 +710,7 @@ function openCouple(name) {
   const c = M.byName[name];
   const h = M.hist[name];
   const sim = SIM.byName[name];
-  const term = D.trends.terms?.[name];
+  const yt = ytByWeek();
   const sub = c.substitute_pro ? ` · ${esc(c.substitute_pro.name)} filled in for week ${c.substitute_pro.week}` : "";
   $("#dialogBody").innerHTML = `
     <button class="d-close" type="button" aria-label="Close">×</button>
@@ -833,42 +724,25 @@ function openCouple(name) {
           <div class="m"><div class="k">Avg per judge</div><div class="v">${c.avg.toFixed(2)}</div></div>
           ${c.bestWeek ? `<div class="m"><div class="k">Best</div><div class="v">${c.bestWeek.total}/${c.bestWeek.max} · wk ${c.bestWeek.week}</div></div>` : ""}
           ${sim ? `<div class="m"><div class="k">Win · MC</div><div class="v">${pct(sim.win, 1)}</div></div><div class="m"><div class="k">Finale</div><div class="v">${pct(sim.finale)}</div></div>` : ""}
+          ${sim?.vote ? `<div class="m"><div class="k">Fan vote</div><div class="v">${pct(sim.vote.p50, 1)}</div></div>` : ""}
         </div>
       </div>
     </div>
     <div class="d-section">
       <h3>Every dance</h3>
-      <div class="table-scroll"><table class="dances"><thead><tr><th>Week</th><th>Dance</th><th>Judges</th><th class="num">Score</th><th class="num">Rank</th><th class="num">Buzz</th></tr></thead><tbody>
+      <div class="table-scroll"><table class="dances"><thead><tr><th>Week</th><th>Dance</th><th>Judges</th><th class="num">Score</th><th class="num">Rank</th>${D.youtube ? `<th class="num">Views</th>` : ""}</tr></thead><tbody>
       ${h.map(x => x.dances.map((d, i) => `<tr>
         <td>${i ? "" : `Wk ${x.week}<div class="theme">${esc(x.theme)}</div>`}</td>
         <td>${esc(d.dance)}</td><td>${d.marks.join(" · ")}</td>
         <td class="num"><b>${d.score}</b>${x.dances.length > 1 && i === x.dances.length - 1 ? `<div class="theme">week ${x.total}/${x.max}</div>` : ` <span class="theme">/ ${d.marks.length * 10}</span>`}</td>
         <td class="num">${i ? "" : `${ordinal(x.rank)}<span class="theme"> /${x.n}</span>`}</td>
-        <td class="num">${i || x.bShare == null ? "" : pct(x.bShare, 1)}</td></tr>`).join("")).join("")}
+        ${D.youtube ? `<td class="num">${(() => { const v = (yt[x.week]?.[name] || [])[i]; return v ? `<a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">${fmtViews(v.views)}</a>` : "–"; })()}</td>` : ""}</tr>`).join("")).join("")}
       </tbody></table></div>
-    </div>
-    <div class="d-section">
-      <h3>Search interest</h3>
-      <div class="chart" id="dialogChart"></div>
-      <p class="foot">Google Trends ${term ? `${term.label.startsWith("topic") ? esc(term.label) : `search term “${esc(term.term)}”`}` : ""}</p>
     </div>
     ${c.photo_credit ? `<p class="credit">Photo: <a href="${esc(c.photo_credit)}">Wikimedia Commons</a></p>` : ""}`;
   const dlg = $("#coupleDialog");
   dlg.showModal();
   $(".d-close", dlg).onclick = () => dlg.close();
-  const { dates, series } = D.trends.daily;
-  if (series[name]) {
-    const idx = Object.fromEntries(dates.map((d, i) => [d, i]));
-    const step = Math.max(1, Math.round(dates.length / 5));
-    lineChart($("#dialogChart"), {
-      label: `Search interest for ${c.name}`, height: 170, margin: { l: 32, r: 12 },
-      x: { domain: [0, dates.length - 1], ticks: dates.map((d, i) => ({ v: i, label: fmtDate(d) })).filter((_, i) => i % step === 0) },
-      y: { domain: [0, Math.max(...series[name]) * 1.08 || 1], ticks: niceTicks(0, Math.max(...series[name]) || 1, 3) },
-      series: [{ id: name, color: "var(--gold)", pts: series[name].map((v, i) => ({ x: i, y: v, date: dates[i] })) }],
-      events: M.weeks.map(w => w.airdates[0]).filter(d => d in idx).map((d, i) => ({ x: idx[d], label: `W${i + 1}` })),
-      tooltip: (_, p) => `<div class="tt-row"><span>${fmtDate(p.date, { weekday: "short", month: "short", day: "numeric" })}</span><b>${p.y.toFixed(1)}</b></div>`,
-    });
-  }
 }
 
 /* ------------------------------------------------------------------ events */
@@ -886,7 +760,7 @@ function segBind(id, key, after) {
 function bind() {
   segBind("#metricSeg", "metric", renderScoreChart);
   segBind("#sortSeg", "sort", renderCards);
-  segBind("#shareSeg", "shareWeek", renderShare);
+  segBind("#ytSeg", "ytWeek", renderYouTube);
 
   for (const id of ["#pinChips", "#pinChips2"]) {
     $(id).addEventListener("click", e => {
@@ -903,15 +777,12 @@ function bind() {
   let raf = 0;
   const resim = () => {
     cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => { runSim(); renderSim(); renderBacktest(); renderStats(); renderCards(); });
+    raf = requestAnimationFrame(() => { runSim(); renderSim(); renderStats(); renderCards(); });
   };
-  $("#weight").addEventListener("input", e => { state.weight = +e.target.value; store.set("dwts-weight-v2", state.weight); resim(); });
+  $("#jw").addEventListener("input", e => { state.jw = +e.target.value; store.set("dwts-jw", state.jw); resim(); });
   $("#recency").addEventListener("input", e => { state.recency = +e.target.value; resim(); });
   $("#finalists").addEventListener("change", e => { state.finalists = +e.target.value; resim(); });
   $("#sims").addEventListener("change", e => { state.sims = +e.target.value; resim(); });
-  $("#damp").addEventListener("change", e => { state.damp = +e.target.value; resim(); });
-  $("#shrink").addEventListener("change", e => { state.shrink = +e.target.value; resim(); });
-  $("#blend").addEventListener("input", e => { state.blend = +e.target.value; resim(); });
 
   $("#themeToggle").addEventListener("click", () => {
     const root = document.documentElement;
@@ -928,7 +799,7 @@ function bind() {
     if (innerWidth === lastW) return;
     lastW = innerWidth;
     clearTimeout(rt);
-    rt = setTimeout(() => { renderScoreChart(); renderBuzzChart(); renderBacktest(); }, 120);
+    rt = setTimeout(() => { renderScoreChart(); renderYouTube(); }, 120);
   });
 
   // Scroll-spy for the section tabs.

@@ -319,7 +319,7 @@ input[type="range"] { width: 100%; accent-color: var(--gold); height: 28px; }
 .sim-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: start; }
 .side-col .card { margin-bottom: 16px; }
 .sim-table { display: flex; flex-direction: column; }
-.sim-head, .sim-row { display: grid; grid-template-columns: 24px minmax(120px, 1.2fr) minmax(0, 1.4fr) 62px 62px 56px 54px; gap: 10px; align-items: center; }
+.sim-head, .sim-row { display: grid; grid-template-columns: 24px minmax(120px, 1.2fr) minmax(0, 1.6fr) 62px 56px; gap: 10px; align-items: center; }
 .sim-row .sub-col, .sim-head .sub-col { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
 .sim-head .sub-col { color: var(--muted); }
 .vote-bars { display: flex; flex-direction: column; gap: 6px; }
@@ -415,9 +415,9 @@ table.dances .theme { color: var(--muted); font-size: 12px; }
 @media (max-width: 560px) {
   .wrap { padding-inline: 16px; }
   .stat .v { font-size: 21px; }
-  .sim-head, .sim-row { grid-template-columns: 18px minmax(0, 1.7fr) 52px 44px 44px; gap: 8px; }
+  .sim-head, .sim-row { grid-template-columns: 18px minmax(0, 1.7fr) 56px 48px; gap: 8px; }
   .sim-row .who .avatar { --size: 24px; }
-  .sim-head .fin, .sim-row .fin, .simple-col { display: none; }
+  .sim-head .fin, .sim-row .fin { display: none; }
   .cellbar .bar-track { display: none; }
   .bar-row { grid-template-columns: minmax(0, 1fr) 1fr 46px; }
   .d-hero { grid-template-columns: 96px 1fr; gap: 12px; }

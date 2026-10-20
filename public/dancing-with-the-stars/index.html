@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ballroom Tracker · DWTS Season 35</title>
-<meta name="description" content="Dancing with the Stars season 35: every judges' score, Google search buzz, and a weighted win simulator.">
+<meta name="description" content="Dancing with the Stars season 35: every judges' score, fan votes inferred from eliminations, YouTube views, and a win simulator.">
 <script>
   // Match tannerjallen.com's theme preference before first paint.
   (function () {
@@ -30,7 +30,7 @@
     </div>
     <p class="eyebrow">Dancing with the Stars · Season <span id="seasonNo">35</span></p>
     <h1>Ballroom <em>Tracker</em></h1>
-    <p class="lede">Every judges' score, each celebrity's Google search buzz, and a simulator that weighs the two to find the likeliest Mirrorball champion.</p>
+    <p class="lede">Every judges' score, each couple's fan vote (worked out from who has gone home), and a simulator that plays out the rest of the season to find the likeliest Mirrorball champion.</p>
     <div class="stats" id="stats"></div>
   </div>
 </header>
@@ -39,7 +39,7 @@
   <div class="wrap tabs-inner">
     <a href="#scores" class="active">Scores</a>
     <a href="#couples">Couples</a>
-    <a href="#buzz">Search buzz</a>
+    <a href="#youtube" id="ytTab" hidden>YouTube</a>
     <a href="#simulator">Simulator</a>
     <a href="#data">Data</a>
   </div>
@@ -82,31 +82,31 @@
       </div>
       <div class="seg" role="radiogroup" aria-label="Sort couples" id="sortSeg">
         <button role="radio" data-v="avg" aria-checked="true">Avg score</button>
-        <button role="radio" data-v="buzz" aria-checked="false">Buzz</button>
+        <button role="radio" data-v="votes" aria-checked="false">Fan vote</button>
         <button role="radio" data-v="win" aria-checked="false">Win %</button>
       </div>
     </div>
     <div class="cards" id="cards"></div>
   </section>
 
-  <section id="buzz" class="section">
+  <section id="youtube" class="section" hidden>
     <div class="section-head">
       <div>
-        <h2>Search buzz</h2>
-        <p class="sub" id="buzzSub">Daily Google search interest in the US.</p>
+        <h2>YouTube views</h2>
+        <p class="sub" id="ytSub"></p>
       </div>
     </div>
     <div class="card chart-card">
       <div class="chips" id="pinChips2"></div>
-      <div class="chart" id="buzzChart"></div>
-      <p class="foot">Relative interest on one scale (all terms anchored to a shared reference term). Vertical rules mark episode nights.</p>
+      <div class="chart" id="ytChart"></div>
+      <p class="foot">Average views per performance video. Older videos have had more time to collect views, so compare couples within a week. Shown for context; not yet used by the model (see the README).</p>
     </div>
     <div class="card">
       <div class="card-head">
-        <h3 id="shareTitle">Share of search during the voting window</h3>
-        <div class="seg small" role="radiogroup" aria-label="Buzz window" id="shareSeg"></div>
+        <h3>Share of the week's views</h3>
+        <div class="seg small" role="radiogroup" aria-label="Week" id="ytSeg"></div>
       </div>
-      <div id="shareBars" class="bars"></div>
+      <div id="ytBars" class="bars"></div>
     </div>
   </section>
 
@@ -114,26 +114,19 @@
     <div class="section-head">
       <div>
         <h2>Win simulator</h2>
-        <p class="sub">Combine judges' scores with fan votes (inferred from eliminations, or estimated from search buzz) and play out the rest of the season.</p>
+        <p class="sub">Combine judges' scores with fan votes inferred from eliminations, then play out the rest of the season.</p>
       </div>
     </div>
 
     <div class="card sim-controls">
-      <div class="weight" id="blendWrap">
-        <div class="weight-labels">
-          <span><b id="bVotes">50%</b> votes model</span>
-          <span><b id="bBuzz">50%</b> buzz model</span>
-        </div>
-        <input type="range" id="blend" min="0" max="100" step="5" value="50" aria-label="Share of odds from the inferred-votes model">
-        <p class="hint">The <b>votes model</b> infers each couple's fan vote from who has actually gone home. The <b>buzz model</b> uses judges' scores plus Google search, weighted by the slider below. On seasons 30–34 an even blend predicted best.</p>
-      </div>
       <div class="weight">
         <div class="weight-labels">
-          <span><b id="wJudges">90%</b> judges' scores</span>
-          <span><b id="wBuzz">10%</b> search buzz</span>
+          <span><b id="wJudges">50%</b> judges' scores</span>
+          <span><b id="wVotes">50%</b> fan votes</span>
         </div>
-        <input type="range" id="weight" min="0" max="100" step="5" value="90" aria-label="Weight on judges' scores">
-        <p class="hint">Buzz model only. On the show, judges' scores and votes each count 50%, but Google search is a weak stand-in for votes. On past seasons this model did best at about 90% judges.</p>
+        <input type="range" id="jw" min="40" max="70" step="10" value="50" list="jwStops" aria-label="Judges' weight in the combined score">
+        <datalist id="jwStops"><option value="40"></option><option value="50" label="Official rule"></option><option value="60"></option><option value="70"></option></datalist>
+        <p class="hint">Officially, judges' scores and viewer votes count equally (50%), so that's the default. Results from seasons 30–34 fit about equally well anywhere from 40% to 70%. Each setting re-estimates the fan votes to match.</p>
       </div>
       <details class="advanced">
         <summary>Model settings</summary>
@@ -144,21 +137,6 @@
           <label>Recent weeks matter
             <input type="range" id="recency" min="0" max="100" value="40" aria-label="Recency emphasis">
             <span class="hint-inline"><span>all weeks equally</span><span>mostly latest</span></span>
-          </label>
-          <label>Search → votes
-            <select id="damp">
-              <option value="1">Linear (2× searches = 2× votes)</option>
-              <option value="0.5" selected>Dampened (√, default)</option>
-              <option value="0.25">Strongly dampened</option>
-            </select>
-          </label>
-          <label>Hedge toward even odds
-            <select id="shrink">
-              <option value="0" selected>None</option>
-              <option value="0.2">20%</option>
-              <option value="0.4">40%</option>
-              <option value="0.6">60%</option>
-            </select>
           </label>
           <label>Simulations
             <select id="sims"><option value="2000">2,000</option><option value="10000" selected>10,000</option><option value="30000">30,000</option></select>
@@ -175,23 +153,17 @@
           <span class="muted small-text" id="simNote"></span>
         </div>
         <div class="sim-table" id="simTable"></div>
-        <p class="foot"><b>Win odds</b> blend the two Monte Carlo models, which play out thousands of seasons week by week with the lowest combined score going home. <b>Votes model</b>: fan votes inferred from eliminations. <b>Buzz model</b>: judges' scores plus search buzz. <b>Simple</b>: one weighted score per couple, turned into odds with nothing played out.</p>
+        <p class="foot"><b>Monte Carlo</b>: plays out thousands of seasons week by week, drawing each couple's fan vote from what the eliminations imply and its judges' scores from its record, with the lowest combined score going home. <b>Simple</b>: one weighted score per couple, turned into odds with nothing played out.</p>
       </div>
       <div class="side-col">
         <div class="card" id="votesCard" hidden>
-          <h3>Inferred fan vote</h3>
+          <h3 id="votesTitle">Inferred fan vote</h3>
           <div id="votesBars" class="vote-bars"></div>
           <p class="foot" id="votesNote"></p>
         </div>
         <div class="card">
           <h3>In danger next week</h3>
           <div id="danger"></div>
-        </div>
-        <div class="card">
-          <h3>This season: buzz-model eliminations</h3>
-          <p class="sub tight" id="backtestLine"></p>
-          <div class="chart small-chart" id="backtestChart"></div>
-          <div id="backtestWeeks" class="bt-weeks"></div>
         </div>
       </div>
     </div>
@@ -207,9 +179,8 @@
     </div>
     <div class="card data-card">
       <ul class="downloads">
-        <li><a href="data.json">data.json</a><span>Everything on this page: cast, per-dance judges' marks, daily search interest</span></li>
+        <li><a href="data.json">data.json</a><span>Everything on this page: cast, per-dance judges' marks, inferred fan votes</span></li>
         <li><a href="scores.csv">scores.csv</a><span>One row per dance: week, celebrity, dance style, score, individual judges' marks</span></li>
-        <li><a href="trends_weekly.csv">trends_weekly.csv</a><span>Search interest and share of the remaining field in each voting window</span></li>
       </ul>
       <p class="foot" id="sources"></p>
     </div>
