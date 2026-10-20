@@ -22,7 +22,8 @@ const state = {
   finalists: 4,
   recency: 40,
   damp: 0.5,        // vote share ∝ search share ^ damp
-  shrink: 0.4,      // hedge win odds toward even (backtest: past models were overconfident)
+  shrink: 0,        // optional hedge of win odds toward even
+  blend: 50,        // % of win odds from the inferred-votes model (backtested 50/50)
   sims: 10000,
   shareWeek: null,
 };
@@ -322,7 +323,7 @@ function renderStats() {
       `<span class="avatars">${tops.map(c => avatar(c, 30)).join("")}</span>${ws.top}<small>/ ${ws.max}</small>`,
       tops.map(c => esc(c.couple)).join(", ")),
     tile("Model favorite", `${avatar(fav.c, 30)}${pct(fav.win)}`,
-      `${esc(fav.c.couple)} · at ${state.weight}% judges`),
+      `${esc(fav.c.couple)} · blended model`),
   ].join("");
 }
 
@@ -606,38 +607,111 @@ function runSim() {
       }
     }
   }
-  const rows = list.map((s, i) => ({
-    c: s.c, J: s.J, T: Math.exp(s.LT), comp: comp[i],
-    win: sims ? hedge(wins[i] / sims) : 0, simple: hedge(ex[i] / exS),
-    finale: sims ? finals[i] / sims : 0, outNext: sims ? outNext[i] / sims : 0,
-  })).sort((a, b) => b.win - a.win || b.simple - a.simple);
-  SIM = { rows, byName: Object.fromEntries(rows.map(r => [r.c.name, r])), sched, sdJ, sdB };
+  // Inferred-votes model: fan strength fitted to who has actually gone home
+  // (pipeline/votes.py), combined with judges' scores by the show's 50/50 rule.
+  const V = D.votes;
+  const vIdx = list.map(s => (V ? V.alive.indexOf(s.c.name) : -1));
+  const haveV = !!V && vIdx.every(i => i >= 0) && V.alive.length === N;
+  const winsV = new Float64Array(N), finalsV = new Float64Array(N), outNextV = new Float64Array(N);
+  if (haveV && sims) {
+    const m = V.alive.length, z = new Float64Array(m), th = new Float64Array(N), ev = new Float64Array(N), cv = new Float64Array(N);
+    const gumbel = () => { let u = 0; while (u === 0) u = rand(); return -Math.log(-Math.log(u)); };
+    for (let s = 0; s < sims; s++) {
+      for (let k = 0; k < m; k++) z[k] = gauss();
+      for (let i = 0; i < N; i++) {
+        const a = vIdx[i], row = V.chol[a];
+        let t = V.mean[a];
+        for (let k = 0; k <= a; k++) t += row[k] * z[k];
+        th[i] = t;
+        J[i] = list[i].J + gauss() * sdJ * 0.75;
+      }
+      let alive = [...Array(N).keys()];
+      for (let wi = 0; wi < sched.length; wi++) {
+        const na = alive.length;
+        let sj = 0, sv = 0, mx = -Infinity;
+        for (const i of alive) { cj[i] = Math.max(0.05, J[i] + gauss() * sdJ); sj += cj[i]; mx = Math.max(mx, th[i]); }
+        for (const i of alive) { ev[i] = Math.exp(th[i] - mx); sv += ev[i]; }
+        for (const i of alive) cv[i] = 0.5 * (cj[i] / sj) * na + 0.5 * (ev[i] / sv) * na;
+        if (sched[wi].finale) {
+          let best = alive[0], bv = -Infinity;
+          for (const i of alive) { finalsV[i]++; const x = cv[i] + V.tau * gumbel(); if (x > bv) { bv = x; best = i; } }
+          winsV[best]++;
+        } else if (sched[wi].out) {
+          for (const i of alive) cc[i] = cv[i] - V.tau * gumbel();
+          alive.sort((a, b) => cc[a] - cc[b]);
+          const gone = alive.splice(0, sched[wi].out);
+          if (wi === 0) for (const i of gone) outNextV[i]++;
+        }
+      }
+    }
+  }
+  const lam = haveV ? state.blend / 100 : 0;
+  const mix = (v, b) => lam * v + (1 - lam) * b;
+  const rows = list.map((s, i) => {
+    const buzzWin = sims ? wins[i] / sims : 0, voteWin = haveV && sims ? winsV[i] / sims : null;
+    return {
+      c: s.c, J: s.J, T: Math.exp(s.LT), comp: comp[i],
+      buzzWin: hedge(buzzWin), voteWin: voteWin == null ? null : hedge(voteWin),
+      win: hedge(mix(voteWin ?? 0, buzzWin)), simple: hedge(ex[i] / exS),
+      finale: sims ? mix(finalsV[i] / sims, finals[i] / sims) : 0,
+      outNext: sims ? mix(outNextV[i] / sims, outNext[i] / sims) : 0,
+      vote: haveV ? V.share[s.c.name] : null,
+    };
+  }).sort((a, b) => b.win - a.win || b.simple - a.simple);
+  SIM = { rows, byName: Object.fromEntries(rows.map(r => [r.c.name, r])), sched, sdJ, sdB, haveV };
 }
 
 function renderSim() {
   $("#wJudges").textContent = `${state.weight}%`;
   $("#wBuzz").textContent = `${100 - state.weight}%`;
+  $("#bVotes").textContent = `${state.blend}%`;
+  $("#bBuzz").textContent = `${100 - state.blend}%`;
+  $("#blendWrap").hidden = !SIM.haveV;
   const sched = SIM.sched;
   $("#schedule").textContent = sched.length
     ? "Assumed schedule: " + sched.map(s => s.finale ? `Finale ${fmtDate(s.date)} (${Math.min(state.finalists, M.remaining.length)} couples)` : `Wk ${s.week} ${fmtDate(s.date)}: ${s.out} out`).join(" · ")
     : "The season is over.";
   $("#simNote").textContent = `${state.sims.toLocaleString()} simulated seasons`;
-  const maxWin = Math.max(...SIM.rows.map(r => r.win), 0.01), maxSimple = Math.max(...SIM.rows.map(r => r.simple), 0.01);
+  const maxWin = Math.max(...SIM.rows.map(r => r.win), 0.01);
+  const num = v => (v == null ? "–" : pct(v, v < 0.1 ? 1 : 0));
   $("#simTable").innerHTML =
-    `<div class="sim-head"><span></span><span>Couple</span><span>Win · Monte Carlo</span><span>Win · Simple</span><span class="fin">Finale</span></div>` +
+    `<div class="sim-head"><span></span><span>Couple</span><span>Win odds</span><span class="sub-col" title="Monte Carlo with fan votes inferred from eliminations">Votes model</span><span class="sub-col" title="Monte Carlo with judges + search buzz (slider)">Buzz model</span><span class="sub-col simple-col" title="One weighted score per couple, no simulation">Simple</span><span class="fin">Finale</span></div>` +
     SIM.rows.map((r, i) => `<div class="sim-row ${i === 0 ? "leader" : ""}">
       <span class="rk">${i + 1}</span>
       <span class="who" data-name="${esc(r.c.name)}">${avatar(r.c, 30)}<span>${esc(r.c.couple)}${i === 0 ? ` <span class="crown" aria-label="favorite">♛</span>` : ""}</span></span>
       <span class="cellbar"><span class="bar-track"><span class="bar-fill" style="display:block;width:${(r.win / maxWin) * 100}%"></span></span><b>${pct(r.win, r.win < 0.1 ? 1 : 0)}</b></span>
-      <span class="cellbar"><span class="bar-track"><span class="bar-fill alt" style="display:block;width:${(r.simple / maxSimple) * 100}%"></span></span><b>${pct(r.simple, r.simple < 0.1 ? 1 : 0)}</b></span>
+      <span class="sub-col">${num(r.voteWin)}</span><span class="sub-col">${num(r.buzzWin)}</span><span class="sub-col simple-col">${num(r.simple)}</span>
       <span class="fin">${pct(r.finale)}</span></div>`).join("");
 
+  renderVotes();
   const next = sched[0];
   const danger = [...SIM.rows].sort((a, b) => b.outNext - a.outNext).slice(0, 4);
   $("#danger").innerHTML = next && next.out
     ? `<p class="sub tight">Week ${next.week} · ${esc(next.theme)} · ${fmtDate(next.date, { weekday: "short", month: "short", day: "numeric" })}</p>` +
       danger.map(r => `<div class="danger-row">${avatar(r.c, 30)}<span class="nm">${esc(r.c.couple)}</span><b>${pct(r.outNext)}</b></div>`).join("")
     : `<p class="sub tight">${next ? "No elimination expected next week." : "Season complete."}</p>`;
+}
+
+function renderVotes() {
+  const el = $("#votesCard");
+  if (!SIM.haveV) { el.hidden = true; return; }
+  el.hidden = false;
+  const rows = [...SIM.rows].sort((a, b) => b.vote.p50 - a.vote.p50);
+  // Dot-and-range plot, so the axis needn't start at zero: zoom to the spread.
+  const even = 1 / rows.length;
+  const lo0 = Math.min(even, ...rows.map(r => r.vote.p10)) * 0.9, hi0 = Math.max(even, ...rows.map(r => r.vote.p90)) * 1.05;
+  const pos = x => ((x - lo0) / (hi0 - lo0)) * 100;
+  $("#votesBars").innerHTML = rows.map(r => {
+    const v = r.vote;
+    return `<div class="vote-row"><span class="who">${avatar(r.c, 24)}<span>${esc(r.c.couple)}</span></span>
+      <span class="range" title="80% range ${pct(v.p10, 1)}–${pct(v.p90, 1)}">
+        <i class="even" style="left:${pos(even)}%"></i>
+        <i class="span" style="left:${pos(v.p10)}%;width:${pos(v.p90) - pos(v.p10)}%"></i>
+        <i class="mid" style="left:${pos(v.p50)}%"></i></span>
+      <b>${pct(v.p50, 1)}</b></div>`;
+  }).join("");
+  const rounds = D.votes.rounds.length;
+  $("#votesNote").textContent = `Estimated from ${rounds} elimination${rounds === 1 ? "" : "s"}: a couple that survives low judges' scores must be getting votes. Bars show the 80% range; the tick marks an even split. Front-runners who have never been near the bottom stay close to even, because their votes haven't been tested yet.`;
 }
 
 /** Given each week's real scores + buzz, who would this weighting have sent home? */
@@ -690,7 +764,7 @@ function renderBacktest() {
 function renderTested() {
   const bt = D.backtest, el = $("#tested");
   if (!bt) { el.hidden = true; return; }
-  const c = bt.config;
+  const c = bt.model;
   const tile = (k, v, d) => `<div class="m"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`;
   const W = 220, H = 46, hi = 0.6;
   const spark = path => {
@@ -719,9 +793,9 @@ function renderTested() {
       }).join("")}
     </div>
     <p class="foot">Gold line: the chance the model gave each season's eventual winner, week by week; gray: even odds.
-      Settings used: ${Math.round(c.w * 100)}% judges, √-dampened buzz, ${Math.round(c.shrink * 100)}% hedge toward even odds (today's defaults).
-      <b>Caveat:</b> five seasons is a small sample. When tuned on four seasons and scored on the fifth, the model did no better than even odds,
-      mainly because of upset winners: Iman Shumpert (S30) and Joey Graziadei (S33, the lowest search buzz of his finalists) won on fan votes the data doesn't capture.</p>`;
+      Model: today's defaults, a ${Math.round(c.blend * 100)}/${100 - Math.round(c.blend * 100)} blend of the votes model and the buzz model (${Math.round(c.buzz.w * 100)}% judges).
+      <b>Caveat:</b> five seasons is a small sample. Tuned on four seasons and scored on the fifth, the blend only just beat even odds
+      (log-loss ${bt.heldout_logloss} vs ${bt.uniform_logloss}). Upset winners like Iman Shumpert (S30) still catch it out.</p>`;
 }
 
 function rangeText(xs) {
@@ -837,6 +911,7 @@ function bind() {
   $("#sims").addEventListener("change", e => { state.sims = +e.target.value; resim(); });
   $("#damp").addEventListener("change", e => { state.damp = +e.target.value; resim(); });
   $("#shrink").addEventListener("change", e => { state.shrink = +e.target.value; resim(); });
+  $("#blend").addEventListener("input", e => { state.blend = +e.target.value; resim(); });
 
   $("#themeToggle").addEventListener("click", () => {
     const root = document.documentElement;

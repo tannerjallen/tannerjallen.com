@@ -114,18 +114,26 @@
     <div class="section-head">
       <div>
         <h2>Win simulator</h2>
-        <p class="sub">Blend judges' scores with search buzz (a stand-in for fan votes) and play out the rest of the season.</p>
+        <p class="sub">Combine judges' scores with fan votes (inferred from eliminations, or estimated from search buzz) and play out the rest of the season.</p>
       </div>
     </div>
 
     <div class="card sim-controls">
+      <div class="weight" id="blendWrap">
+        <div class="weight-labels">
+          <span><b id="bVotes">50%</b> votes model</span>
+          <span><b id="bBuzz">50%</b> buzz model</span>
+        </div>
+        <input type="range" id="blend" min="0" max="100" step="5" value="50" aria-label="Share of odds from the inferred-votes model">
+        <p class="hint">The <b>votes model</b> infers each couple's fan vote from who has actually gone home. The <b>buzz model</b> uses judges' scores plus Google search, weighted by the slider below. On seasons 30–34 an even blend predicted best.</p>
+      </div>
       <div class="weight">
         <div class="weight-labels">
           <span><b id="wJudges">90%</b> judges' scores</span>
           <span><b id="wBuzz">10%</b> search buzz</span>
         </div>
         <input type="range" id="weight" min="0" max="100" step="5" value="90" aria-label="Weight on judges' scores">
-        <p class="hint">On the show, judges' scores and viewer votes each count 50%, but Google search is a weak stand-in for votes. On past seasons the model predicted best at about 90% judges, so that's the default.</p>
+        <p class="hint">Buzz model only. On the show, judges' scores and votes each count 50%, but Google search is a weak stand-in for votes. On past seasons this model did best at about 90% judges.</p>
       </div>
       <details class="advanced">
         <summary>Model settings</summary>
@@ -146,9 +154,9 @@
           </label>
           <label>Hedge toward even odds
             <select id="shrink">
-              <option value="0">None</option>
+              <option value="0" selected>None</option>
               <option value="0.2">20%</option>
-              <option value="0.4" selected>40% (backtested)</option>
+              <option value="0.4">40%</option>
               <option value="0.6">60%</option>
             </select>
           </label>
@@ -167,15 +175,20 @@
           <span class="muted small-text" id="simNote"></span>
         </div>
         <div class="sim-table" id="simTable"></div>
-        <p class="foot"><b>Monte Carlo</b>: thousands of seasons are played out week by week with realistic noise, and the lowest combined score goes home each week. <b>Simple</b>: one weighted strength score per couple, turned into odds. No randomness, nothing played out.</p>
+        <p class="foot"><b>Win odds</b> blend the two Monte Carlo models, which play out thousands of seasons week by week with the lowest combined score going home. <b>Votes model</b>: fan votes inferred from eliminations. <b>Buzz model</b>: judges' scores plus search buzz. <b>Simple</b>: one weighted score per couple, turned into odds with nothing played out.</p>
       </div>
       <div class="side-col">
+        <div class="card" id="votesCard" hidden>
+          <h3>Inferred fan vote</h3>
+          <div id="votesBars" class="vote-bars"></div>
+          <p class="foot" id="votesNote"></p>
+        </div>
         <div class="card">
           <h3>In danger next week</h3>
           <div id="danger"></div>
         </div>
         <div class="card">
-          <h3>Backtest</h3>
+          <h3>This season: buzz-model eliminations</h3>
           <p class="sub tight" id="backtestLine"></p>
           <div class="chart small-chart" id="backtestChart"></div>
           <div id="backtestWeeks" class="bt-weeks"></div>
