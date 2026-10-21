@@ -20,6 +20,7 @@ const state = {
   pins: {},          // name -> slot index (color follows the couple, not its rank)
   jw: 50,            // judges' weight in the combined score (%); the show's rule
   useYt: false,      // experimental: YouTube views as a hint for fan votes
+  usePr: false,      // experimental: pro-partner & celebrity-type hint learned from S17-34
   finalists: 4,
   recency: 40,
   sims: 10000,
@@ -547,7 +548,7 @@ function schedule() {
 }
 
 /** The fan-vote fit for the chosen judges' weight (precomputed by pipeline/live.py). */
-const voteFit = () => D.votes?.fits[String(state.jw / 100) + (state.useYt ? "|yt" : "")] ?? D.votes?.fits[String(state.jw / 100)];
+const voteFit = () => D.votes?.fits[String(state.jw / 100) + (state.useYt ? "|yt" : "") + (state.usePr ? "|pr" : "")] ?? D.votes?.fits[String(state.jw / 100)];
 
 function runSim() {
   const jw = state.jw / 100;
@@ -628,6 +629,7 @@ function renderSim() {
   $("#wJudges").textContent = `${state.jw}%`;
   $("#wVotes").textContent = `${100 - state.jw}%`;
   $("#ytToggle").hidden = !D.votes?.alpha_yt;
+  $("#prToggle").hidden = !D.votes?.prior;
   const sched = SIM.sched;
   $("#schedule").textContent = sched.length
     ? "Assumed schedule: " + sched.map((s, i) => s.finale ? `Finale ${fmtDate(s.date)} (${Math.min(state.finalists, M.remaining.length)} couples)` : `Wk ${s.week} ${fmtDate(s.date)}: ${s.out} out${i === 0 && M.carry ? ` (scores combined with week ${M.lastWeek})` : ""}`).join(" · ")
@@ -701,7 +703,7 @@ function renderVotes() {
       <b>${pct(v.p50, 1)}</b></div>`;
   }).join("");
   const rounds = D.votes.rounds.length;
-  $("#votesTitle").textContent = `Inferred fan vote · at ${state.jw}% judges${state.useYt ? " + YouTube hint" : ""}`;
+  $("#votesTitle").textContent = `Inferred fan vote · at ${state.jw}% judges${state.useYt ? " + YouTube" : ""}${state.usePr ? " + pro/type" : ""}`;
   $("#votesNote").textContent = `Estimated from ${rounds} elimination${rounds === 1 ? "" : "s"}: a couple that survives low judges' scores must be getting votes. Bars show the 80% range; the tick marks an even split. Front-runners who have never been near the bottom stay close to even, because their votes haven't been tested yet.`;
 }
 
@@ -825,6 +827,7 @@ function bind() {
   };
   $("#jw").addEventListener("input", e => { state.jw = +e.target.value; store.set("dwts-jw", state.jw); resim(); });
   $("#useYt").addEventListener("change", e => { state.useYt = e.target.checked; resim(); });
+  $("#usePr").addEventListener("change", e => { state.usePr = e.target.checked; resim(); });
   $("#recency").addEventListener("input", e => { state.recency = +e.target.value; resim(); });
   $("#finalists").addEventListener("change", e => { state.finalists = +e.target.value; resim(); });
   $("#sims").addEventListener("change", e => { state.sims = +e.target.value; resim(); });

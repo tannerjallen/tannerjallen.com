@@ -127,6 +127,7 @@
         <input type="range" id="jw" min="40" max="70" step="10" value="50" list="jwStops" aria-label="Judges' weight in the combined score">
         <datalist id="jwStops"><option value="40"></option><option value="50" label="Official rule"></option><option value="60"></option><option value="70"></option></datalist>
         <p class="hint">Officially, judges' scores and viewer votes count equally (50%), so that's the default. Results from seasons 30–34 fit about equally well anywhere from 40% to 70%. Each setting re-estimates the fan votes to match.</p>
+        <label class="toggle" id="prToggle" hidden><input type="checkbox" id="usePr"> <span><b>Experimental:</b> start each couple's fan vote from what similar couples drew in seasons 17–34 (mainly the pro partner: Daniella, Derek and Lindsay couples pull more votes; Keo, Pasha and Gleb couples fewer). Helped in 11 of 18 past seasons, but not reliably.</span></label>
         <label class="toggle" id="ytToggle" hidden><input type="checkbox" id="useYt"> <span><b>Experimental:</b> use YouTube views as a hint for fan votes. Tested on one season only (S34), where it slightly improved elimination calls.</span></label>
       </div>
       <details class="advanced">
