@@ -1398,17 +1398,202 @@
     "Kym Johnson",
     "Bruno Tonioli"
    ],
+   "scores": {
+    "Tatyana Ali": {
+     "total": 32,
+     "max": 40,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Viennese waltz",
+       "night": 1
+      }
+     ]
+    },
+    "Tyler Cameron": {
+     "total": 32,
+     "max": 40,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Jenna Dewan": {
+     "total": 37,
+     "max": 40,
+     "dances": [
+      {
+       "score": 37,
+       "marks": [
+        10,
+        9,
+        9,
+        9
+       ],
+       "dance": "Viennese waltz",
+       "night": 1
+      }
+     ]
+    },
+    "Ezra Frech": {
+     "total": 37,
+     "max": 40,
+     "dances": [
+      {
+       "score": 37,
+       "marks": [
+        9,
+        9,
+        10,
+        9
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Amber Glenn": {
+     "total": 38,
+     "max": 40,
+     "dances": [
+      {
+       "score": 38,
+       "marks": [
+        10,
+        9,
+        10,
+        9
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Maura Higgins": {
+     "total": 35,
+     "max": 40,
+     "dances": [
+      {
+       "score": 35,
+       "marks": [
+        8,
+        9,
+        9,
+        9
+       ],
+       "dance": "Paso doble",
+       "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
+     "total": 32,
+     "max": 40,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Quickstep",
+       "night": 1
+      }
+     ]
+    },
+    "Harry Shum Jr.": {
+     "total": 36,
+     "max": 40,
+     "dances": [
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Foxtrot",
+       "night": 1
+      }
+     ]
+    },
+    "Julia Stiles": {
+     "total": 36,
+     "max": 40,
+     "dances": [
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Connor Wood": {
+     "total": 32,
+     "max": 40,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Viennese waltz",
+       "night": 1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "week": 7,
+   "theme": "Horror Movie Night",
+   "airdates": [
+    "2026-10-27"
+   ],
+   "judges": [
+    "Carrie Ann Inaba",
+    "Derek Hough",
+    "Shirley Ballas",
+    "Bruno Tonioli"
+   ],
    "scores": {}
   }
  ],
  "season": 35,
- "finalists": 4,
- "updated": "2026-10-19T22:46",
+ "finalists": 5,
+ "updated": "2026-10-20T22:07",
  "source": "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35",
  "youtube": {
-  "fetched": "2026-10-19T22:46",
+  "fetched": "2026-10-20T22:07",
   "matched": 66,
-  "performances": 66,
+  "performances": 76,
   "videos": [
    {
     "season": 35,
@@ -1419,7 +1604,7 @@
     "id": "2xsu68W-rsM",
     "title": "Conner Leavitt\u2019s Premiere Night Salsa | Dancing with the Stars",
     "published": "2026-09-16T05:00:00Z",
-    "views": 258473,
+    "views": 259017,
     "likes": 785,
     "comments": 182,
     "seconds": 81
@@ -1433,8 +1618,8 @@
     "id": "WEhWgrxzVcQ",
     "title": "Sarah Jane Nader\u2019s Premiere Night Jive | Dancing with the Stars",
     "published": "2026-09-17T03:00:29Z",
-    "views": 210097,
-    "likes": 1028,
+    "views": 210594,
+    "likes": 1029,
     "comments": 174,
     "seconds": 82
    },
@@ -1447,8 +1632,8 @@
     "id": "__IxvZ6NJO0",
     "title": "Giada De Laurentiis\u2019 Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-17T03:00:15Z",
-    "views": 215128,
-    "likes": 1123,
+    "views": 215595,
+    "likes": 1124,
     "comments": 86,
     "seconds": 80
    },
@@ -1461,8 +1646,8 @@
     "id": "J842WqUtiDI",
     "title": "Taylor Hanson\u2019s Premiere Night Quickstep | Dancing with the Stars",
     "published": "2026-09-16T05:00:35Z",
-    "views": 217652,
-    "likes": 2055,
+    "views": 218076,
+    "likes": 2056,
     "comments": 182,
     "seconds": 82
    },
@@ -1475,7 +1660,7 @@
     "id": "qqTTfgzWYOY",
     "title": "Ciara Miller\u2019s Premiere Night Foxtrot | Dancing with the Stars",
     "published": "2026-09-17T03:00:33Z",
-    "views": 174007,
+    "views": 174248,
     "likes": 1248,
     "comments": 90,
     "seconds": 85
@@ -1489,8 +1674,8 @@
     "id": "mwEbXVAyfyQ",
     "title": "Guillermo Rodriguez\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-16T05:00:20Z",
-    "views": 658052,
-    "likes": 4766,
+    "views": 658984,
+    "likes": 4770,
     "comments": 385,
     "seconds": 79
    },
@@ -1503,9 +1688,9 @@
     "id": "OmNBSb9wl_I",
     "title": "Tatyana Ali\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-17T03:00:25Z",
-    "views": 211477,
-    "likes": 1336,
-    "comments": 97,
+    "views": 212104,
+    "likes": 1343,
+    "comments": 98,
     "seconds": 81
    },
    {
@@ -1517,8 +1702,8 @@
     "id": "pvS5ZKWORCo",
     "title": "Tyler Cameron\u2019s Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-16T05:00:17Z",
-    "views": 161145,
-    "likes": 1179,
+    "views": 161461,
+    "likes": 1180,
     "comments": 77,
     "seconds": 82
    },
@@ -1531,9 +1716,9 @@
     "id": "Hn3RI1ZPOHk",
     "title": "Jenna Dewan\u2019s Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-17T05:00:33Z",
-    "views": 462556,
-    "likes": 3113,
-    "comments": 281,
+    "views": 463680,
+    "likes": 3120,
+    "comments": 282,
     "seconds": 86
    },
    {
@@ -1545,8 +1730,8 @@
     "id": "o8ZzfPoA1Ss",
     "title": "Ezra Frech\u2019s Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-16T05:00:06Z",
-    "views": 477764,
-    "likes": 3699,
+    "views": 479502,
+    "likes": 3708,
     "comments": 194,
     "seconds": 85
    },
@@ -1559,8 +1744,8 @@
     "id": "wE5scszton0",
     "title": "Amber Glenn\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-17T03:00:09Z",
-    "views": 311324,
-    "likes": 3227,
+    "views": 312175,
+    "likes": 3235,
     "comments": 212,
     "seconds": 83
    },
@@ -1573,8 +1758,8 @@
     "id": "bQrbxemvJ18",
     "title": "Maura Higgins\u2019 Premiere Night Foxtrot | Dancing with the Stars",
     "published": "2026-09-17T03:00:21Z",
-    "views": 575835,
-    "likes": 3571,
+    "views": 578089,
+    "likes": 3577,
     "comments": 266,
     "seconds": 89
    },
@@ -1587,8 +1772,8 @@
     "id": "6Lhnozic5iA",
     "title": "Jackson Olson\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-16T05:00:19Z",
-    "views": 269051,
-    "likes": 1764,
+    "views": 269713,
+    "likes": 1766,
     "comments": 86,
     "seconds": 85
    },
@@ -1601,8 +1786,8 @@
     "id": "LUuHIjk-8Dk",
     "title": "Harry Shum Jr.\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-16T05:00:32Z",
-    "views": 884586,
-    "likes": 6006,
+    "views": 886246,
+    "likes": 6015,
     "comments": 399,
     "seconds": 88
    },
@@ -1615,8 +1800,8 @@
     "id": "2IGlKTTc_pA",
     "title": "Julia Stiles\u2019 Premiere Night Quickstep | Dancing with the Stars",
     "published": "2026-09-17T05:00:14Z",
-    "views": 947121,
-    "likes": 4404,
+    "views": 952071,
+    "likes": 4423,
     "comments": 223,
     "seconds": 82
    },
@@ -1629,8 +1814,8 @@
     "id": "mOs3lxpFr6c",
     "title": "Connor Wood\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-16T05:00:15Z",
-    "views": 352832,
-    "likes": 2460,
+    "views": 353894,
+    "likes": 2464,
     "comments": 147,
     "seconds": 83
    },
@@ -1643,7 +1828,7 @@
     "id": "6X9yOAvLNhw",
     "title": "Giada De Laurentiis and Alan Bersten Viral Hits Night Salsa | Dancing with the Stars",
     "published": "2026-09-23T05:00:11Z",
-    "views": 210990,
+    "views": 211515,
     "likes": 591,
     "comments": 119,
     "seconds": 72
@@ -1657,8 +1842,8 @@
     "id": "Mtx38Rwe07o",
     "title": "Taylor Hanson and Britt Stewart\u2019s Viral Hits Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-23T05:00:35Z",
-    "views": 132861,
-    "likes": 1159,
+    "views": 133444,
+    "likes": 1162,
     "comments": 75,
     "seconds": 73
    },
@@ -1671,7 +1856,7 @@
     "id": "PVDjPC-UOtg",
     "title": "Ciara Miller and Brandon Armstrong Viral Hits Night Tango | Dancing with the Stars",
     "published": "2026-09-23T05:00:25Z",
-    "views": 125660,
+    "views": 125923,
     "likes": 913,
     "comments": 45,
     "seconds": 75
@@ -1685,8 +1870,8 @@
     "id": "P0EqbIw_ZXA",
     "title": "Guillermo Rodriguez and Witney Carson Viral Hits Night Paso Doble | Dancing with the Stars",
     "published": "2026-09-23T05:00:22Z",
-    "views": 1028539,
-    "likes": 11200,
+    "views": 1030101,
+    "likes": 11205,
     "comments": 929,
     "seconds": 76
    },
@@ -1699,9 +1884,9 @@
     "id": "sIplW9GSLdU",
     "title": "Tatyana Ali and Jan Ravnik Viral Hits Night Foxtrot | Dancing with the Stars",
     "published": "2026-09-23T05:00:34Z",
-    "views": 138484,
-    "likes": 1234,
-    "comments": 60,
+    "views": 139499,
+    "likes": 1241,
+    "comments": 61,
     "seconds": 79
    },
    {
@@ -1713,8 +1898,8 @@
     "id": "ILidSWBIoy0",
     "title": "Tyler Cameron and Sharna Burgess Viral Hits Night Salsa | Dancing with the Stars",
     "published": "2026-09-23T05:00:13Z",
-    "views": 226120,
-    "likes": 1200,
+    "views": 226919,
+    "likes": 1202,
     "comments": 136,
     "seconds": 81
    },
@@ -1727,8 +1912,8 @@
     "id": "1hwGpU_VVYg",
     "title": "Jenna Dewan and Val Chmerkovskiy Viral Hits Night Jive | Dancing with the Stars",
     "published": "2026-09-23T05:00:23Z",
-    "views": 260647,
-    "likes": 2123,
+    "views": 261922,
+    "likes": 2128,
     "comments": 117,
     "seconds": 79
    },
@@ -1741,9 +1926,9 @@
     "id": "CSArofjgZsE",
     "title": "Ezra Frech and Daniella Karagach Viral Hits Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-23T05:00:29Z",
-    "views": 917547,
-    "likes": 7540,
-    "comments": 332,
+    "views": 924058,
+    "likes": 7571,
+    "comments": 333,
     "seconds": 82
    },
    {
@@ -1755,9 +1940,9 @@
     "id": "cu69XesQxHI",
     "title": "Amber Glenn and Pasha Pashkov\u2019s Viral Hits Night Tango | Dancing with the Stars",
     "published": "2026-09-23T05:00:14Z",
-    "views": 313550,
-    "likes": 3493,
-    "comments": 197,
+    "views": 315025,
+    "likes": 3500,
+    "comments": 198,
     "seconds": 78
    },
    {
@@ -1769,8 +1954,8 @@
     "id": "m4BU9kkS_1I",
     "title": "Maura Higgins and Mark Ballas Viral Hits Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-23T05:00:22Z",
-    "views": 294655,
-    "likes": 1694,
+    "views": 296398,
+    "likes": 1697,
     "comments": 98,
     "seconds": 81
    },
@@ -1783,8 +1968,8 @@
     "id": "T2upZ2d2r2A",
     "title": "Jackson Olson and Emma Slater Viral Hits Night Foxtrot | Dancing with the Stars",
     "published": "2026-09-23T05:00:39Z",
-    "views": 209997,
-    "likes": 1245,
+    "views": 211095,
+    "likes": 1247,
     "comments": 44,
     "seconds": 77
    },
@@ -1797,8 +1982,8 @@
     "id": "UnmFDEQj3Zw",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Viral Hits Night Viennese Waltz | Dancing with the Stars",
     "published": "2026-09-23T05:00:37Z",
-    "views": 342839,
-    "likes": 2412,
+    "views": 343964,
+    "likes": 2419,
     "comments": 160,
     "seconds": 75
    },
@@ -1811,8 +1996,8 @@
     "id": "mObU6cjKrNU",
     "title": "Julia Stiles and Ezra Sosa Viral Hits Night Tango | Dancing with the Stars",
     "published": "2026-09-23T05:00:35Z",
-    "views": 626662,
-    "likes": 2720,
+    "views": 630573,
+    "likes": 2733,
     "comments": 184,
     "seconds": 77
    },
@@ -1825,8 +2010,8 @@
     "id": "8RRvSG7DYkA",
     "title": "Connor Wood and Rylee Arnold Viral Hits Night Tango | Dancing with the Stars",
     "published": "2026-09-23T05:00:12Z",
-    "views": 201699,
-    "likes": 1454,
+    "views": 202413,
+    "likes": 1456,
     "comments": 86,
     "seconds": 78
    },
@@ -1839,9 +2024,9 @@
     "id": "0FkIbLOGHRE",
     "title": "Taylor Hanson and Britt Stewart\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:37Z",
-    "views": 121395,
-    "likes": 989,
-    "comments": 184,
+    "views": 121840,
+    "likes": 991,
+    "comments": 185,
     "seconds": 80
    },
    {
@@ -1853,7 +2038,7 @@
     "id": "92MKKsMJSnc",
     "title": "Ciara Miller and Brandon Armstrong\u2019s Yacht Rock Cha Cha | Dancing with the Stars",
     "published": "2026-09-30T05:00:14Z",
-    "views": 114643,
+    "views": 114933,
     "likes": 985,
     "comments": 60,
     "seconds": 76
@@ -1867,9 +2052,9 @@
     "id": "Mi2cPcK8yqs",
     "title": "Guillermo Rodriguez and Witney Carson\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:09Z",
-    "views": 505319,
-    "likes": 5814,
-    "comments": 410,
+    "views": 507107,
+    "likes": 5825,
+    "comments": 411,
     "seconds": 79
    },
    {
@@ -1881,8 +2066,8 @@
     "id": "e60oZYfy7Bw",
     "title": "Tatyana Ali and pro Jan Ravnik\u2019s Yacht Rock Quickstep | Dancing with the Stars",
     "published": "2026-09-30T05:00:31Z",
-    "views": 142887,
-    "likes": 1534,
+    "views": 144512,
+    "likes": 1539,
     "comments": 81,
     "seconds": 76
    },
@@ -1895,8 +2080,8 @@
     "id": "w5kIJp27wh0",
     "title": "Tyler Cameron and Sharna Burgess\u2019s Yacht Rock Jive | Dancing with the Stars",
     "published": "2026-09-30T05:00:39Z",
-    "views": 130176,
-    "likes": 712,
+    "views": 131150,
+    "likes": 713,
     "comments": 57,
     "seconds": 78
    },
@@ -1909,8 +2094,8 @@
     "id": "G_kVcBCBasI",
     "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Yacht Rock Samba | Dancing with the Stars",
     "published": "2026-09-30T05:00:36Z",
-    "views": 393304,
-    "likes": 1955,
+    "views": 394897,
+    "likes": 1959,
     "comments": 204,
     "seconds": 78
    },
@@ -1923,9 +2108,9 @@
     "id": "6Ww9KDLpeF8",
     "title": "Ezra Frech and Daniella Karagach\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:31Z",
-    "views": 272370,
-    "likes": 2323,
-    "comments": 95,
+    "views": 274009,
+    "likes": 2331,
+    "comments": 96,
     "seconds": 70
    },
    {
@@ -1937,8 +2122,8 @@
     "id": "vyMkV7Xkuz0",
     "title": "Amber Glenn and Pasha Pashov\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:12Z",
-    "views": 186198,
-    "likes": 2138,
+    "views": 187368,
+    "likes": 2142,
     "comments": 99,
     "seconds": 77
    },
@@ -1951,8 +2136,8 @@
     "id": "MATRQQ_izX8",
     "title": "Maura Higgins and Mark Ballas\u2019s Yacht Rock Quickstep | Dancing with the Stars",
     "published": "2026-09-30T05:00:01Z",
-    "views": 230119,
-    "likes": 1438,
+    "views": 231876,
+    "likes": 1442,
     "comments": 84,
     "seconds": 74
    },
@@ -1965,8 +2150,8 @@
     "id": "RXd1bh8r7iA",
     "title": "Jackson Olson and Emma Slater\u2019s Yacht Rock Paso Doble | Dancing with the Stars",
     "published": "2026-09-30T05:00:13Z",
-    "views": 89498,
-    "likes": 693,
+    "views": 89877,
+    "likes": 694,
     "comments": 45,
     "seconds": 79
    },
@@ -1979,8 +2164,8 @@
     "id": "ZsfTYOB0-zw",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Yacht Rock Jive | Dancing with the Stars",
     "published": "2026-09-30T05:00:07Z",
-    "views": 401570,
-    "likes": 2772,
+    "views": 404010,
+    "likes": 2777,
     "comments": 152,
     "seconds": 79
    },
@@ -1993,9 +2178,9 @@
     "id": "XCwUsTbeNYA",
     "title": "Julia Stiles and Ezra Sosa\u2019s Yacht Rock Salsa | Dancing with the Stars",
     "published": "2026-09-30T05:00:07Z",
-    "views": 446125,
-    "likes": 2657,
-    "comments": 171,
+    "views": 450784,
+    "likes": 2675,
+    "comments": 172,
     "seconds": 75
    },
    {
@@ -2007,7 +2192,7 @@
     "id": "mSJ7i4yGWSA",
     "title": "Connor Wood and Rylee Arnold\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:35Z",
-    "views": 148333,
+    "views": 149013,
     "likes": 1149,
     "comments": 59,
     "seconds": 74
@@ -2021,8 +2206,8 @@
     "id": "4SGQJzbgtgI",
     "title": "Ciara Miller and Brandon Armstrong\u2019s Mariah Carey Night Jazz | Dancing with the Stars",
     "published": "2026-10-07T05:00:10Z",
-    "views": 110578,
-    "likes": 999,
+    "views": 111065,
+    "likes": 1001,
     "comments": 99,
     "seconds": 87
    },
@@ -2035,8 +2220,8 @@
     "id": "ltNdgMOOHfQ",
     "title": "Guillermo Rodriguez and Witney Carson\u2019s Mariah Carey Night Samba | Dancing with the Stars",
     "published": "2026-10-07T05:00:12Z",
-    "views": 805476,
-    "likes": 8684,
+    "views": 811416,
+    "likes": 8693,
     "comments": 810,
     "seconds": 87
    },
@@ -2049,8 +2234,8 @@
     "id": "tPa9AMZWwDU",
     "title": "Tatyana Ali and Jan Ravnik\u2019s Mariah Carey Night Jazz | Dancing with the Stars",
     "published": "2026-10-07T05:00:21Z",
-    "views": 215577,
-    "likes": 2162,
+    "views": 219558,
+    "likes": 2182,
     "comments": 114,
     "seconds": 87
    },
@@ -2063,7 +2248,7 @@
     "id": "Pwvxnh2CcDQ",
     "title": "Tyler Cameron and Sharna Burgess\u2019s Mariah Carey Night Foxtrot | Dancing with the Stars",
     "published": "2026-10-07T05:00:10Z",
-    "views": 81663,
+    "views": 82127,
     "likes": 834,
     "comments": 52,
     "seconds": 88
@@ -2077,8 +2262,8 @@
     "id": "LHtk24br-rk",
     "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:16Z",
-    "views": 226661,
-    "likes": 1962,
+    "views": 228590,
+    "likes": 1971,
     "comments": 166,
     "seconds": 91
    },
@@ -2091,8 +2276,8 @@
     "id": "gjA0rRZFJOY",
     "title": "Ezra Frech and Daniella Karagach\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:27Z",
-    "views": 237437,
-    "likes": 2454,
+    "views": 239724,
+    "likes": 2466,
     "comments": 127,
     "seconds": 79
    },
@@ -2105,8 +2290,8 @@
     "id": "Amk-nvzkhr0",
     "title": "Amber Glenn and Pasha Pashkov\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:16Z",
-    "views": 177777,
-    "likes": 2155,
+    "views": 179893,
+    "likes": 2163,
     "comments": 153,
     "seconds": 89
    },
@@ -2119,8 +2304,8 @@
     "id": "L9r66FG_KmI",
     "title": "Maura Higgins and Mark Ballas\u2019s Mariah Carey Night Waltz | Dancing with the Stars",
     "published": "2026-10-07T05:00:11Z",
-    "views": 229830,
-    "likes": 1479,
+    "views": 231698,
+    "likes": 1480,
     "comments": 123,
     "seconds": 85
    },
@@ -2133,8 +2318,8 @@
     "id": "YzUtGI-AM80",
     "title": "Jackson Olson and Emma Slater\u2019s Mariah Carey Night Waltz | Dancing with the Stars",
     "published": "2026-10-07T05:00:14Z",
-    "views": 98759,
-    "likes": 914,
+    "views": 99321,
+    "likes": 915,
     "comments": 69,
     "seconds": 89
    },
@@ -2147,8 +2332,8 @@
     "id": "JlKhG72uJrM",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Mariah Carey Night Tango | Dancing with the Stars",
     "published": "2026-10-07T05:00:17Z",
-    "views": 268352,
-    "likes": 2519,
+    "views": 270567,
+    "likes": 2530,
     "comments": 143,
     "seconds": 85
    },
@@ -2161,9 +2346,9 @@
     "id": "0X5DsDPAZP8",
     "title": "Julia Stiles and Ezra Sosa\u2019s Mariah Carey Night Viennese Waltz | Dancing with the Stars",
     "published": "2026-10-07T05:00:28Z",
-    "views": 255397,
-    "likes": 1929,
-    "comments": 79,
+    "views": 261885,
+    "likes": 1952,
+    "comments": 80,
     "seconds": 86
    },
    {
@@ -2175,8 +2360,8 @@
     "id": "0wZWyOGVsFU",
     "title": "Connor Wood and Rylee Arnold\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:16Z",
-    "views": 241832,
-    "likes": 1950,
+    "views": 243954,
+    "likes": 1965,
     "comments": 108,
     "seconds": 86
    },
@@ -2189,9 +2374,9 @@
     "id": "4oGJzrWHhuc",
     "title": "Guillermo Rodriguez and Witney Carson\u2019s Super Bowl Night Salsa | Dancing with the Stars",
     "published": "2026-10-14T05:00:15Z",
-    "views": 410616,
-    "likes": 4739,
-    "comments": 458,
+    "views": 429466,
+    "likes": 4790,
+    "comments": 460,
     "seconds": 89
    },
    {
@@ -2203,9 +2388,9 @@
     "id": "r2HQ0KNzoag",
     "title": "Tatyana Ali and Jan Ravnik\u2019s Super Bowl Night Salsa | Dancing with the Stars",
     "published": "2026-10-14T05:00:11Z",
-    "views": 144377,
-    "likes": 1821,
-    "comments": 136,
+    "views": 150805,
+    "likes": 1874,
+    "comments": 139,
     "seconds": 87
    },
    {
@@ -2217,8 +2402,8 @@
     "id": "lumXonAI-XI",
     "title": "Tyler Cameron and Sharna Burgess\u2019s Super Bowl Night Jazz | Dancing with the Stars",
     "published": "2026-10-14T05:00:17Z",
-    "views": 98290,
-    "likes": 925,
+    "views": 101211,
+    "likes": 937,
     "comments": 82,
     "seconds": 89
    },
@@ -2231,9 +2416,9 @@
     "id": "_m7haHZvFrI",
     "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Super Bowl Night Paso Doble | Dancing with the Stars",
     "published": "2026-10-14T05:00:01Z",
-    "views": 251390,
-    "likes": 2466,
-    "comments": 196,
+    "views": 260270,
+    "likes": 2508,
+    "comments": 198,
     "seconds": 89
    },
    {
@@ -2245,9 +2430,9 @@
     "id": "GhxQPZnJVUA",
     "title": "Ezra Frech and Daniella Karagach\u2019s Super Bowl Night Salsa | Dancing with the Stars",
     "published": "2026-10-14T05:00:26Z",
-    "views": 291110,
-    "likes": 2870,
-    "comments": 186,
+    "views": 303724,
+    "likes": 2912,
+    "comments": 188,
     "seconds": 89
    },
    {
@@ -2259,9 +2444,9 @@
     "id": "dop5OGz3aCU",
     "title": "Amber Glenn and Pasha Pashkov\u2019s Super Bowl Night Samba | Dancing with the Stars",
     "published": "2026-10-14T05:00:33Z",
-    "views": 304219,
-    "likes": 3811,
-    "comments": 250,
+    "views": 324279,
+    "likes": 3903,
+    "comments": 254,
     "seconds": 89
    },
    {
@@ -2273,8 +2458,8 @@
     "id": "KOLtPVA4n0M",
     "title": "Maura Higgins and Mark Ballas\u2019s Super Bowl Night Tango | Dancing with the Stars",
     "published": "2026-10-14T05:00:28Z",
-    "views": 177924,
-    "likes": 1200,
+    "views": 183172,
+    "likes": 1216,
     "comments": 95,
     "seconds": 87
    },
@@ -2287,8 +2472,8 @@
     "id": "eesH2SYHYnY",
     "title": "Jackson Olson and Emma Slater\u2019s Super Bowl Night Salsa | Dancing with the Stars",
     "published": "2026-10-14T05:00:25Z",
-    "views": 101825,
-    "likes": 976,
+    "views": 105061,
+    "likes": 989,
     "comments": 60,
     "seconds": 85
    },
@@ -2301,9 +2486,9 @@
     "id": "ss_jD0tU3fY",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Super Bowl Night Samba | Dancing with the Stars",
     "published": "2026-10-14T05:00:16Z",
-    "views": 304335,
-    "likes": 1881,
-    "comments": 279,
+    "views": 314478,
+    "likes": 1921,
+    "comments": 282,
     "seconds": 86
    },
    {
@@ -2315,9 +2500,9 @@
     "id": "gpbC3NKA8WA",
     "title": "Julia Stiles and Ezra Sosa\u2019s Super Bowl Night Jazz  | Dancing with the Stars",
     "published": "2026-10-14T05:00:35Z",
-    "views": 1428531,
-    "likes": 11371,
-    "comments": 694,
+    "views": 1499211,
+    "likes": 11645,
+    "comments": 711,
     "seconds": 82
    },
    {
@@ -2329,8 +2514,8 @@
     "id": "j6-ETZ7WFag",
     "title": "Connor Wood and Rylee Arnold\u2019s Super Bowl Night Samba | Dancing with the Stars",
     "published": "2026-10-14T05:00:27Z",
-    "views": 182324,
-    "likes": 1874,
+    "views": 189425,
+    "likes": 1901,
     "comments": 156,
     "seconds": 87
    }
@@ -3225,20 +3410,20 @@
    },
    "0.4|yt": {
     "mean": [
-     0.0056,
-     0.0774,
-     0.046,
-     0.0505,
-     -0.0136,
-     0.0236,
-     0.095,
-     0.0156,
-     0.0299,
-     -0.0035
+     0.006,
+     0.0773,
+     0.0461,
+     0.0503,
+     -0.0138,
+     0.0234,
+     0.0956,
+     0.0154,
+     0.03,
+     -0.0037
     ],
     "chol": [
      [
-      0.09616,
+      0.09621,
       0.0,
       0.0,
       0.0,
@@ -3250,7 +3435,7 @@
       0.0
      ],
      [
-      0.00136,
+      0.00134,
       0.06357,
       0.0,
       0.0,
@@ -3277,7 +3462,7 @@
       3e-05,
       0.00113,
       0.0,
-      0.09818,
+      0.09817,
       0.0,
       0.0,
       0.0,
@@ -3286,11 +3471,11 @@
       0.0
      ],
      [
-      0.00055,
-      0.01228,
+      0.00054,
+      0.0123,
       -0.00019,
-      -1e-05,
-      0.07044,
+      -0.0,
+      0.07041,
       0.0,
       0.0,
       0.0,
@@ -3303,7 +3488,7 @@
       1e-05,
       1e-05,
       -0.0002,
-      0.09893,
+      0.09892,
       0.0,
       0.0,
       0.0,
@@ -3311,12 +3496,12 @@
      ],
      [
       0.0,
-      0.00054,
+      0.00053,
       3e-05,
       3e-05,
-      -0.00019,
+      -0.0002,
       1e-05,
-      0.09873,
+      0.09875,
       0.0,
       0.0,
       0.0
@@ -3329,40 +3514,40 @@
       0.00051,
       -2e-05,
       -1e-05,
-      0.09569,
+      0.09568,
       0.0,
       0.0
      ],
      [
-      0.00099,
-      0.01099,
+      0.00097,
+      0.01096,
       -7e-05,
       0.0001,
-      0.00445,
+      0.00444,
       0.00038,
       0.00041,
       0.00078,
-      0.06364,
+      0.0637,
       0.0
      ],
      [
-      0.00069,
-      0.01404,
-      -0.00014,
-      6e-05,
-      0.0059,
+      0.00067,
+      0.01405,
+      -0.00015,
+      7e-05,
+      0.00592,
       -8e-05,
       -8e-05,
       0.00047,
-      0.00527,
-      0.06512
+      0.00526,
+      0.06509
      ]
     ],
     "share": {
      "Amber Glenn": {
-      "p10": 0.0866,
-      "p50": 0.0971,
-      "p90": 0.1089
+      "p10": 0.0867,
+      "p50": 0.0972,
+      "p90": 0.109
      },
      "Connor Wood": {
       "p10": 0.0966,
@@ -3381,22 +3566,22 @@
      },
      "Jackson Olson": {
       "p10": 0.0874,
-      "p50": 0.0952,
+      "p50": 0.0951,
       "p90": 0.1035
      },
      "Jenna Dewan": {
-      "p10": 0.0875,
-      "p50": 0.0989,
+      "p10": 0.0874,
+      "p50": 0.0988,
       "p90": 0.1117
      },
      "Julia Stiles": {
       "p10": 0.0944,
-      "p50": 0.106,
-      "p90": 0.1195
+      "p50": 0.1061,
+      "p90": 0.1196
      },
      "Maura Higgins": {
       "p10": 0.0873,
-      "p50": 0.0979,
+      "p50": 0.0978,
       "p90": 0.1095
      },
      "Tatyana Ali": {
@@ -3405,7 +3590,7 @@
       "p90": 0.1075
      },
      "Tyler Cameron": {
-      "p10": 0.0888,
+      "p10": 0.0887,
       "p50": 0.0961,
       "p90": 0.1045
      }
@@ -3418,11 +3603,11 @@
      "Ezra Frech": 0.046,
      "Giada De Laurentiis": -0.063,
      "Guillermo Rodriguez": 0.126,
-     "Harry Shum Jr.": 0.051,
+     "Harry Shum Jr.": 0.05,
      "Jackson Olson": -0.014,
-     "Jenna Dewan": 0.024,
-     "Julia Stiles": 0.095,
-     "Maura Higgins": 0.016,
+     "Jenna Dewan": 0.023,
+     "Julia Stiles": 0.096,
+     "Maura Higgins": 0.015,
      "Sarah Jane Nader": -0.116,
      "Tatyana Ali": 0.03,
      "Taylor Hanson": -0.122,
@@ -3431,20 +3616,20 @@
    },
    "0.5|yt": {
     "mean": [
-     0.0018,
-     0.0903,
-     0.0442,
-     0.0483,
-     -0.0291,
-     0.0213,
-     0.0928,
-     0.0118,
-     0.0386,
-     -0.0146
+     0.0023,
+     0.0902,
+     0.0443,
+     0.0481,
+     -0.0294,
+     0.0212,
+     0.0934,
+     0.0116,
+     0.0387,
+     -0.0148
     ],
     "chol": [
      [
-      0.09884,
+      0.09885,
       0.0,
       0.0,
       0.0,
@@ -3456,8 +3641,8 @@
       0.0
      ],
      [
-      0.00031,
-      0.0681,
+      0.0003,
+      0.06811,
       0.0,
       0.0,
       0.0,
@@ -3480,10 +3665,10 @@
       0.0
      ],
      [
-      0.0,
+      1e-05,
       0.00035,
       1e-05,
-      0.09922,
+      0.09921,
       0.0,
       0.0,
       0.0,
@@ -3493,10 +3678,10 @@
      ],
      [
       -0.00011,
-      0.00998,
+      0.01,
       -0.00024,
       -0.00019,
-      0.07945,
+      0.07942,
       0.0,
       0.0,
       0.0,
@@ -3517,12 +3702,12 @@
      ],
      [
       -0.0,
-      5e-05,
+      4e-05,
       3e-05,
       2e-05,
       -0.00026,
       1e-05,
-      0.09911,
+      0.09912,
       0.0,
       0.0,
       0.0
@@ -3535,39 +3720,39 @@
       -0.00014,
       -2e-05,
       -1e-05,
-      0.09848,
+      0.09847,
       0.0,
       0.0
      ],
      [
       0.00059,
-      0.00794,
+      0.00791,
       -8e-05,
       -4e-05,
       0.00201,
       0.0005,
       0.00057,
       0.00058,
-      0.06823,
+      0.06827,
       0.0
      ],
      [
-      -4e-05,
-      0.01231,
+      -5e-05,
+      0.01232,
       -0.00016,
       -0.0001,
-      0.00383,
+      0.00384,
       -0.00018,
       -0.00014,
       -3e-05,
       0.00321,
-      0.07191
+      0.07189
      ]
     ],
     "share": {
      "Amber Glenn": {
       "p10": 0.0862,
-      "p50": 0.0969,
+      "p50": 0.097,
       "p90": 0.1091
      },
      "Connor Wood": {
@@ -3581,8 +3766,8 @@
       "p90": 0.1134
      },
      "Harry Shum Jr.": {
-      "p10": 0.0895,
-      "p50": 0.1012,
+      "p10": 0.0894,
+      "p50": 0.1011,
       "p90": 0.1137
      },
      "Jackson Olson": {
@@ -3591,19 +3776,19 @@
       "p90": 0.1032
      },
      "Jenna Dewan": {
-      "p10": 0.0874,
+      "p10": 0.0873,
       "p50": 0.0988,
       "p90": 0.1117
      },
      "Julia Stiles": {
       "p10": 0.0943,
       "p50": 0.106,
-      "p90": 0.1195
+      "p90": 0.1196
      },
      "Maura Higgins": {
-      "p10": 0.0869,
+      "p10": 0.0868,
       "p50": 0.0976,
-      "p90": 0.1097
+      "p90": 0.1096
      },
      "Tatyana Ali": {
       "p10": 0.092,
@@ -3613,7 +3798,7 @@
      "Tyler Cameron": {
       "p10": 0.0872,
       "p50": 0.0951,
-      "p90": 0.1045
+      "p90": 0.1044
      }
     },
     "strength_all": {
@@ -3637,16 +3822,16 @@
    },
    "0.6|yt": {
     "mean": [
-     -0.0007,
-     0.0889,
-     0.0427,
-     0.0464,
-     -0.0431,
-     0.0193,
-     0.0906,
-     0.009,
-     0.0555,
-     -0.0232
+     -0.0002,
+     0.0888,
+     0.0428,
+     0.0462,
+     -0.0433,
+     0.0192,
+     0.0912,
+     0.0089,
+     0.0557,
+     -0.0235
     ],
     "chol": [
      [
@@ -3699,10 +3884,10 @@
      ],
      [
       -8e-05,
-      0.0034,
+      0.00341,
       -4e-05,
       -4e-05,
-      0.08911,
+      0.0891,
       0.0,
       0.0,
       0.0,
@@ -3738,7 +3923,7 @@
       -0.00078,
       4e-05,
       4e-05,
-      -5e-05,
+      -6e-05,
       4e-05,
       4e-05,
       0.09948,
@@ -3747,27 +3932,27 @@
      ],
      [
       0.00059,
-      0.00241,
+      0.00239,
       3e-05,
       3e-05,
       0.00065,
       0.00062,
       0.00068,
-      0.00061,
-      0.07538,
+      0.00062,
+      0.07539,
       0.0
      ],
      [
       -3e-05,
-      0.00519,
+      0.0052,
       8e-05,
       8e-05,
       0.00344,
       3e-05,
       9e-05,
       3e-05,
-      0.0017,
-      0.07991
+      0.00171,
+      0.07989
      ]
     ],
     "share": {
@@ -3779,7 +3964,7 @@
      "Connor Wood": {
       "p10": 0.0963,
       "p50": 0.1061,
-      "p90": 0.1164
+      "p90": 0.1163
      },
      "Ezra Frech": {
       "p10": 0.0895,
@@ -3789,16 +3974,16 @@
      "Harry Shum Jr.": {
       "p10": 0.0894,
       "p50": 0.1011,
-      "p90": 0.1138
+      "p90": 0.1137
      },
      "Jackson Olson": {
       "p10": 0.0834,
       "p50": 0.0926,
-      "p90": 0.1032
+      "p90": 0.1031
      },
      "Jenna Dewan": {
       "p10": 0.0873,
-      "p50": 0.0988,
+      "p50": 0.0987,
       "p90": 0.1117
      },
      "Julia Stiles": {
@@ -3819,11 +4004,11 @@
      "Tyler Cameron": {
       "p10": 0.0858,
       "p50": 0.0944,
-      "p90": 0.1047
+      "p90": 0.1046
      }
     },
     "strength_all": {
-     "Amber Glenn": -0.001,
+     "Amber Glenn": -0.0,
      "Ciara Miller": -0.148,
      "Conner Leavitt": -0.041,
      "Connor Wood": 0.089,
@@ -3836,27 +4021,27 @@
      "Julia Stiles": 0.091,
      "Maura Higgins": 0.009,
      "Sarah Jane Nader": -0.133,
-     "Tatyana Ali": 0.055,
+     "Tatyana Ali": 0.056,
      "Taylor Hanson": -0.149,
      "Tyler Cameron": -0.023
     }
    },
    "0.7|yt": {
     "mean": [
-     -0.0014,
-     0.0596,
-     0.0418,
-     0.0455,
-     -0.0487,
-     0.0187,
-     0.0899,
-     0.0082,
-     0.0754,
-     -0.0225
+     -0.0009,
+     0.0595,
+     0.0419,
+     0.0452,
+     -0.049,
+     0.0185,
+     0.0905,
+     0.0081,
+     0.0757,
+     -0.0227
     ],
     "chol": [
      [
-      0.09968,
+      0.09967,
       0.0,
       0.0,
       0.0,
@@ -3869,7 +4054,7 @@
      ],
      [
       -0.00097,
-      0.08596,
+      0.08597,
       0.0,
       0.0,
       0.0,
@@ -3907,8 +4092,8 @@
       -1e-05,
       4e-05,
       -0.0,
-      -0.0,
-      0.09404,
+      -1e-05,
+      0.09403,
       0.0,
       0.0,
       0.0,
@@ -3960,7 +4145,7 @@
       3e-05,
       4e-05,
       3e-05,
-      0.0863,
+      0.08628,
       0.0
      ],
      [
@@ -3968,7 +4153,7 @@
       0.00135,
       3e-05,
       3e-05,
-      0.00352,
+      0.00353,
       -0.0,
       8e-05,
       -1e-05,
@@ -3985,7 +4170,7 @@
      "Connor Wood": {
       "p10": 0.0927,
       "p50": 0.1034,
-      "p90": 0.1145
+      "p90": 0.1144
      },
      "Ezra Frech": {
       "p10": 0.0895,
@@ -3993,9 +4178,9 @@
       "p90": 0.1136
      },
      "Harry Shum Jr.": {
-      "p10": 0.0895,
+      "p10": 0.0894,
       "p50": 0.1012,
-      "p90": 0.1139
+      "p90": 0.1138
      },
      "Jackson Olson": {
       "p10": 0.0826,
@@ -4008,9 +4193,9 @@
       "p90": 0.1119
      },
      "Julia Stiles": {
-      "p10": 0.0942,
-      "p50": 0.106,
-      "p90": 0.1196
+      "p10": 0.0943,
+      "p50": 0.1061,
+      "p90": 0.1197
      },
      "Maura Higgins": {
       "p10": 0.0867,
@@ -4019,8 +4204,8 @@
      },
      "Tatyana Ali": {
       "p10": 0.0937,
-      "p50": 0.1043,
-      "p90": 0.1157
+      "p50": 0.1044,
+      "p90": 0.1158
      },
      "Tyler Cameron": {
       "p10": 0.0855,
@@ -4030,23 +4215,121 @@
     },
     "strength_all": {
      "Amber Glenn": -0.001,
-     "Ciara Miller": -0.15,
+     "Ciara Miller": -0.151,
      "Conner Leavitt": -0.06,
-     "Connor Wood": 0.06,
+     "Connor Wood": 0.059,
      "Ezra Frech": 0.042,
      "Giada De Laurentiis": -0.035,
      "Guillermo Rodriguez": 0.262,
      "Harry Shum Jr.": 0.045,
      "Jackson Olson": -0.049,
-     "Jenna Dewan": 0.019,
-     "Julia Stiles": 0.09,
+     "Jenna Dewan": 0.018,
+     "Julia Stiles": 0.091,
      "Maura Higgins": 0.008,
-     "Sarah Jane Nader": -0.139,
-     "Tatyana Ali": 0.075,
+     "Sarah Jane Nader": -0.138,
+     "Tatyana Ali": 0.076,
      "Taylor Hanson": -0.144,
-     "Tyler Cameron": -0.022
+     "Tyler Cameron": -0.023
     }
    }
+  }
+ },
+ "kalshi": {
+  "fetched": "2026-10-21T02:07+00:00",
+  "winner": {
+   "event": "KXDANCINGWITHTHESTARS-26DEC31",
+   "rows": [
+    {
+     "label": "Tyler Cameron",
+     "name": "Tyler Cameron",
+     "bid": 0,
+     "ask": 1,
+     "last": 1,
+     "volume": 204985,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-TCAM"
+    },
+    {
+     "label": "Tatyana Ali",
+     "name": "Tatyana Ali",
+     "bid": 0,
+     "ask": 1,
+     "last": 1,
+     "volume": 100757,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-TAT"
+    },
+    {
+     "label": "Maura Higgins",
+     "name": "Maura Higgins",
+     "bid": 10,
+     "ask": 11,
+     "last": 11,
+     "volume": 573020,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-MHIG"
+    },
+    {
+     "label": "Julia Stiles",
+     "name": "Julia Stiles",
+     "bid": 3,
+     "ask": 4,
+     "last": 4,
+     "volume": 361612,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-JSTIL"
+    },
+    {
+     "label": "Jackson Olson",
+     "name": "Jackson Olson",
+     "bid": 2,
+     "ask": 3,
+     "last": 2,
+     "volume": 298991,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-JOLS"
+    },
+    {
+     "label": "Jenna Dewan",
+     "name": "Jenna Dewan",
+     "bid": 4,
+     "ask": 5,
+     "last": 6,
+     "volume": 294939,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-JDEW"
+    },
+    {
+     "label": "Harry Shum Jr.",
+     "name": "Harry Shum Jr.",
+     "bid": 7,
+     "ask": 8,
+     "last": 8,
+     "volume": 357506,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-HSHU"
+    },
+    {
+     "label": "Ezra Frech",
+     "name": "Ezra Frech",
+     "bid": 56,
+     "ask": 57,
+     "last": 56,
+     "volume": 583714,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-EFRE"
+    },
+    {
+     "label": "Connor Wood",
+     "name": "Connor Wood",
+     "bid": 2,
+     "ask": 3,
+     "last": 3,
+     "volume": 390898,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-CWOO"
+    },
+    {
+     "label": "Amber Glenn",
+     "name": "Amber Glenn",
+     "bid": 12,
+     "ask": 13,
+     "last": 13,
+     "volume": 415668,
+     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-AGLE"
+    }
+   ]
   }
  },
  "backtest": {

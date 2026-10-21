@@ -92,9 +92,16 @@ function derive() {
     return { week: wk, date: e.date, theme: sec ? sec.theme : e.title, finale: i === future.length - 1 };
   });
 
+  // A scored week with no elimination carries its judges' scores into the next
+  // week's elimination (as on S34's Dedication Night).
+  const lastHadElim = cast.some(c => c.eliminated_week === lastWeek);
+  const carry = lastWeek && !lastHadElim && futureWeeks.length
+    ? Object.fromEntries(Object.keys(weeks[weeks.length - 1].scores).map(n => [n, hist[n].find(h => h.week === lastWeek).jRel]))
+    : null;
+
   const avgs = cast.flatMap(c => hist[c.name].map(h => h.avg));
   M = {
-    cast, byName, weeks, lastWeek, hist, weekStats, futureWeeks, totalWeeks,
+    cast, byName, weeks, lastWeek, hist, weekStats, futureWeeks, totalWeeks, carry,
     remaining: cast.filter(c => !c.out),
     avgMin: Math.min(...avgs), avgMax: Math.max(...avgs),
   };
@@ -108,6 +115,7 @@ function restore() {
   if (!saved) {
     [...M.remaining].sort((a, b) => b.avg - a.avg).slice(0, 3).forEach((c, i) => (state.pins[c.name] = i));
   }
+  if (D.finalists) { state.finalists = D.finalists; $("#finalists").value = String(D.finalists); }
   const jw = store.get("dwts-jw", null);
   if (D.votes && D.votes.fits[String(jw / 100)]) state.jw = jw;
   else if (D.votes) state.jw = Math.round(D.votes.default_jw * 100);
@@ -554,6 +562,7 @@ function runSim() {
   const gumbel = () => { let u = 0; while (u === 0) u = rand(); return -Math.log(-Math.log(u)); };
   const V = voteFit(), tau = D.votes?.tau ?? 0.02;
   const vIdx = list.map(s => (V ? D.votes.alive.indexOf(s.c.name) : -1));
+  const carryRel = M.carry && list.every(s => s.c.name in M.carry) ? list.map(s => M.carry[s.c.name]) : null;
   const haveV = !!V && vIdx.every(i => i >= 0) && D.votes.alive.length === N;
 
   // Simple: judges' strength and posterior-mean vote share, one weighted score
@@ -587,7 +596,11 @@ function runSim() {
       let sj = 0, sv = 0, mx = -Infinity;
       for (const i of alive) { cj[i] = Math.max(0.05, J[i] + gauss() * sdJ); sj += cj[i]; mx = Math.max(mx, th[i]); }
       for (const i of alive) { ev[i] = Math.exp(th[i] - mx); sv += ev[i]; }
-      for (const i of alive) cv[i] = na * (jw * (cj[i] / sj) + (1 - jw) * (ev[i] / sv));
+      for (const i of alive) {
+        // Carry-over week: judges' share is the two weeks combined.
+        const js = wi === 0 && carryRel ? 0.5 * (carryRel[i] / na) + 0.5 * (cj[i] / sj) : cj[i] / sj;
+        cv[i] = na * (jw * js + (1 - jw) * (ev[i] / sv));
+      }
       if (sched[wi].finale) {
         let best = alive[0], bv = -Infinity;
         for (const i of alive) { finals[i]++; const x = cv[i] + tau * gumbel(); if (x > bv) { bv = x; best = i; } }
@@ -617,27 +630,56 @@ function renderSim() {
   $("#ytToggle").hidden = !D.votes?.alpha_yt;
   const sched = SIM.sched;
   $("#schedule").textContent = sched.length
-    ? "Assumed schedule: " + sched.map(s => s.finale ? `Finale ${fmtDate(s.date)} (${Math.min(state.finalists, M.remaining.length)} couples)` : `Wk ${s.week} ${fmtDate(s.date)}: ${s.out} out`).join(" · ")
+    ? "Assumed schedule: " + sched.map((s, i) => s.finale ? `Finale ${fmtDate(s.date)} (${Math.min(state.finalists, M.remaining.length)} couples)` : `Wk ${s.week} ${fmtDate(s.date)}: ${s.out} out${i === 0 && M.carry ? ` (scores combined with week ${M.lastWeek})` : ""}`).join(" · ")
     : "The season is over.";
   $("#simNote").textContent = `${state.sims.toLocaleString()} simulated seasons`;
   const maxWin = Math.max(...SIM.rows.map(r => r.win), 0.01);
   const num = v => (v == null ? "–" : pct(v, v < 0.1 ? 1 : 0));
   $("#simTable").innerHTML =
-    `<div class="sim-head"><span></span><span>Couple</span><span>Win · Monte Carlo</span><span class="sub-col" title="One weighted score per couple, no simulation">Simple</span><span class="fin">Finale</span></div>` +
+    `<div class="sim-head"><span></span><span>Couple</span><span>Win · Monte Carlo</span><span class="sub-col" title="One weighted score per couple, no simulation">Simple</span><span class="sub-col kalshi-col" title="Kalshi Yes price (midpoint of bid and ask) at the last update">Kalshi</span><span class="fin">Finale</span></div>` +
     SIM.rows.map((r, i) => `<div class="sim-row ${i === 0 ? "leader" : ""}">
       <span class="rk">${i + 1}</span>
       <span class="who" data-name="${esc(r.c.name)}">${avatar(r.c, 30)}<span>${esc(r.c.couple)}${i === 0 ? ` <span class="crown" aria-label="favorite">♛</span>` : ""}</span></span>
       <span class="cellbar"><span class="bar-track"><span class="bar-fill" style="display:block;width:${(r.win / maxWin) * 100}%"></span></span><b>${pct(r.win, r.win < 0.1 ? 1 : 0)}</b></span>
-      <span class="sub-col">${num(r.simple)}</span>
+      <span class="sub-col">${num(r.simple)}</span><span class="sub-col kalshi-col">${kalshiCell(kalshiRow("winner", r.c.name))}</span>
       <span class="fin">${pct(r.finale)}</span></div>`).join("");
 
   renderVotes();
-  const next = sched[0];
-  const danger = [...SIM.rows].sort((a, b) => b.outNext - a.outNext).slice(0, 4);
-  $("#danger").innerHTML = next && next.out
-    ? `<p class="sub tight">Week ${next.week} · ${esc(next.theme)} · ${fmtDate(next.date, { weekday: "short", month: "short", day: "numeric" })}</p>` +
-      danger.map(r => `<div class="danger-row">${avatar(r.c, 30)}<span class="nm">${esc(r.c.couple)}</span><b>${pct(r.outNext)}</b></div>`).join("")
-    : `<p class="sub tight">${next ? "No elimination expected next week." : "Season complete."}</p>`;
+  renderDanger();
+}
+
+/** Kalshi snapshot row for a couple (or "NONE") in the elimination or winner market. */
+function kalshiRow(kind, name) {
+  const rows = D.kalshi?.[kind]?.rows || [];
+  return name === "NONE" ? rows.find(r => r.label.toUpperCase() === "NONE") : rows.find(r => r.name === name);
+}
+const kalshiMid = r => (r && r.bid != null && r.ask != null ? (r.bid + r.ask) / 200 : r?.last != null ? r.last / 100 : null);
+const kalshiCell = r => (kalshiMid(r) == null ? "–" : `<span title="bid ${r.bid}¢ · ask ${r.ask}¢ · last ${r.last}¢">${pct(kalshiMid(r))}</span>`);
+
+/** Next elimination: the model (given someone goes) beside every Kalshi outcome,
+ * including "nobody", so a no-elimination week is never missed. */
+function renderDanger() {
+  const next = SIM.sched[0];
+  const el = $("#danger");
+  if (!next || !next.out) { el.innerHTML = `<p class="sub tight">${next ? "No elimination expected next week." : "Season complete."}</p>`; return; }
+  const ev = D.kalshi?.elimination;
+  const none = ev ? kalshiMid(kalshiRow("elimination", "NONE")) : null;
+  const pElim = none == null ? null : 1 - none;
+  const rows = [...SIM.rows].sort((a, b) => b.outNext - a.outNext);
+  const head = `<p class="sub tight">Week ${next.week} · ${esc(next.theme)} · ${fmtDate(next.date, { weekday: "short", month: "short", day: "numeric" })}${next.out > 1 ? ` · ${next.out} couples go home` : ""}${M.carry ? ` · week ${M.lastWeek} scores carry over` : ""}</p>`;
+  let sumNote = "";
+  if (ev) {
+    const sum = (ev.rows || []).reduce((a, r) => a + (kalshiMid(r) || 0), 0);
+    const off = Math.abs(sum - Math.max(1, next.out)) > 0.08;
+    sumNote = `<p class="foot">Kalshi ${esc(ev.event)}, prices as of ${new Date(D.kalshi.fetched).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.
+      Outcomes add up to ${pct(sum)}${off ? ` — <b>not ~100%</b>, so some prices are stale or mispriced` : ""}.
+      "If anyone goes" is the model; "overall" multiplies it by the market's chance of any elimination.</p>`;
+  }
+  el.innerHTML = head + `<div class="danger-head"><span></span><span>Couple</span><span>If anyone goes</span>${ev ? "<span>Overall</span><span>Kalshi</span>" : ""}</div>` +
+    (ev ? `<div class="danger-row none-row"><span></span><span class="nm">Nobody eliminated</span><b>–</b><b>–</b><b>${kalshiCell(kalshiRow("elimination", "NONE"))}</b></div>` : "") +
+    rows.map(r => `<div class="danger-row">${avatar(r.c, 26)}<span class="nm">${esc(r.c.couple)}</span><b>${pct(r.outNext, r.outNext < 0.1 ? 1 : 0)}</b>${ev
+      ? `<b class="muted">${pElim == null ? "–" : pct(r.outNext * pElim, 1)}</b><b>${kalshiCell(kalshiRow("elimination", r.c.name))}</b>` : ""}</div>`).join("") +
+    sumNote;
 }
 
 function renderVotes() {
