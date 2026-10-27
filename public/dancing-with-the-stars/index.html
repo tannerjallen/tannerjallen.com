@@ -140,6 +140,10 @@
             <input type="range" id="recency" min="0" max="100" value="40" aria-label="Recency emphasis">
             <span class="hint-inline"><span>all weeks equally</span><span>mostly latest</span></span>
           </label>
+          <label>Blend: model's share vs Kalshi · <b id="mwVal">30%</b>
+            <input type="range" id="mw" min="0" max="100" step="10" value="30" aria-label="Model's share in the blend with Kalshi">
+            <span class="hint-inline"><span>all Kalshi</span><span>all model</span></span>
+          </label>
           <label>Simulations
             <select id="sims"><option value="2000">2,000</option><option value="10000" selected>10,000</option><option value="30000">30,000</option></select>
           </label>
@@ -155,7 +159,7 @@
           <span class="muted small-text" id="simNote"></span>
         </div>
         <div class="sim-table" id="simTable"></div>
-        <p class="foot"><b>Monte Carlo</b>: plays out thousands of seasons week by week, drawing each couple's fan vote from what the eliminations imply and its judges' scores from its record, with the lowest combined score going home. <b>Simple</b>: one weighted score per couple, turned into odds with nothing played out.</p>
+        <p class="foot"><b>Monte Carlo</b>: plays out thousands of seasons week by week, drawing each couple's fan vote from what the eliminations imply and its judges' scores from its record, with the lowest combined score going home. <b>Simple</b>: one weighted score per couple, turned into odds with nothing played out. <b>Blend</b>: Monte Carlo and Kalshi combined (model's share set under Model settings).</p>
       </div>
       <div class="side-col">
         <div class="card" id="votesCard" hidden>

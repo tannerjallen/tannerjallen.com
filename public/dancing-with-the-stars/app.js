@@ -21,6 +21,7 @@ const state = {
   jw: 50,            // judges' weight in the combined score (%); the show's rule
   useYt: false,      // experimental: YouTube views as a hint for fan votes
   usePr: false,      // experimental: pro-partner & celebrity-type hint learned from S17-34
+  mw: 30,            // model's share (%) in the blend with Kalshi prices
   finalists: 4,
   recency: 40,
   sims: 10000,
@@ -121,6 +122,9 @@ function restore() {
   if (D.votes && D.votes.fits[String(jw / 100)]) state.jw = jw;
   else if (D.votes) state.jw = Math.round(D.votes.default_jw * 100);
   $("#jw").value = state.jw;
+  if (D.blend) state.mw = Math.round(D.blend.model_weight * 100);
+  $("#mw").value = state.mw;
+  $("#mwVal").textContent = `${state.mw}%`;
 }
 
 /* ---------------------------------------------------------------- helpers */
@@ -541,9 +545,13 @@ function schedule() {
   const alive = M.remaining.length;
   const nonFinale = fw.length - 1;
   const fin = Math.min(state.finalists, alive);
-  const E = Math.max(0, alive - fin);
-  const per = Array(nonFinale).fill(nonFinale ? Math.floor(E / nonFinale) : 0);
-  for (let i = 0; i < (nonFinale ? E % nonFinale : 0); i++) per[nonFinale - 1 - i]++; // doubles come late
+  // Announced weeks (e.g. a double elimination) are fixed; the rest are spread.
+  const known = fw.map(f => (f.finale ? null : D.announced_out?.[f.week] ?? null));
+  const free = known.map((k, i) => (k == null && i < nonFinale ? i : -1)).filter(i => i >= 0);
+  const E = Math.max(0, alive - fin - known.reduce((a, k) => a + (k || 0), 0));
+  const per = known.map(k => k ?? 0);
+  free.forEach(i => (per[i] = Math.floor(E / free.length)));
+  for (let j = 0; j < (free.length ? E % free.length : 0); j++) per[free[free.length - 1 - j]]++; // doubles come late
   return fw.map((f, i) => ({ ...f, out: f.finale ? 0 : per[i] }));
 }
 
@@ -637,17 +645,35 @@ function renderSim() {
   $("#simNote").textContent = `${state.sims.toLocaleString()} simulated seasons`;
   const maxWin = Math.max(...SIM.rows.map(r => r.win), 0.01);
   const num = v => (v == null ? "–" : pct(v, v < 0.1 ? 1 : 0));
+  const bw = SIM.rows.some(r => r.win > 0) ? blend(SIM.rows, "winner", "win") : null;
   $("#simTable").innerHTML =
-    `<div class="sim-head"><span></span><span>Couple</span><span>Win · Monte Carlo</span><span class="sub-col" title="One weighted score per couple, no simulation">Simple</span><span class="sub-col kalshi-col" title="Kalshi Yes price (midpoint of bid and ask) at the last update">Kalshi</span><span class="fin">Finale</span></div>` +
+    `<div class="sim-head"><span></span><span>Couple</span><span>Win · Monte Carlo</span><span class="sub-col simple-col" title="One weighted score per couple, no simulation">Simple</span><span class="sub-col kalshi-col" title="Kalshi Yes price (midpoint of bid and ask) at the last update">Kalshi</span><span class="sub-col blend-col" title="Model and Kalshi combined (${state.mw}% model)">Blend</span><span class="fin">Finale</span></div>` +
     SIM.rows.map((r, i) => `<div class="sim-row ${i === 0 ? "leader" : ""}">
       <span class="rk">${i + 1}</span>
       <span class="who" data-name="${esc(r.c.name)}">${avatar(r.c, 30)}<span>${esc(r.c.couple)}${i === 0 ? ` <span class="crown" aria-label="favorite">♛</span>` : ""}</span></span>
       <span class="cellbar"><span class="bar-track"><span class="bar-fill" style="display:block;width:${(r.win / maxWin) * 100}%"></span></span><b>${pct(r.win, r.win < 0.1 ? 1 : 0)}</b></span>
-      <span class="sub-col">${num(r.simple)}</span><span class="sub-col kalshi-col">${kalshiCell(kalshiRow("winner", r.c.name))}</span>
+      <span class="sub-col simple-col">${num(r.simple)}</span><span class="sub-col kalshi-col">${kalshiCell(kalshiRow("winner", r.c.name))}</span>
+      <span class="sub-col blend-col"><b>${bw ? num(bw[i]) : "–"}</b></span>
       <span class="fin">${pct(r.finale)}</span></div>`).join("");
 
   renderVotes();
   renderDanger();
+}
+
+/** Logarithmic pool of model and Kalshi odds: p ∝ model^w · market^(1-w), scaled
+ * to sum to k. Couples without a market price keep the model's odds. Mirrors
+ * blend() in pipeline/elimination.py. Returns null without market prices. */
+function blend(rows, kind, key, k = 1) {
+  const mk = rows.map(r => kalshiMid(kalshiRow(kind, r.c.name)));
+  const have = mk.map(v => v != null && v > 0);
+  if (!have.some(Boolean)) return null;
+  // Market prices only over priced couples, rescaled to the model's mass there.
+  const mSum = rows.reduce((a, r, i) => a + (have[i] ? r[key] : 0), 0);
+  const kSum = mk.reduce((a, v, i) => a + (have[i] ? v : 0), 0);
+  const w = state.mw / 100, lg = x => Math.log(Math.max(x, 1e-4));
+  const q = rows.map((r, i) => Math.exp(w * lg(r[key]) + (1 - w) * lg(have[i] ? (mk[i] / kSum) * mSum : r[key])));
+  const qs = q.reduce((a, b) => a + b, 0);
+  return q.map(v => (v / qs) * k);
 }
 
 /** Kalshi snapshot row for a couple (or "NONE") in the elimination or winner market. */
@@ -665,9 +691,9 @@ function renderDanger() {
   const el = $("#danger");
   if (!next || !next.out) { el.innerHTML = `<p class="sub tight">${next ? "No elimination expected next week." : "Season complete."}</p>`; return; }
   const ev = D.kalshi?.elimination;
-  const none = ev ? kalshiMid(kalshiRow("elimination", "NONE")) : null;
-  const pElim = none == null ? null : 1 - none;
-  const rows = [...SIM.rows].sort((a, b) => b.outNext - a.outNext);
+  const bl = ev ? blend(SIM.rows, "elimination", "outNext", next.out) : null;
+  const rows = SIM.rows.map((r, i) => ({ ...r, blend: bl ? bl[i] : null }))
+    .sort((a, b) => (b.blend ?? b.outNext) - (a.blend ?? a.outNext));
   const head = `<p class="sub tight">Week ${next.week} · ${esc(next.theme)} · ${fmtDate(next.date, { weekday: "short", month: "short", day: "numeric" })}${next.out > 1 ? ` · ${next.out} couples go home` : ""}${M.carry ? ` · week ${M.lastWeek} scores carry over` : ""}</p>`;
   let sumNote = "";
   if (ev) {
@@ -675,13 +701,23 @@ function renderDanger() {
     const off = Math.abs(sum - Math.max(1, next.out)) > 0.08;
     sumNote = `<p class="foot">Kalshi ${esc(ev.event)}, prices as of ${new Date(D.kalshi.fetched).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.
       Outcomes add up to ${pct(sum)}${off ? ` — <b>not ~100%</b>, so some prices are stale or mispriced` : ""}.
-      "If anyone goes" is the model; "overall" multiplies it by the market's chance of any elimination.</p>`;
+      All columns assume someone goes home; the market's chance that nobody does is on its own row.
+      <b>Blend</b> combines the two (${state.mw}% model).${blendRecord()}</p>`;
   }
-  el.innerHTML = head + `<div class="danger-head"><span></span><span>Couple</span><span>If anyone goes</span>${ev ? "<span>Overall</span><span>Kalshi</span>" : ""}</div>` +
-    (ev ? `<div class="danger-row none-row"><span></span><span class="nm">Nobody eliminated</span><b>–</b><b>–</b><b>${kalshiCell(kalshiRow("elimination", "NONE"))}</b></div>` : "") +
-    rows.map(r => `<div class="danger-row">${avatar(r.c, 26)}<span class="nm">${esc(r.c.couple)}</span><b>${pct(r.outNext, r.outNext < 0.1 ? 1 : 0)}</b>${ev
-      ? `<b class="muted">${pElim == null ? "–" : pct(r.outNext * pElim, 1)}</b><b>${kalshiCell(kalshiRow("elimination", r.c.name))}</b>` : ""}</div>`).join("") +
+  const p = v => (v == null ? "–" : pct(v, v < 0.1 ? 1 : 0));
+  el.innerHTML = head + `<div class="danger-head"><span></span><span>Couple</span><span>Model</span>${ev ? "<span>Kalshi</span><span>Blend</span>" : ""}</div>` +
+    (ev ? `<div class="danger-row none-row"><span></span><span class="nm">Nobody eliminated</span><b>–</b><b>${kalshiCell(kalshiRow("elimination", "NONE"))}</b><b>–</b></div>` : "") +
+    rows.map(r => `<div class="danger-row">${avatar(r.c, 26)}<span class="nm">${esc(r.c.couple)}</span><b class="${ev ? "muted" : ""}">${p(r.outNext)}</b>${ev
+      ? `<b class="muted">${kalshiCell(kalshiRow("elimination", r.c.name))}</b><b>${p(r.blend)}</b>` : ""}</div>`).join("") +
     sumNote;
+}
+
+/** One line on how model, Kalshi and blend have done before this season's eliminations. */
+function blendRecord() {
+  const L = D.blend?.logloss;
+  if (!L) return "";
+  return ` So far this season (${D.blend.eliminations} eliminations, log-loss, lower is better): Kalshi ${L.kalshi.toFixed(2)},
+    model ${L.model.toFixed(2)}, blend ${L.blend.toFixed(2)}, even odds ${L.even.toFixed(2)}. Too few to settle the weight.`;
 }
 
 function renderVotes() {
@@ -831,6 +867,7 @@ function bind() {
   $("#recency").addEventListener("input", e => { state.recency = +e.target.value; resim(); });
   $("#finalists").addEventListener("change", e => { state.finalists = +e.target.value; resim(); });
   $("#sims").addEventListener("change", e => { state.sims = +e.target.value; resim(); });
+  $("#mw").addEventListener("input", e => { state.mw = +e.target.value; $("#mwVal").textContent = `${state.mw}%`; renderSim(); });
 
   $("#themeToggle").addEventListener("click", () => {
     const root = document.documentElement;
