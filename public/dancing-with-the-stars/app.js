@@ -86,7 +86,10 @@ function derive() {
   }
 
   const lastAir = weeks.length ? weeks[weeks.length - 1].airdates.slice(-1)[0] : "";
-  const future = D.episodes.filter(e => e.date > lastAir);
+  // Episodes after the finale (e.g. a holiday special) aren't part of the competition.
+  const upcoming = D.episodes.filter(e => e.date > lastAir);
+  const fi = upcoming.findIndex(e => /^finale\b/i.test(e.title));
+  const future = fi >= 0 ? upcoming.slice(0, fi + 1) : upcoming;
   const totalWeeks = lastWeek + future.length;
   const futureWeeks = future.map((e, i) => {
     const wk = lastWeek + 1 + i;

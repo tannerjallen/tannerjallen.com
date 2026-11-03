@@ -79,6 +79,45 @@
    "photo_credit": "https://commons.wikimedia.org/wiki/File:GuillermoD\u00edazHWOFJan2013_(cropped).jpg"
   },
   {
+   "name": "Tyler Cameron",
+   "first": "Tyler",
+   "last": "Cameron",
+   "wiki": "Tyler Cameron",
+   "notability": "The Bachelorette runner-up",
+   "pro": "Sharna Burgess",
+   "substitute_pro": null,
+   "status": "Eliminated 7th & 8th on October 27, 2026",
+   "eliminated_week": 7,
+   "photo": "photos/tyler-cameron.jpg",
+   "photo_credit": "https://commons.wikimedia.org/wiki/File:Tyler_Cameron_16.5.24_on_The_Jennifer_Hudson_Show_WBNX_TV_55.jpg"
+  },
+  {
+   "name": "Jackson Olson",
+   "first": "Jackson",
+   "last": "Olson",
+   "wiki": "Jackson Olson",
+   "notability": "Savannah Bananas second baseman",
+   "pro": "Emma Slater",
+   "substitute_pro": null,
+   "status": "Participating",
+   "eliminated_week": 7,
+   "photo": "photos/jackson-olson.jpg",
+   "photo_credit": "https://commons.wikimedia.org/wiki/File:Jackson_Olson_in_2025_(cropped-J1).jpg"
+  },
+  {
+   "name": "Julia Stiles",
+   "first": "Julia",
+   "last": "Stiles",
+   "wiki": "Julia Stiles",
+   "notability": "Actress & director",
+   "pro": "Ezra Sosa",
+   "substitute_pro": null,
+   "status": "Eliminated 9th on November 2, 2026",
+   "eliminated_week": 8,
+   "photo": "photos/julia-stiles.jpg",
+   "photo_credit": "https://commons.wikimedia.org/wiki/File:Julia_Stiles_by_David_Shankbone_cropped.jpg"
+  },
+  {
    "name": "Tatyana Ali",
    "first": "Tatyana",
    "last": "Ali",
@@ -90,19 +129,6 @@
    "eliminated_week": null,
    "photo": "photos/tatyana-ali.jpg",
    "photo_credit": "https://commons.wikimedia.org/wiki/File:Streamy_Awards_Photo_1302_(4513297565).jpg"
-  },
-  {
-   "name": "Tyler Cameron",
-   "first": "Tyler",
-   "last": "Cameron",
-   "wiki": "Tyler Cameron",
-   "notability": "The Bachelorette runner-up",
-   "pro": "Sharna Burgess",
-   "substitute_pro": null,
-   "status": "Participating",
-   "eliminated_week": null,
-   "photo": "photos/tyler-cameron.jpg",
-   "photo_credit": "https://commons.wikimedia.org/wiki/File:Tyler_Cameron_16.5.24_on_The_Jennifer_Hudson_Show_WBNX_TV_55.jpg"
   },
   {
    "name": "Jenna Dewan",
@@ -157,20 +183,7 @@
    "status": "Participating",
    "eliminated_week": null,
    "photo": "photos/maura-higgins.jpg",
-   "photo_credit": "https://commons.wikimedia.org/wiki/File:Maura_Higgins_attending_the_World_premier_of_\"Argylle\"_in_London_,_January_2024_(cropped).jpg"
-  },
-  {
-   "name": "Jackson Olson",
-   "first": "Jackson",
-   "last": "Olson",
-   "wiki": "Jackson Olson",
-   "notability": "Savannah Bananas second baseman",
-   "pro": "Emma Slater",
-   "substitute_pro": null,
-   "status": "Participating",
-   "eliminated_week": null,
-   "photo": "photos/jackson-olson.jpg",
-   "photo_credit": "https://commons.wikimedia.org/wiki/File:Jackson_Olson_in_2025_(cropped-J1).jpg"
+   "photo_credit": "https://commons.wikimedia.org/wiki/File:Maura_Higgins,_world_premier_of_\"Argylle\"_in_London,_January_2024_(crop).jpg"
   },
   {
    "name": "Harry Shum Jr.",
@@ -184,19 +197,6 @@
    "eliminated_week": null,
    "photo": "photos/harry-shum-jr.jpg",
    "photo_credit": "https://commons.wikimedia.org/wiki/File:Harry_Shum_Jr._podczas_San_Diego_ComicCon_2017.jpg"
-  },
-  {
-   "name": "Julia Stiles",
-   "first": "Julia",
-   "last": "Stiles",
-   "wiki": "Julia Stiles",
-   "notability": "Actress & director",
-   "pro": "Ezra Sosa",
-   "substitute_pro": null,
-   "status": "Participating",
-   "eliminated_week": null,
-   "photo": "photos/julia-stiles.jpg",
-   "photo_credit": "https://commons.wikimedia.org/wiki/File:Julia_Stiles_by_David_Shankbone_cropped.jpg"
   },
   {
    "name": "Connor Wood",
@@ -260,6 +260,10 @@
   {
    "title": "Finale",
    "date": "2026-11-24"
+  },
+  {
+   "title": "Dancing with the Holidays",
+   "date": "2026-12-01"
   }
  ],
  "weeks": [
@@ -368,22 +372,6 @@
       }
      ]
     },
-    "Tatyana Ali": {
-     "total": 12,
-     "max": 30,
-     "dances": [
-      {
-       "score": 12,
-       "marks": [
-        4,
-        4,
-        4
-       ],
-       "dance": "Jive",
-       "night": 2
-      }
-     ]
-    },
     "Tyler Cameron": {
      "total": 17,
      "max": 30,
@@ -397,6 +385,54 @@
        ],
        "dance": "Tango",
        "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
+     "total": 15,
+     "max": 30,
+     "dances": [
+      {
+       "score": 15,
+       "marks": [
+        5,
+        5,
+        5
+       ],
+       "dance": "Cha-cha-cha",
+       "night": 1
+      }
+     ]
+    },
+    "Julia Stiles": {
+     "total": 18,
+     "max": 30,
+     "dances": [
+      {
+       "score": 18,
+       "marks": [
+        6,
+        6,
+        6
+       ],
+       "dance": "Quickstep",
+       "night": 2
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 12,
+     "max": 30,
+     "dances": [
+      {
+       "score": 12,
+       "marks": [
+        4,
+        4,
+        4
+       ],
+       "dance": "Jive",
+       "night": 2
       }
      ]
     },
@@ -464,22 +500,6 @@
       }
      ]
     },
-    "Jackson Olson": {
-     "total": 15,
-     "max": 30,
-     "dances": [
-      {
-       "score": 15,
-       "marks": [
-        5,
-        5,
-        5
-       ],
-       "dance": "Cha-cha-cha",
-       "night": 1
-      }
-     ]
-    },
     "Harry Shum Jr.": {
      "total": 21,
      "max": 30,
@@ -493,22 +513,6 @@
        ],
        "dance": "Cha-cha-cha",
        "night": 1
-      }
-     ]
-    },
-    "Julia Stiles": {
-     "total": 18,
-     "max": 30,
-     "dances": [
-      {
-       "score": 18,
-       "marks": [
-        6,
-        6,
-        6
-       ],
-       "dance": "Quickstep",
-       "night": 2
       }
      ]
     },
@@ -602,7 +606,23 @@
       }
      ]
     },
-    "Tatyana Ali": {
+    "Tyler Cameron": {
+     "total": 16,
+     "max": 30,
+     "dances": [
+      {
+       "score": 16,
+       "marks": [
+        6,
+        5,
+        5
+       ],
+       "dance": "Salsa",
+       "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
      "total": 18,
      "max": 30,
      "dances": [
@@ -618,18 +638,34 @@
       }
      ]
     },
-    "Tyler Cameron": {
+    "Julia Stiles": {
      "total": 16,
      "max": 30,
      "dances": [
       {
        "score": 16,
        "marks": [
-        6,
         5,
+        6,
         5
        ],
-       "dance": "Salsa",
+       "dance": "Tango",
+       "night": 1
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 18,
+     "max": 30,
+     "dances": [
+      {
+       "score": 18,
+       "marks": [
+        6,
+        6,
+        6
+       ],
+       "dance": "Foxtrot",
        "night": 1
       }
      ]
@@ -698,22 +734,6 @@
       }
      ]
     },
-    "Jackson Olson": {
-     "total": 18,
-     "max": 30,
-     "dances": [
-      {
-       "score": 18,
-       "marks": [
-        6,
-        6,
-        6
-       ],
-       "dance": "Foxtrot",
-       "night": 1
-      }
-     ]
-    },
     "Harry Shum Jr.": {
      "total": 18,
      "max": 30,
@@ -726,22 +746,6 @@
         6
        ],
        "dance": "Viennese waltz",
-       "night": 1
-      }
-     ]
-    },
-    "Julia Stiles": {
-     "total": 16,
-     "max": 30,
-     "dances": [
-      {
-       "score": 16,
-       "marks": [
-        5,
-        6,
-        5
-       ],
-       "dance": "Tango",
        "night": 1
       }
      ]
@@ -820,22 +824,6 @@
       }
      ]
     },
-    "Tatyana Ali": {
-     "total": 21,
-     "max": 30,
-     "dances": [
-      {
-       "score": 21,
-       "marks": [
-        7,
-        7,
-        7
-       ],
-       "dance": "Quickstep",
-       "night": 1
-      }
-     ]
-    },
     "Tyler Cameron": {
      "total": 17,
      "max": 30,
@@ -848,6 +836,54 @@
         6
        ],
        "dance": "Jive",
+       "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
+     "total": 18,
+     "max": 30,
+     "dances": [
+      {
+       "score": 18,
+       "marks": [
+        6,
+        6,
+        6
+       ],
+       "dance": "Paso doble",
+       "night": 1
+      }
+     ]
+    },
+    "Julia Stiles": {
+     "total": 19,
+     "max": 30,
+     "dances": [
+      {
+       "score": 19,
+       "marks": [
+        6,
+        7,
+        6
+       ],
+       "dance": "Salsa",
+       "night": 1
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 21,
+     "max": 30,
+     "dances": [
+      {
+       "score": 21,
+       "marks": [
+        7,
+        7,
+        7
+       ],
+       "dance": "Quickstep",
        "night": 1
       }
      ]
@@ -916,22 +952,6 @@
       }
      ]
     },
-    "Jackson Olson": {
-     "total": 18,
-     "max": 30,
-     "dances": [
-      {
-       "score": 18,
-       "marks": [
-        6,
-        6,
-        6
-       ],
-       "dance": "Paso doble",
-       "night": 1
-      }
-     ]
-    },
     "Harry Shum Jr.": {
      "total": 24,
      "max": 30,
@@ -944,22 +964,6 @@
         8
        ],
        "dance": "Jive",
-       "night": 1
-      }
-     ]
-    },
-    "Julia Stiles": {
-     "total": 19,
-     "max": 30,
-     "dances": [
-      {
-       "score": 19,
-       "marks": [
-        6,
-        7,
-        6
-       ],
-       "dance": "Salsa",
        "night": 1
       }
      ]
@@ -1022,22 +1026,6 @@
       }
      ]
     },
-    "Tatyana Ali": {
-     "total": 20,
-     "max": 30,
-     "dances": [
-      {
-       "score": 20,
-       "marks": [
-        6,
-        7,
-        7
-       ],
-       "dance": "Jazz",
-       "night": 1
-      }
-     ]
-    },
     "Tyler Cameron": {
      "total": 21,
      "max": 30,
@@ -1050,6 +1038,54 @@
         7
        ],
        "dance": "Foxtrot",
+       "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
+     "total": 21,
+     "max": 30,
+     "dances": [
+      {
+       "score": 21,
+       "marks": [
+        7,
+        7,
+        7
+       ],
+       "dance": "Waltz",
+       "night": 1
+      }
+     ]
+    },
+    "Julia Stiles": {
+     "total": 21,
+     "max": 30,
+     "dances": [
+      {
+       "score": 21,
+       "marks": [
+        7,
+        7,
+        7
+       ],
+       "dance": "Viennese waltz",
+       "night": 1
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 20,
+     "max": 30,
+     "dances": [
+      {
+       "score": 20,
+       "marks": [
+        6,
+        7,
+        7
+       ],
+       "dance": "Jazz",
        "night": 1
       }
      ]
@@ -1118,22 +1154,6 @@
       }
      ]
     },
-    "Jackson Olson": {
-     "total": 21,
-     "max": 30,
-     "dances": [
-      {
-       "score": 21,
-       "marks": [
-        7,
-        7,
-        7
-       ],
-       "dance": "Waltz",
-       "night": 1
-      }
-     ]
-    },
     "Harry Shum Jr.": {
      "total": 24,
      "max": 30,
@@ -1146,22 +1166,6 @@
         8
        ],
        "dance": "Tango",
-       "night": 1
-      }
-     ]
-    },
-    "Julia Stiles": {
-     "total": 21,
-     "max": 30,
-     "dances": [
-      {
-       "score": 21,
-       "marks": [
-        7,
-        7,
-        7
-       ],
-       "dance": "Viennese waltz",
        "night": 1
       }
      ]
@@ -1214,23 +1218,6 @@
       }
      ]
     },
-    "Tatyana Ali": {
-     "total": 29,
-     "max": 40,
-     "dances": [
-      {
-       "score": 29,
-       "marks": [
-        7,
-        7,
-        8,
-        7
-       ],
-       "dance": "Salsa",
-       "night": 1
-      }
-     ]
-    },
     "Tyler Cameron": {
      "total": 30,
      "max": 40,
@@ -1244,6 +1231,57 @@
         7
        ],
        "dance": "Jazz",
+       "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
+     "total": 31,
+     "max": 40,
+     "dances": [
+      {
+       "score": 31,
+       "marks": [
+        8,
+        8,
+        8,
+        7
+       ],
+       "dance": "Salsa",
+       "night": 1
+      }
+     ]
+    },
+    "Julia Stiles": {
+     "total": 33,
+     "max": 40,
+     "dances": [
+      {
+       "score": 33,
+       "marks": [
+        8,
+        8,
+        9,
+        8
+       ],
+       "dance": "Jazz",
+       "night": 1
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 29,
+     "max": 40,
+     "dances": [
+      {
+       "score": 29,
+       "marks": [
+        7,
+        7,
+        8,
+        7
+       ],
+       "dance": "Salsa",
        "night": 1
       }
      ]
@@ -1316,23 +1354,6 @@
       }
      ]
     },
-    "Jackson Olson": {
-     "total": 31,
-     "max": 40,
-     "dances": [
-      {
-       "score": 31,
-       "marks": [
-        8,
-        8,
-        8,
-        7
-       ],
-       "dance": "Salsa",
-       "night": 1
-      }
-     ]
-    },
     "Harry Shum Jr.": {
      "total": 33,
      "max": 40,
@@ -1346,23 +1367,6 @@
         8
        ],
        "dance": "Samba",
-       "night": 1
-      }
-     ]
-    },
-    "Julia Stiles": {
-     "total": 33,
-     "max": 40,
-     "dances": [
-      {
-       "score": 33,
-       "marks": [
-        8,
-        8,
-        9,
-        8
-       ],
-       "dance": "Jazz",
        "night": 1
       }
      ]
@@ -1399,23 +1403,6 @@
     "Bruno Tonioli"
    ],
    "scores": {
-    "Tatyana Ali": {
-     "total": 32,
-     "max": 40,
-     "dances": [
-      {
-       "score": 32,
-       "marks": [
-        8,
-        8,
-        8,
-        8
-       ],
-       "dance": "Viennese waltz",
-       "night": 1
-      }
-     ]
-    },
     "Tyler Cameron": {
      "total": 32,
      "max": 40,
@@ -1429,6 +1416,57 @@
         8
        ],
        "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
+     "total": 32,
+     "max": 40,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Quickstep",
+       "night": 1
+      }
+     ]
+    },
+    "Julia Stiles": {
+     "total": 36,
+     "max": 40,
+     "dances": [
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 32,
+     "max": 40,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Viennese waltz",
        "night": 1
       }
      ]
@@ -1501,23 +1539,6 @@
       }
      ]
     },
-    "Jackson Olson": {
-     "total": 32,
-     "max": 40,
-     "dances": [
-      {
-       "score": 32,
-       "marks": [
-        8,
-        8,
-        8,
-        8
-       ],
-       "dance": "Quickstep",
-       "night": 1
-      }
-     ]
-    },
     "Harry Shum Jr.": {
      "total": 36,
      "max": 40,
@@ -1531,23 +1552,6 @@
         9
        ],
        "dance": "Foxtrot",
-       "night": 1
-      }
-     ]
-    },
-    "Julia Stiles": {
-     "total": 36,
-     "max": 40,
-     "dances": [
-      {
-       "score": 36,
-       "marks": [
-        9,
-        9,
-        9,
-        9
-       ],
-       "dance": "Contemporary",
        "night": 1
       }
      ]
@@ -1583,6 +1587,425 @@
     "Shirley Ballas",
     "Bruno Tonioli"
    ],
+   "scores": {
+    "Tyler Cameron": {
+     "total": 26,
+     "max": 40,
+     "dances": [
+      {
+       "score": 26,
+       "marks": [
+        7,
+        7,
+        5,
+        7
+       ],
+       "dance": "Viennese waltz",
+       "night": 1
+      }
+     ]
+    },
+    "Jackson Olson": {
+     "total": 35,
+     "max": 40,
+     "dances": [
+      {
+       "score": 35,
+       "marks": [
+        9,
+        9,
+        8,
+        9
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Julia Stiles": {
+     "total": 26,
+     "max": 40,
+     "dances": [
+      {
+       "score": 26,
+       "marks": [
+        7,
+        7,
+        4,
+        8
+       ],
+       "dance": "Argentine tango",
+       "night": 1
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 28,
+     "max": 40,
+     "dances": [
+      {
+       "score": 28,
+       "marks": [
+        8,
+        8,
+        4,
+        8
+       ],
+       "dance": "Paso doble",
+       "night": 1
+      }
+     ]
+    },
+    "Jenna Dewan": {
+     "total": 37,
+     "max": 40,
+     "dances": [
+      {
+       "score": 37,
+       "marks": [
+        9,
+        10,
+        9,
+        9
+       ],
+       "dance": "Argentine tango",
+       "night": 1
+      }
+     ]
+    },
+    "Ezra Frech": {
+     "total": 35,
+     "max": 40,
+     "dances": [
+      {
+       "score": 35,
+       "marks": [
+        8,
+        9,
+        9,
+        9
+       ],
+       "dance": "Jazz",
+       "night": 1
+      }
+     ]
+    },
+    "Amber Glenn": {
+     "total": 36,
+     "max": 40,
+     "dances": [
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Argentine tango",
+       "night": 1
+      }
+     ]
+    },
+    "Maura Higgins": {
+     "total": 32,
+     "max": 40,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        9,
+        8,
+        7,
+        8
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Harry Shum Jr.": {
+     "total": 40,
+     "max": 40,
+     "dances": [
+      {
+       "score": 40,
+       "marks": [
+        10,
+        10,
+        10,
+        10
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    },
+    "Connor Wood": {
+     "total": 37,
+     "max": 40,
+     "dances": [
+      {
+       "score": 37,
+       "marks": [
+        10,
+        10,
+        8,
+        9
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "week": 8,
+   "theme": "Disney Night",
+   "airdates": [
+    "2026-11-02"
+   ],
+   "judges": [
+    "Carrie Ann Inaba",
+    "Derek Hough",
+    "Cynthia Erivo",
+    "Bruno Tonioli"
+   ],
+   "scores": {
+    "Julia Stiles": {
+     "total": 69,
+     "max": 80,
+     "dances": [
+      {
+       "score": 33,
+       "marks": [
+        8,
+        8,
+        8,
+        9
+       ],
+       "dance": "Paso doble",
+       "night": 1
+      },
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Freestyle (Team Slaytopia)",
+       "night": 1
+      }
+     ]
+    },
+    "Tatyana Ali": {
+     "total": 69,
+     "max": 80,
+     "dances": [
+      {
+       "score": 33,
+       "marks": [
+        9,
+        8,
+        8,
+        8
+       ],
+       "dance": "Contemporary",
+       "night": 1
+      },
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Freestyle (Team Slaytopia)",
+       "night": 1
+      }
+     ]
+    },
+    "Jenna Dewan": {
+     "total": 80,
+     "max": 80,
+     "dances": [
+      {
+       "score": 40,
+       "marks": [
+        10,
+        10,
+        10,
+        10
+       ],
+       "dance": "Quickstep",
+       "night": 1
+      },
+      {
+       "score": 40,
+       "marks": [
+        10,
+        10,
+        10,
+        10
+       ],
+       "dance": "Freestyle (Team Wildcats)",
+       "night": 1
+      }
+     ]
+    },
+    "Ezra Frech": {
+     "total": 77,
+     "max": 80,
+     "dances": [
+      {
+       "score": 37,
+       "marks": [
+        9,
+        10,
+        9,
+        9
+       ],
+       "dance": "Samba",
+       "night": 1
+      },
+      {
+       "score": 40,
+       "marks": [
+        10,
+        10,
+        10,
+        10
+       ],
+       "dance": "Freestyle (Team Wildcats)",
+       "night": 1
+      }
+     ]
+    },
+    "Amber Glenn": {
+     "total": 70,
+     "max": 80,
+     "dances": [
+      {
+       "score": 34,
+       "marks": [
+        8,
+        9,
+        8,
+        9
+       ],
+       "dance": "Quickstep",
+       "night": 1
+      },
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Freestyle (Team Slaytopia)",
+       "night": 1
+      }
+     ]
+    },
+    "Maura Higgins": {
+     "total": 68,
+     "max": 80,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Jive",
+       "night": 1
+      },
+      {
+       "score": 36,
+       "marks": [
+        9,
+        9,
+        9,
+        9
+       ],
+       "dance": "Freestyle (Team Slaytopia)",
+       "night": 1
+      }
+     ]
+    },
+    "Harry Shum Jr.": {
+     "total": 80,
+     "max": 80,
+     "dances": [
+      {
+       "score": 40,
+       "marks": [
+        10,
+        10,
+        10,
+        10
+       ],
+       "dance": "Jazz",
+       "night": 1
+      },
+      {
+       "score": 40,
+       "marks": [
+        10,
+        10,
+        10,
+        10
+       ],
+       "dance": "Freestyle (Team Wildcats)",
+       "night": 1
+      }
+     ]
+    },
+    "Connor Wood": {
+     "total": 72,
+     "max": 80,
+     "dances": [
+      {
+       "score": 32,
+       "marks": [
+        8,
+        8,
+        8,
+        8
+       ],
+       "dance": "Waltz",
+       "night": 1
+      },
+      {
+       "score": 40,
+       "marks": [
+        10,
+        10,
+        10,
+        10
+       ],
+       "dance": "Freestyle (Team Wildcats)",
+       "night": 1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "week": 9,
+   "theme": "Grammy Night",
+   "airdates": [
+    "2026-11-10"
+   ],
+   "judges": null,
    "scores": {}
   }
  ],
@@ -1591,12 +2014,12 @@
  "announced_out": {
   "7": 2
  },
- "updated": "2026-10-26T21:44",
+ "updated": "2026-11-02T22:09",
  "source": "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35",
  "youtube": {
-  "fetched": "2026-10-26T21:44",
-  "matched": 76,
-  "performances": 76,
+  "fetched": "2026-11-02T22:09",
+  "matched": 86,
+  "performances": 102,
   "videos": [
    {
     "season": 35,
@@ -1607,8 +2030,8 @@
     "id": "2xsu68W-rsM",
     "title": "Conner Leavitt\u2019s Premiere Night Salsa | Dancing with the Stars",
     "published": "2026-09-16T05:00:00Z",
-    "views": 263840,
-    "likes": 792,
+    "views": 268497,
+    "likes": 801,
     "comments": 181,
     "seconds": 81
    },
@@ -1621,8 +2044,8 @@
     "id": "WEhWgrxzVcQ",
     "title": "Sarah Jane Nader\u2019s Premiere Night Jive | Dancing with the Stars",
     "published": "2026-09-17T03:00:29Z",
-    "views": 213831,
-    "likes": 1039,
+    "views": 217043,
+    "likes": 1044,
     "comments": 177,
     "seconds": 82
    },
@@ -1635,8 +2058,8 @@
     "id": "__IxvZ6NJO0",
     "title": "Giada De Laurentiis\u2019 Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-17T03:00:15Z",
-    "views": 218073,
-    "likes": 1134,
+    "views": 219960,
+    "likes": 1141,
     "comments": 86,
     "seconds": 80
    },
@@ -1649,8 +2072,8 @@
     "id": "J842WqUtiDI",
     "title": "Taylor Hanson\u2019s Premiere Night Quickstep | Dancing with the Stars",
     "published": "2026-09-16T05:00:35Z",
-    "views": 220481,
-    "likes": 2067,
+    "views": 222403,
+    "likes": 2076,
     "comments": 182,
     "seconds": 82
    },
@@ -1663,8 +2086,8 @@
     "id": "qqTTfgzWYOY",
     "title": "Ciara Miller\u2019s Premiere Night Foxtrot | Dancing with the Stars",
     "published": "2026-09-17T03:00:33Z",
-    "views": 175790,
-    "likes": 1257,
+    "views": 176843,
+    "likes": 1259,
     "comments": 88,
     "seconds": 85
    },
@@ -1677,24 +2100,10 @@
     "id": "mwEbXVAyfyQ",
     "title": "Guillermo Rodriguez\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-16T05:00:20Z",
-    "views": 664065,
-    "likes": 4794,
+    "views": 668297,
+    "likes": 4810,
     "comments": 384,
     "seconds": 79
-   },
-   {
-    "season": 35,
-    "week": 1,
-    "celeb": "Tatyana Ali",
-    "dance_index": 0,
-    "dance": "Jive",
-    "id": "OmNBSb9wl_I",
-    "title": "Tatyana Ali\u2019s Premiere Night Cha Cha | Dancing with the Stars",
-    "published": "2026-09-17T03:00:25Z",
-    "views": 215506,
-    "likes": 1374,
-    "comments": 99,
-    "seconds": 81
    },
    {
     "season": 35,
@@ -1705,10 +2114,52 @@
     "id": "pvS5ZKWORCo",
     "title": "Tyler Cameron\u2019s Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-16T05:00:17Z",
-    "views": 163586,
-    "likes": 1186,
+    "views": 165033,
+    "likes": 1193,
     "comments": 78,
     "seconds": 82
+   },
+   {
+    "season": 35,
+    "week": 1,
+    "celeb": "Jackson Olson",
+    "dance_index": 0,
+    "dance": "Cha-cha-cha",
+    "id": "6Lhnozic5iA",
+    "title": "Jackson Olson\u2019s Premiere Night Cha Cha | Dancing with the Stars",
+    "published": "2026-09-16T05:00:19Z",
+    "views": 276794,
+    "likes": 1797,
+    "comments": 89,
+    "seconds": 85
+   },
+   {
+    "season": 35,
+    "week": 1,
+    "celeb": "Julia Stiles",
+    "dance_index": 0,
+    "dance": "Quickstep",
+    "id": "2IGlKTTc_pA",
+    "title": "Julia Stiles\u2019 Premiere Night Quickstep | Dancing with the Stars",
+    "published": "2026-09-17T05:00:14Z",
+    "views": 984255,
+    "likes": 4571,
+    "comments": 222,
+    "seconds": 82
+   },
+   {
+    "season": 35,
+    "week": 1,
+    "celeb": "Tatyana Ali",
+    "dance_index": 0,
+    "dance": "Jive",
+    "id": "OmNBSb9wl_I",
+    "title": "Tatyana Ali\u2019s Premiere Night Cha Cha | Dancing with the Stars",
+    "published": "2026-09-17T03:00:25Z",
+    "views": 217418,
+    "likes": 1391,
+    "comments": 99,
+    "seconds": 81
    },
    {
     "season": 35,
@@ -1719,9 +2170,9 @@
     "id": "Hn3RI1ZPOHk",
     "title": "Jenna Dewan\u2019s Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-17T05:00:33Z",
-    "views": 470871,
-    "likes": 3162,
-    "comments": 283,
+    "views": 476479,
+    "likes": 3173,
+    "comments": 284,
     "seconds": 86
    },
    {
@@ -1733,8 +2184,8 @@
     "id": "o8ZzfPoA1Ss",
     "title": "Ezra Frech\u2019s Premiere Night Tango | Dancing with the Stars",
     "published": "2026-09-16T05:00:06Z",
-    "views": 492802,
-    "likes": 3759,
+    "views": 503305,
+    "likes": 3794,
     "comments": 194,
     "seconds": 85
    },
@@ -1747,9 +2198,9 @@
     "id": "wE5scszton0",
     "title": "Amber Glenn\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-17T03:00:09Z",
-    "views": 318850,
-    "likes": 3282,
-    "comments": 212,
+    "views": 323854,
+    "likes": 3314,
+    "comments": 213,
     "seconds": 83
    },
    {
@@ -1761,24 +2212,10 @@
     "id": "bQrbxemvJ18",
     "title": "Maura Higgins\u2019 Premiere Night Foxtrot | Dancing with the Stars",
     "published": "2026-09-17T03:00:21Z",
-    "views": 592599,
-    "likes": 3621,
-    "comments": 266,
+    "views": 604721,
+    "likes": 3651,
+    "comments": 267,
     "seconds": 89
-   },
-   {
-    "season": 35,
-    "week": 1,
-    "celeb": "Jackson Olson",
-    "dance_index": 0,
-    "dance": "Cha-cha-cha",
-    "id": "6Lhnozic5iA",
-    "title": "Jackson Olson\u2019s Premiere Night Cha Cha | Dancing with the Stars",
-    "published": "2026-09-16T05:00:19Z",
-    "views": 273265,
-    "likes": 1781,
-    "comments": 87,
-    "seconds": 85
    },
    {
     "season": 35,
@@ -1789,24 +2226,10 @@
     "id": "LUuHIjk-8Dk",
     "title": "Harry Shum Jr.\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-16T05:00:32Z",
-    "views": 896268,
-    "likes": 6063,
-    "comments": 401,
+    "views": 906277,
+    "likes": 6106,
+    "comments": 404,
     "seconds": 88
-   },
-   {
-    "season": 35,
-    "week": 1,
-    "celeb": "Julia Stiles",
-    "dance_index": 0,
-    "dance": "Quickstep",
-    "id": "2IGlKTTc_pA",
-    "title": "Julia Stiles\u2019 Premiere Night Quickstep | Dancing with the Stars",
-    "published": "2026-09-17T05:00:14Z",
-    "views": 975570,
-    "likes": 4539,
-    "comments": 220,
-    "seconds": 82
    },
    {
     "season": 35,
@@ -1817,9 +2240,9 @@
     "id": "mOs3lxpFr6c",
     "title": "Connor Wood\u2019s Premiere Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-16T05:00:15Z",
-    "views": 363360,
-    "likes": 2495,
-    "comments": 147,
+    "views": 373071,
+    "likes": 2525,
+    "comments": 149,
     "seconds": 83
    },
    {
@@ -1831,8 +2254,8 @@
     "id": "6X9yOAvLNhw",
     "title": "Giada De Laurentiis and Alan Bersten Viral Hits Night Salsa | Dancing with the Stars",
     "published": "2026-09-23T05:00:11Z",
-    "views": 214304,
-    "likes": 599,
+    "views": 216401,
+    "likes": 604,
     "comments": 119,
     "seconds": 72
    },
@@ -1845,9 +2268,9 @@
     "id": "Mtx38Rwe07o",
     "title": "Taylor Hanson and Britt Stewart\u2019s Viral Hits Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-23T05:00:35Z",
-    "views": 136189,
-    "likes": 1181,
-    "comments": 76,
+    "views": 138318,
+    "likes": 1191,
+    "comments": 77,
     "seconds": 73
    },
    {
@@ -1859,8 +2282,8 @@
     "id": "PVDjPC-UOtg",
     "title": "Ciara Miller and Brandon Armstrong Viral Hits Night Tango | Dancing with the Stars",
     "published": "2026-09-23T05:00:25Z",
-    "views": 127707,
-    "likes": 920,
+    "views": 129099,
+    "likes": 928,
     "comments": 46,
     "seconds": 75
    },
@@ -1873,24 +2296,10 @@
     "id": "P0EqbIw_ZXA",
     "title": "Guillermo Rodriguez and Witney Carson Viral Hits Night Paso Doble | Dancing with the Stars",
     "published": "2026-09-23T05:00:22Z",
-    "views": 1038733,
-    "likes": 11237,
-    "comments": 928,
+    "views": 1045857,
+    "likes": 11260,
+    "comments": 929,
     "seconds": 76
-   },
-   {
-    "season": 35,
-    "week": 2,
-    "celeb": "Tatyana Ali",
-    "dance_index": 0,
-    "dance": "Foxtrot",
-    "id": "sIplW9GSLdU",
-    "title": "Tatyana Ali and Jan Ravnik Viral Hits Night Foxtrot | Dancing with the Stars",
-    "published": "2026-09-23T05:00:34Z",
-    "views": 144503,
-    "likes": 1257,
-    "comments": 61,
-    "seconds": 79
    },
    {
     "season": 35,
@@ -1901,10 +2310,52 @@
     "id": "ILidSWBIoy0",
     "title": "Tyler Cameron and Sharna Burgess Viral Hits Night Salsa | Dancing with the Stars",
     "published": "2026-09-23T05:00:13Z",
-    "views": 232146,
-    "likes": 1222,
+    "views": 235484,
+    "likes": 1239,
     "comments": 135,
     "seconds": 81
+   },
+   {
+    "season": 35,
+    "week": 2,
+    "celeb": "Jackson Olson",
+    "dance_index": 0,
+    "dance": "Foxtrot",
+    "id": "T2upZ2d2r2A",
+    "title": "Jackson Olson and Emma Slater Viral Hits Night Foxtrot | Dancing with the Stars",
+    "published": "2026-09-23T05:00:39Z",
+    "views": 223795,
+    "likes": 1268,
+    "comments": 44,
+    "seconds": 77
+   },
+   {
+    "season": 35,
+    "week": 2,
+    "celeb": "Julia Stiles",
+    "dance_index": 0,
+    "dance": "Tango",
+    "id": "mObU6cjKrNU",
+    "title": "Julia Stiles and Ezra Sosa Viral Hits Night Tango | Dancing with the Stars",
+    "published": "2026-09-23T05:00:35Z",
+    "views": 660077,
+    "likes": 2867,
+    "comments": 186,
+    "seconds": 77
+   },
+   {
+    "season": 35,
+    "week": 2,
+    "celeb": "Tatyana Ali",
+    "dance_index": 0,
+    "dance": "Foxtrot",
+    "id": "sIplW9GSLdU",
+    "title": "Tatyana Ali and Jan Ravnik Viral Hits Night Foxtrot | Dancing with the Stars",
+    "published": "2026-09-23T05:00:34Z",
+    "views": 148599,
+    "likes": 1270,
+    "comments": 61,
+    "seconds": 79
    },
    {
     "season": 35,
@@ -1915,8 +2366,8 @@
     "id": "1hwGpU_VVYg",
     "title": "Jenna Dewan and Val Chmerkovskiy Viral Hits Night Jive | Dancing with the Stars",
     "published": "2026-09-23T05:00:23Z",
-    "views": 271711,
-    "likes": 2173,
+    "views": 279402,
+    "likes": 2209,
     "comments": 117,
     "seconds": 79
    },
@@ -1929,8 +2380,8 @@
     "id": "CSArofjgZsE",
     "title": "Ezra Frech and Daniella Karagach Viral Hits Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-23T05:00:29Z",
-    "views": 967212,
-    "likes": 7735,
+    "views": 1003035,
+    "likes": 7866,
     "comments": 338,
     "seconds": 82
    },
@@ -1943,8 +2394,8 @@
     "id": "cu69XesQxHI",
     "title": "Amber Glenn and Pasha Pashkov\u2019s Viral Hits Night Tango | Dancing with the Stars",
     "published": "2026-09-23T05:00:14Z",
-    "views": 326827,
-    "likes": 3581,
+    "views": 335175,
+    "likes": 3638,
     "comments": 196,
     "seconds": 78
    },
@@ -1957,24 +2408,10 @@
     "id": "m4BU9kkS_1I",
     "title": "Maura Higgins and Mark Ballas Viral Hits Night Cha Cha | Dancing with the Stars",
     "published": "2026-09-23T05:00:22Z",
-    "views": 307285,
-    "likes": 1720,
+    "views": 313950,
+    "likes": 1742,
     "comments": 99,
     "seconds": 81
-   },
-   {
-    "season": 35,
-    "week": 2,
-    "celeb": "Jackson Olson",
-    "dance_index": 0,
-    "dance": "Foxtrot",
-    "id": "T2upZ2d2r2A",
-    "title": "Jackson Olson and Emma Slater Viral Hits Night Foxtrot | Dancing with the Stars",
-    "published": "2026-09-23T05:00:39Z",
-    "views": 218274,
-    "likes": 1261,
-    "comments": 44,
-    "seconds": 77
    },
    {
     "season": 35,
@@ -1985,24 +2422,10 @@
     "id": "UnmFDEQj3Zw",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Viral Hits Night Viennese Waltz | Dancing with the Stars",
     "published": "2026-09-23T05:00:37Z",
-    "views": 350151,
-    "likes": 2452,
-    "comments": 160,
+    "views": 355320,
+    "likes": 2476,
+    "comments": 161,
     "seconds": 75
-   },
-   {
-    "season": 35,
-    "week": 2,
-    "celeb": "Julia Stiles",
-    "dance_index": 0,
-    "dance": "Tango",
-    "id": "mObU6cjKrNU",
-    "title": "Julia Stiles and Ezra Sosa Viral Hits Night Tango | Dancing with the Stars",
-    "published": "2026-09-23T05:00:35Z",
-    "views": 650251,
-    "likes": 2835,
-    "comments": 185,
-    "seconds": 77
    },
    {
     "season": 35,
@@ -2013,8 +2436,8 @@
     "id": "8RRvSG7DYkA",
     "title": "Connor Wood and Rylee Arnold Viral Hits Night Tango | Dancing with the Stars",
     "published": "2026-09-23T05:00:12Z",
-    "views": 207213,
-    "likes": 1480,
+    "views": 212375,
+    "likes": 1495,
     "comments": 86,
     "seconds": 78
    },
@@ -2027,9 +2450,9 @@
     "id": "0FkIbLOGHRE",
     "title": "Taylor Hanson and Britt Stewart\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:37Z",
-    "views": 124078,
-    "likes": 1003,
-    "comments": 185,
+    "views": 125649,
+    "likes": 1007,
+    "comments": 186,
     "seconds": 80
    },
    {
@@ -2041,8 +2464,8 @@
     "id": "92MKKsMJSnc",
     "title": "Ciara Miller and Brandon Armstrong\u2019s Yacht Rock Cha Cha | Dancing with the Stars",
     "published": "2026-09-30T05:00:14Z",
-    "views": 116879,
-    "likes": 991,
+    "views": 118335,
+    "likes": 996,
     "comments": 60,
     "seconds": 76
    },
@@ -2055,24 +2478,10 @@
     "id": "Mi2cPcK8yqs",
     "title": "Guillermo Rodriguez and Witney Carson\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:09Z",
-    "views": 516044,
-    "likes": 5853,
-    "comments": 412,
+    "views": 522295,
+    "likes": 5883,
+    "comments": 413,
     "seconds": 79
-   },
-   {
-    "season": 35,
-    "week": 3,
-    "celeb": "Tatyana Ali",
-    "dance_index": 0,
-    "dance": "Quickstep",
-    "id": "e60oZYfy7Bw",
-    "title": "Tatyana Ali and pro Jan Ravnik\u2019s Yacht Rock Quickstep | Dancing with the Stars",
-    "published": "2026-09-30T05:00:31Z",
-    "views": 151196,
-    "likes": 1573,
-    "comments": 81,
-    "seconds": 76
    },
    {
     "season": 35,
@@ -2083,66 +2492,10 @@
     "id": "w5kIJp27wh0",
     "title": "Tyler Cameron and Sharna Burgess\u2019s Yacht Rock Jive | Dancing with the Stars",
     "published": "2026-09-30T05:00:39Z",
-    "views": 136919,
-    "likes": 723,
+    "views": 140050,
+    "likes": 731,
     "comments": 57,
     "seconds": 78
-   },
-   {
-    "season": 35,
-    "week": 3,
-    "celeb": "Jenna Dewan",
-    "dance_index": 0,
-    "dance": "Samba",
-    "id": "G_kVcBCBasI",
-    "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Yacht Rock Samba | Dancing with the Stars",
-    "published": "2026-09-30T05:00:36Z",
-    "views": 403984,
-    "likes": 1995,
-    "comments": 209,
-    "seconds": 78
-   },
-   {
-    "season": 35,
-    "week": 3,
-    "celeb": "Ezra Frech",
-    "dance_index": 0,
-    "dance": "Foxtrot",
-    "id": "6Ww9KDLpeF8",
-    "title": "Ezra Frech and Daniella Karagach\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
-    "published": "2026-09-30T05:00:31Z",
-    "views": 284779,
-    "likes": 2380,
-    "comments": 96,
-    "seconds": 70
-   },
-   {
-    "season": 35,
-    "week": 3,
-    "celeb": "Amber Glenn",
-    "dance_index": 0,
-    "dance": "Foxtrot",
-    "id": "vyMkV7Xkuz0",
-    "title": "Amber Glenn and Pasha Pashov\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
-    "published": "2026-09-30T05:00:12Z",
-    "views": 195813,
-    "likes": 2199,
-    "comments": 98,
-    "seconds": 77
-   },
-   {
-    "season": 35,
-    "week": 3,
-    "celeb": "Maura Higgins",
-    "dance_index": 0,
-    "dance": "Quickstep",
-    "id": "MATRQQ_izX8",
-    "title": "Maura Higgins and Mark Ballas\u2019s Yacht Rock Quickstep | Dancing with the Stars",
-    "published": "2026-09-30T05:00:01Z",
-    "views": 242167,
-    "likes": 1456,
-    "comments": 84,
-    "seconds": 74
    },
    {
     "season": 35,
@@ -2153,23 +2506,9 @@
     "id": "RXd1bh8r7iA",
     "title": "Jackson Olson and Emma Slater\u2019s Yacht Rock Paso Doble | Dancing with the Stars",
     "published": "2026-09-30T05:00:13Z",
-    "views": 91953,
+    "views": 93871,
     "likes": 704,
-    "comments": 45,
-    "seconds": 79
-   },
-   {
-    "season": 35,
-    "week": 3,
-    "celeb": "Harry Shum Jr.",
-    "dance_index": 0,
-    "dance": "Jive",
-    "id": "ZsfTYOB0-zw",
-    "title": "Harry Shum Jr. and Jenna Johnson\u2019s Yacht Rock Jive | Dancing with the Stars",
-    "published": "2026-09-30T05:00:07Z",
-    "views": 419520,
-    "likes": 2827,
-    "comments": 155,
+    "comments": 46,
     "seconds": 79
    },
    {
@@ -2181,10 +2520,94 @@
     "id": "XCwUsTbeNYA",
     "title": "Julia Stiles and Ezra Sosa\u2019s Yacht Rock Salsa | Dancing with the Stars",
     "published": "2026-09-30T05:00:07Z",
-    "views": 468969,
-    "likes": 2778,
-    "comments": 172,
+    "views": 476892,
+    "likes": 2822,
+    "comments": 174,
     "seconds": 75
+   },
+   {
+    "season": 35,
+    "week": 3,
+    "celeb": "Tatyana Ali",
+    "dance_index": 0,
+    "dance": "Quickstep",
+    "id": "e60oZYfy7Bw",
+    "title": "Tatyana Ali and pro Jan Ravnik\u2019s Yacht Rock Quickstep | Dancing with the Stars",
+    "published": "2026-09-30T05:00:31Z",
+    "views": 155851,
+    "likes": 1595,
+    "comments": 81,
+    "seconds": 76
+   },
+   {
+    "season": 35,
+    "week": 3,
+    "celeb": "Jenna Dewan",
+    "dance_index": 0,
+    "dance": "Samba",
+    "id": "G_kVcBCBasI",
+    "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Yacht Rock Samba | Dancing with the Stars",
+    "published": "2026-09-30T05:00:36Z",
+    "views": 411110,
+    "likes": 2017,
+    "comments": 210,
+    "seconds": 78
+   },
+   {
+    "season": 35,
+    "week": 3,
+    "celeb": "Ezra Frech",
+    "dance_index": 0,
+    "dance": "Foxtrot",
+    "id": "6Ww9KDLpeF8",
+    "title": "Ezra Frech and Daniella Karagach\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
+    "published": "2026-09-30T05:00:31Z",
+    "views": 292822,
+    "likes": 2410,
+    "comments": 97,
+    "seconds": 70
+   },
+   {
+    "season": 35,
+    "week": 3,
+    "celeb": "Amber Glenn",
+    "dance_index": 0,
+    "dance": "Foxtrot",
+    "id": "vyMkV7Xkuz0",
+    "title": "Amber Glenn and Pasha Pashov\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
+    "published": "2026-09-30T05:00:12Z",
+    "views": 201846,
+    "likes": 2233,
+    "comments": 99,
+    "seconds": 77
+   },
+   {
+    "season": 35,
+    "week": 3,
+    "celeb": "Maura Higgins",
+    "dance_index": 0,
+    "dance": "Quickstep",
+    "id": "MATRQQ_izX8",
+    "title": "Maura Higgins and Mark Ballas\u2019s Yacht Rock Quickstep | Dancing with the Stars",
+    "published": "2026-09-30T05:00:01Z",
+    "views": 250856,
+    "likes": 1481,
+    "comments": 86,
+    "seconds": 74
+   },
+   {
+    "season": 35,
+    "week": 3,
+    "celeb": "Harry Shum Jr.",
+    "dance_index": 0,
+    "dance": "Jive",
+    "id": "ZsfTYOB0-zw",
+    "title": "Harry Shum Jr. and Jenna Johnson\u2019s Yacht Rock Jive | Dancing with the Stars",
+    "published": "2026-09-30T05:00:07Z",
+    "views": 434073,
+    "likes": 2872,
+    "comments": 155,
+    "seconds": 79
    },
    {
     "season": 35,
@@ -2195,9 +2618,9 @@
     "id": "mSJ7i4yGWSA",
     "title": "Connor Wood and Rylee Arnold\u2019s Yacht Rock Foxtrot | Dancing with the Stars",
     "published": "2026-09-30T05:00:35Z",
-    "views": 152762,
-    "likes": 1160,
-    "comments": 59,
+    "views": 157096,
+    "likes": 1181,
+    "comments": 60,
     "seconds": 74
    },
    {
@@ -2209,8 +2632,8 @@
     "id": "4SGQJzbgtgI",
     "title": "Ciara Miller and Brandon Armstrong\u2019s Mariah Carey Night Jazz | Dancing with the Stars",
     "published": "2026-10-07T05:00:10Z",
-    "views": 114104,
-    "likes": 1021,
+    "views": 116014,
+    "likes": 1032,
     "comments": 99,
     "seconds": 87
    },
@@ -2223,23 +2646,9 @@
     "id": "ltNdgMOOHfQ",
     "title": "Guillermo Rodriguez and Witney Carson\u2019s Mariah Carey Night Samba | Dancing with the Stars",
     "published": "2026-10-07T05:00:12Z",
-    "views": 826964,
-    "likes": 8745,
+    "views": 837562,
+    "likes": 8785,
     "comments": 811,
-    "seconds": 87
-   },
-   {
-    "season": 35,
-    "week": 4,
-    "celeb": "Tatyana Ali",
-    "dance_index": 0,
-    "dance": "Jazz",
-    "id": "tPa9AMZWwDU",
-    "title": "Tatyana Ali and Jan Ravnik\u2019s Mariah Carey Night Jazz | Dancing with the Stars",
-    "published": "2026-10-07T05:00:21Z",
-    "views": 236119,
-    "likes": 2283,
-    "comments": 118,
     "seconds": 87
    },
    {
@@ -2251,10 +2660,52 @@
     "id": "Pwvxnh2CcDQ",
     "title": "Tyler Cameron and Sharna Burgess\u2019s Mariah Carey Night Foxtrot | Dancing with the Stars",
     "published": "2026-10-07T05:00:10Z",
-    "views": 85459,
-    "likes": 846,
+    "views": 87034,
+    "likes": 856,
     "comments": 52,
     "seconds": 88
+   },
+   {
+    "season": 35,
+    "week": 4,
+    "celeb": "Jackson Olson",
+    "dance_index": 0,
+    "dance": "Waltz",
+    "id": "YzUtGI-AM80",
+    "title": "Jackson Olson and Emma Slater\u2019s Mariah Carey Night Waltz | Dancing with the Stars",
+    "published": "2026-10-07T05:00:14Z",
+    "views": 104993,
+    "likes": 941,
+    "comments": 69,
+    "seconds": 89
+   },
+   {
+    "season": 35,
+    "week": 4,
+    "celeb": "Julia Stiles",
+    "dance_index": 0,
+    "dance": "Viennese waltz",
+    "id": "0X5DsDPAZP8",
+    "title": "Julia Stiles and Ezra Sosa\u2019s Mariah Carey Night Viennese Waltz | Dancing with the Stars",
+    "published": "2026-10-07T05:00:28Z",
+    "views": 296718,
+    "likes": 2114,
+    "comments": 80,
+    "seconds": 86
+   },
+   {
+    "season": 35,
+    "week": 4,
+    "celeb": "Tatyana Ali",
+    "dance_index": 0,
+    "dance": "Jazz",
+    "id": "tPa9AMZWwDU",
+    "title": "Tatyana Ali and Jan Ravnik\u2019s Mariah Carey Night Jazz | Dancing with the Stars",
+    "published": "2026-10-07T05:00:21Z",
+    "views": 242977,
+    "likes": 2326,
+    "comments": 120,
+    "seconds": 87
    },
    {
     "season": 35,
@@ -2265,9 +2716,9 @@
     "id": "LHtk24br-rk",
     "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:16Z",
-    "views": 241639,
-    "likes": 2040,
-    "comments": 167,
+    "views": 249988,
+    "likes": 2085,
+    "comments": 172,
     "seconds": 91
    },
    {
@@ -2279,9 +2730,9 @@
     "id": "gjA0rRZFJOY",
     "title": "Ezra Frech and Daniella Karagach\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:27Z",
-    "views": 253925,
-    "likes": 2544,
-    "comments": 128,
+    "views": 263311,
+    "likes": 2589,
+    "comments": 131,
     "seconds": 79
    },
    {
@@ -2293,9 +2744,9 @@
     "id": "Amk-nvzkhr0",
     "title": "Amber Glenn and Pasha Pashkov\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:16Z",
-    "views": 190834,
-    "likes": 2241,
-    "comments": 152,
+    "views": 197209,
+    "likes": 2283,
+    "comments": 154,
     "seconds": 89
    },
    {
@@ -2307,24 +2758,10 @@
     "id": "L9r66FG_KmI",
     "title": "Maura Higgins and Mark Ballas\u2019s Mariah Carey Night Waltz | Dancing with the Stars",
     "published": "2026-10-07T05:00:11Z",
-    "views": 240799,
-    "likes": 1504,
-    "comments": 126,
+    "views": 246650,
+    "likes": 1528,
+    "comments": 125,
     "seconds": 85
-   },
-   {
-    "season": 35,
-    "week": 4,
-    "celeb": "Jackson Olson",
-    "dance_index": 0,
-    "dance": "Waltz",
-    "id": "YzUtGI-AM80",
-    "title": "Jackson Olson and Emma Slater\u2019s Mariah Carey Night Waltz | Dancing with the Stars",
-    "published": "2026-10-07T05:00:14Z",
-    "views": 102493,
-    "likes": 934,
-    "comments": 69,
-    "seconds": 89
    },
    {
     "season": 35,
@@ -2335,24 +2772,10 @@
     "id": "JlKhG72uJrM",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Mariah Carey Night Tango | Dancing with the Stars",
     "published": "2026-10-07T05:00:17Z",
-    "views": 284449,
-    "likes": 2609,
+    "views": 296220,
+    "likes": 2664,
     "comments": 143,
     "seconds": 85
-   },
-   {
-    "season": 35,
-    "week": 4,
-    "celeb": "Julia Stiles",
-    "dance_index": 0,
-    "dance": "Viennese waltz",
-    "id": "0X5DsDPAZP8",
-    "title": "Julia Stiles and Ezra Sosa\u2019s Mariah Carey Night Viennese Waltz | Dancing with the Stars",
-    "published": "2026-10-07T05:00:28Z",
-    "views": 287077,
-    "likes": 2068,
-    "comments": 80,
-    "seconds": 86
    },
    {
     "season": 35,
@@ -2363,9 +2786,9 @@
     "id": "0wZWyOGVsFU",
     "title": "Connor Wood and Rylee Arnold\u2019s Mariah Carey Night Rumba | Dancing with the Stars",
     "published": "2026-10-07T05:00:16Z",
-    "views": 257902,
-    "likes": 2035,
-    "comments": 108,
+    "views": 273465,
+    "likes": 2101,
+    "comments": 111,
     "seconds": 86
    },
    {
@@ -2377,24 +2800,10 @@
     "id": "4oGJzrWHhuc",
     "title": "Guillermo Rodriguez and Witney Carson\u2019s Super Bowl Night Salsa | Dancing with the Stars",
     "published": "2026-10-14T05:00:15Z",
-    "views": 480816,
-    "likes": 4934,
-    "comments": 465,
+    "views": 498589,
+    "likes": 4990,
+    "comments": 463,
     "seconds": 89
-   },
-   {
-    "season": 35,
-    "week": 5,
-    "celeb": "Tatyana Ali",
-    "dance_index": 0,
-    "dance": "Salsa",
-    "id": "r2HQ0KNzoag",
-    "title": "Tatyana Ali and Jan Ravnik\u2019s Super Bowl Night Salsa | Dancing with the Stars",
-    "published": "2026-10-14T05:00:11Z",
-    "views": 166603,
-    "likes": 1984,
-    "comments": 146,
-    "seconds": 87
    },
    {
     "season": 35,
@@ -2405,10 +2814,52 @@
     "id": "lumXonAI-XI",
     "title": "Tyler Cameron and Sharna Burgess\u2019s Super Bowl Night Jazz | Dancing with the Stars",
     "published": "2026-10-14T05:00:17Z",
-    "views": 109272,
-    "likes": 967,
-    "comments": 83,
+    "views": 112252,
+    "likes": 981,
+    "comments": 84,
     "seconds": 89
+   },
+   {
+    "season": 35,
+    "week": 5,
+    "celeb": "Jackson Olson",
+    "dance_index": 0,
+    "dance": "Salsa",
+    "id": "eesH2SYHYnY",
+    "title": "Jackson Olson and Emma Slater\u2019s Super Bowl Night Salsa | Dancing with the Stars",
+    "published": "2026-10-14T05:00:25Z",
+    "views": 117554,
+    "likes": 1054,
+    "comments": 61,
+    "seconds": 85
+   },
+   {
+    "season": 35,
+    "week": 5,
+    "celeb": "Julia Stiles",
+    "dance_index": 0,
+    "dance": "Jazz",
+    "id": "gpbC3NKA8WA",
+    "title": "Julia Stiles and Ezra Sosa\u2019s Super Bowl Night Jazz  | Dancing with the Stars",
+    "published": "2026-10-14T05:00:35Z",
+    "views": 1739401,
+    "likes": 12795,
+    "comments": 760,
+    "seconds": 82
+   },
+   {
+    "season": 35,
+    "week": 5,
+    "celeb": "Tatyana Ali",
+    "dance_index": 0,
+    "dance": "Salsa",
+    "id": "r2HQ0KNzoag",
+    "title": "Tatyana Ali and Jan Ravnik\u2019s Super Bowl Night Salsa | Dancing with the Stars",
+    "published": "2026-10-14T05:00:11Z",
+    "views": 171765,
+    "likes": 2024,
+    "comments": 146,
+    "seconds": 87
    },
    {
     "season": 35,
@@ -2419,9 +2870,9 @@
     "id": "_m7haHZvFrI",
     "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Super Bowl Night Paso Doble | Dancing with the Stars",
     "published": "2026-10-14T05:00:01Z",
-    "views": 287000,
-    "likes": 2618,
-    "comments": 204,
+    "views": 298146,
+    "likes": 2670,
+    "comments": 206,
     "seconds": 89
    },
    {
@@ -2433,9 +2884,9 @@
     "id": "GhxQPZnJVUA",
     "title": "Ezra Frech and Daniella Karagach\u2019s Super Bowl Night Salsa | Dancing with the Stars",
     "published": "2026-10-14T05:00:26Z",
-    "views": 338206,
-    "likes": 3042,
-    "comments": 191,
+    "views": 354762,
+    "likes": 3103,
+    "comments": 193,
     "seconds": 89
    },
    {
@@ -2447,8 +2898,8 @@
     "id": "dop5OGz3aCU",
     "title": "Amber Glenn and Pasha Pashkov\u2019s Super Bowl Night Samba | Dancing with the Stars",
     "published": "2026-10-14T05:00:33Z",
-    "views": 388292,
-    "likes": 4232,
+    "views": 422236,
+    "likes": 4393,
     "comments": 261,
     "seconds": 89
    },
@@ -2461,24 +2912,10 @@
     "id": "KOLtPVA4n0M",
     "title": "Maura Higgins and Mark Ballas\u2019s Super Bowl Night Tango | Dancing with the Stars",
     "published": "2026-10-14T05:00:28Z",
-    "views": 198056,
-    "likes": 1271,
-    "comments": 94,
+    "views": 203075,
+    "likes": 1291,
+    "comments": 95,
     "seconds": 87
-   },
-   {
-    "season": 35,
-    "week": 5,
-    "celeb": "Jackson Olson",
-    "dance_index": 0,
-    "dance": "Salsa",
-    "id": "eesH2SYHYnY",
-    "title": "Jackson Olson and Emma Slater\u2019s Super Bowl Night Salsa | Dancing with the Stars",
-    "published": "2026-10-14T05:00:25Z",
-    "views": 113650,
-    "likes": 1041,
-    "comments": 61,
-    "seconds": 85
    },
    {
     "season": 35,
@@ -2489,24 +2926,10 @@
     "id": "ss_jD0tU3fY",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Super Bowl Night Samba | Dancing with the Stars",
     "published": "2026-10-14T05:00:16Z",
-    "views": 343377,
-    "likes": 2020,
-    "comments": 291,
+    "views": 355868,
+    "likes": 2070,
+    "comments": 292,
     "seconds": 86
-   },
-   {
-    "season": 35,
-    "week": 5,
-    "celeb": "Julia Stiles",
-    "dance_index": 0,
-    "dance": "Jazz",
-    "id": "gpbC3NKA8WA",
-    "title": "Julia Stiles and Ezra Sosa\u2019s Super Bowl Night Jazz  | Dancing with the Stars",
-    "published": "2026-10-14T05:00:35Z",
-    "views": 1697025,
-    "likes": 12603,
-    "comments": 751,
-    "seconds": 82
    },
    {
     "season": 35,
@@ -2517,24 +2940,10 @@
     "id": "j6-ETZ7WFag",
     "title": "Connor Wood and Rylee Arnold\u2019s Super Bowl Night Samba | Dancing with the Stars",
     "published": "2026-10-14T05:00:27Z",
-    "views": 208442,
-    "likes": 1964,
-    "comments": 156,
+    "views": 221689,
+    "likes": 2017,
+    "comments": 157,
     "seconds": 87
-   },
-   {
-    "season": 35,
-    "week": 6,
-    "celeb": "Tatyana Ali",
-    "dance_index": 0,
-    "dance": "Viennese waltz",
-    "id": "U4w1hRAzIQc",
-    "title": "Tatyana Ali and Jan Ravnik\u2019s Dedication Night Viennese Waltz | Dancing with the Stars",
-    "published": "2026-10-21T05:00:04Z",
-    "views": 358301,
-    "likes": 5023,
-    "comments": 369,
-    "seconds": 106
    },
    {
     "season": 35,
@@ -2545,10 +2954,52 @@
     "id": "vVdUs0Uq5WM",
     "title": "Tyler Cameron and Sharna Burgess\u2019s Dedication Night Contemporary | Dancing with the Stars",
     "published": "2026-10-21T05:00:16Z",
-    "views": 223689,
-    "likes": 1739,
-    "comments": 108,
+    "views": 238753,
+    "likes": 1814,
+    "comments": 113,
     "seconds": 103
+   },
+   {
+    "season": 35,
+    "week": 6,
+    "celeb": "Jackson Olson",
+    "dance_index": 0,
+    "dance": "Quickstep",
+    "id": "8RxCM22TG_A",
+    "title": "Jackson Olson and Emma Slater\u2019s Dedication Night Quickstep | Dancing with the Stars",
+    "published": "2026-10-21T05:00:18Z",
+    "views": 111894,
+    "likes": 1038,
+    "comments": 50,
+    "seconds": 92
+   },
+   {
+    "season": 35,
+    "week": 6,
+    "celeb": "Julia Stiles",
+    "dance_index": 0,
+    "dance": "Contemporary",
+    "id": "_JppcwYFLag",
+    "title": "Julia Stiles and Ezra Sosa\u2019s Dedication Night Contemporary | Dancing with the Stars",
+    "published": "2026-10-21T05:00:08Z",
+    "views": 1327129,
+    "likes": 15182,
+    "comments": 663,
+    "seconds": 109
+   },
+   {
+    "season": 35,
+    "week": 6,
+    "celeb": "Tatyana Ali",
+    "dance_index": 0,
+    "dance": "Viennese waltz",
+    "id": "U4w1hRAzIQc",
+    "title": "Tatyana Ali and Jan Ravnik\u2019s Dedication Night Viennese Waltz | Dancing with the Stars",
+    "published": "2026-10-21T05:00:04Z",
+    "views": 392393,
+    "likes": 5266,
+    "comments": 389,
+    "seconds": 106
    },
    {
     "season": 35,
@@ -2559,9 +3010,9 @@
     "id": "p7ZZchCzuJM",
     "title": "Jenna Dewan and Alan Bersten\u2019s Dedication Night Viennese Waltz | Dancing with the Stars",
     "published": "2026-10-21T05:00:31Z",
-    "views": 319059,
-    "likes": 2315,
-    "comments": 188,
+    "views": 338360,
+    "likes": 2396,
+    "comments": 193,
     "seconds": 99
    },
    {
@@ -2573,9 +3024,9 @@
     "id": "0EMnaTMmeoY",
     "title": "Ezra Frech and Daniella Karagach\u2019s Dedication Night Contemporary | Dancing with the Stars",
     "published": "2026-10-21T05:00:17Z",
-    "views": 288841,
-    "likes": 2942,
-    "comments": 157,
+    "views": 326259,
+    "likes": 3096,
+    "comments": 161,
     "seconds": 98
    },
    {
@@ -2587,9 +3038,9 @@
     "id": "hUHafOmL-0E",
     "title": "Amber Glenn and Pasha Pashkov\u2019s Dedication Night Contemporary | Dancing with the Stars",
     "published": "2026-10-21T05:00:17Z",
-    "views": 335011,
-    "likes": 4102,
-    "comments": 243,
+    "views": 372040,
+    "likes": 4323,
+    "comments": 250,
     "seconds": 97
    },
    {
@@ -2601,24 +3052,10 @@
     "id": "gJDmNlQHuag",
     "title": "Maura Higgins and Mark Ballas\u2019s Dedication Night Paso Doble | Dancing with the Stars",
     "published": "2026-10-21T05:00:06Z",
-    "views": 516435,
-    "likes": 3719,
-    "comments": 272,
+    "views": 569754,
+    "likes": 3926,
+    "comments": 284,
     "seconds": 100
-   },
-   {
-    "season": 35,
-    "week": 6,
-    "celeb": "Jackson Olson",
-    "dance_index": 0,
-    "dance": "Quickstep",
-    "id": "8RxCM22TG_A",
-    "title": "Jackson Olson and Emma Slater\u2019s Dedication Night Quickstep | Dancing with the Stars",
-    "published": "2026-10-21T05:00:18Z",
-    "views": 103960,
-    "likes": 989,
-    "comments": 47,
-    "seconds": 92
    },
    {
     "season": 35,
@@ -2629,24 +3066,10 @@
     "id": "vp_R_OfQcRI",
     "title": "Harry Shum Jr. and Jenna Johnson\u2019s Dedication Night Foxtrot | Dancing with the Stars",
     "published": "2026-10-21T05:00:32Z",
-    "views": 285999,
-    "likes": 2680,
-    "comments": 146,
+    "views": 314216,
+    "likes": 2819,
+    "comments": 154,
     "seconds": 104
-   },
-   {
-    "season": 35,
-    "week": 6,
-    "celeb": "Julia Stiles",
-    "dance_index": 0,
-    "dance": "Contemporary",
-    "id": "_JppcwYFLag",
-    "title": "Julia Stiles and Ezra Sosa\u2019s Dedication Night Contemporary | Dancing with the Stars",
-    "published": "2026-10-21T05:00:08Z",
-    "views": 1224835,
-    "likes": 14452,
-    "comments": 635,
-    "seconds": 109
    },
    {
     "season": 35,
@@ -2657,10 +3080,150 @@
     "id": "NEGriJYWBsc",
     "title": "Connor Wood and Rylee Arnold\u2019s Dedication Night Viennese Waltz | Dancing with the Stars",
     "published": "2026-10-21T05:00:27Z",
-    "views": 161272,
-    "likes": 1533,
-    "comments": 71,
+    "views": 182199,
+    "likes": 1623,
+    "comments": 75,
     "seconds": 100
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Tyler Cameron",
+    "dance_index": 0,
+    "dance": "Viennese waltz",
+    "id": "WoygrlOfn24",
+    "title": "Tyler Cameron and Sharna Burgess\u2019s Horror Movie Night Viennese Waltz | Dancing with the Stars",
+    "published": "2026-10-28T05:00:34Z",
+    "views": 105839,
+    "likes": 576,
+    "comments": 55,
+    "seconds": 92
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Jackson Olson",
+    "dance_index": 0,
+    "dance": "Contemporary",
+    "id": "YQl4AFJqwSs",
+    "title": "Jackson Olson and Emma Slater\u2019s Horror Movie Night Contemporary | Dancing with the Stars",
+    "published": "2026-10-28T05:00:01Z",
+    "views": 130187,
+    "likes": 1074,
+    "comments": 79,
+    "seconds": 97
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Julia Stiles",
+    "dance_index": 0,
+    "dance": "Argentine tango",
+    "id": "8lRlPTWC91I",
+    "title": "Julia Stiles and Ezra Sosa\u2019s Horror Movie Night Argentine Tango | Dancing with the Stars",
+    "published": "2026-10-28T05:00:06Z",
+    "views": 267291,
+    "likes": 1444,
+    "comments": 124,
+    "seconds": 88
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Tatyana Ali",
+    "dance_index": 0,
+    "dance": "Paso doble",
+    "id": "uPHP28R600k",
+    "title": "Tatyana Ali and Jan Ravnik\u2019s Horror Movie Night Paso Doble | Dancing with the Stars",
+    "published": "2026-10-28T05:00:04Z",
+    "views": 153748,
+    "likes": 1637,
+    "comments": 153,
+    "seconds": 93
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Jenna Dewan",
+    "dance_index": 0,
+    "dance": "Argentine tango",
+    "id": "lsY2ayn4lvw",
+    "title": "Jenna Dewan and Val Chmerkovskiy\u2019s Horror Movie Night Argentine Tango | Dancing with the Stars",
+    "published": "2026-10-28T05:00:08Z",
+    "views": 245382,
+    "likes": 1565,
+    "comments": 139,
+    "seconds": 93
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Ezra Frech",
+    "dance_index": 0,
+    "dance": "Jazz",
+    "id": "RnHnp50tJhQ",
+    "title": "Ezra Frech and Daniella Karagach\u2019s Horror Movie Night Jazz | Dancing with the Stars",
+    "published": "2026-10-28T05:00:03Z",
+    "views": 184189,
+    "likes": 1313,
+    "comments": 63,
+    "seconds": 89
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Amber Glenn",
+    "dance_index": 0,
+    "dance": "Argentine tango",
+    "id": "mh4_h-nLHzo",
+    "title": "Amber Glenn and Pasha Pashkov\u2019s Horror Movie Night Argentine Tango | Dancing with the Stars",
+    "published": "2026-10-28T05:00:25Z",
+    "views": 158997,
+    "likes": 1348,
+    "comments": 82,
+    "seconds": 89
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Maura Higgins",
+    "dance_index": 0,
+    "dance": "Contemporary",
+    "id": "P27lWh5Se7o",
+    "title": "Maura Higgins and Mark Ballas\u2019s Horror Movie Night Contemporary | Dancing with the Stars",
+    "published": "2026-10-28T05:00:34Z",
+    "views": 217533,
+    "likes": 1250,
+    "comments": 109,
+    "seconds": 96
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Harry Shum Jr.",
+    "dance_index": 0,
+    "dance": "Contemporary",
+    "id": "hBIDBUvHQAU",
+    "title": "Harry Shum Jr. and Jenna Johnson\u2019s Horror Movie Night Contemporary | Dancing with the Stars",
+    "published": "2026-10-28T05:00:07Z",
+    "views": 363609,
+    "likes": 2892,
+    "comments": 198,
+    "seconds": 97
+   },
+   {
+    "season": 35,
+    "week": 7,
+    "celeb": "Connor Wood",
+    "dance_index": 0,
+    "dance": "Contemporary",
+    "id": "6ebFieXxC6E",
+    "title": "Connor Wood and Rylee Arnold\u2019s Horror Movie Night Contemporary | Dancing with the Stars",
+    "published": "2026-10-28T05:00:33Z",
+    "views": 391315,
+    "likes": 4217,
+    "comments": 247,
+    "seconds": 93
    }
   ]
  },
@@ -2674,12 +3237,9 @@
    "Connor Wood",
    "Ezra Frech",
    "Harry Shum Jr.",
-   "Jackson Olson",
    "Jenna Dewan",
-   "Julia Stiles",
    "Maura Higgins",
-   "Tatyana Ali",
-   "Tyler Cameron"
+   "Tatyana Ali"
   ],
   "rounds": [
    {
@@ -2723,6 +3283,21 @@
     "out": [
      "Guillermo Rodriguez"
     ]
+   },
+   {
+    "week": 7,
+    "danced": 10,
+    "out": [
+     "Tyler Cameron",
+     "Jackson Olson"
+    ]
+   },
+   {
+    "week": 8,
+    "danced": 8,
+    "out": [
+     "Julia Stiles"
+    ]
    }
   ],
   "alpha_yt": 0.1,
@@ -2732,12 +3307,9 @@
     "Connor Wood": -0.032,
     "Ezra Frech": 0.117,
     "Harry Shum Jr.": 0.037,
-    "Jackson Olson": -0.019,
     "Jenna Dewan": 0.047,
-    "Julia Stiles": -0.003,
     "Maura Higgins": 0.081,
-    "Tatyana Ali": -0.055,
-    "Tyler Cameron": 0.121
+    "Tatyana Ali": -0.055
    },
    "category": {
     "Conner Leavitt": "reality",
@@ -2746,15 +3318,15 @@
     "Taylor Hanson": "music",
     "Ciara Miller": "reality",
     "Guillermo Rodriguez": "tv",
-    "Tatyana Ali": "music",
     "Tyler Cameron": "bachelor",
+    "Jackson Olson": "athlete",
+    "Julia Stiles": "actor",
+    "Tatyana Ali": "music",
     "Jenna Dewan": "actor",
     "Ezra Frech": "olympian",
     "Amber Glenn": "olympian",
     "Maura Higgins": "tv",
-    "Jackson Olson": "athlete",
     "Harry Shum Jr.": "actor",
-    "Julia Stiles": "actor",
     "Connor Wood": "social"
    },
    "pro_effects": {
@@ -2797,35 +3369,17 @@
   "fits": {
    "0.4": {
     "mean": [
-     0.0001,
-     0.0842,
-     -0.0019,
-     0.0022,
-     0.0198,
-     -0.002,
-     0.0092,
-     0.0019,
-     0.0536,
-     0.0301
+     0.0403,
+     0.0765,
+     0.0149,
+     0.0076,
+     0.0073,
+     0.0539,
+     0.0759
     ],
     "chol": [
      [
-      0.09453,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00185,
-      0.06341,
-      0.0,
-      0.0,
+      0.07083,
       0.0,
       0.0,
       0.0,
@@ -2834,10 +3388,129 @@
       0.0
      ],
      [
-      3e-05,
-      0.0011,
-      0.09725,
+      0.00425,
+      0.06193,
       0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0053,
+      0.00299,
+      0.08068,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00329,
+      0.00328,
+      0.00117,
+      0.08595,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00345,
+      0.00225,
+      0.00133,
+      0.00068,
+      0.08628,
+      0.0,
+      0.0
+     ],
+     [
+      0.01081,
+      0.00477,
+      0.00419,
+      0.00236,
+      0.00252,
+      0.06529,
+      0.0
+     ],
+     [
+      0.00649,
+      0.0061,
+      0.003,
+      0.00182,
+      0.00221,
+      0.006,
+      0.05759
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1317,
+      "p50": 0.1424,
+      "p90": 0.1545
+     },
+     "Connor Wood": {
+      "p10": 0.1377,
+      "p50": 0.148,
+      "p90": 0.1587
+     },
+     "Ezra Frech": {
+      "p10": 0.1266,
+      "p50": 0.139,
+      "p90": 0.1526
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1249,
+      "p50": 0.1379,
+      "p90": 0.1525
+     },
+     "Jenna Dewan": {
+      "p10": 0.1248,
+      "p50": 0.1378,
+      "p90": 0.1524
+     },
+     "Maura Higgins": {
+      "p10": 0.1343,
+      "p50": 0.1447,
+      "p90": 0.1555
+     },
+     "Tatyana Ali": {
+      "p10": 0.138,
+      "p50": 0.1479,
+      "p90": 0.1581
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.04,
+     "Ciara Miller": -0.085,
+     "Conner Leavitt": -0.041,
+     "Connor Wood": 0.077,
+     "Ezra Frech": 0.015,
+     "Giada De Laurentiis": -0.039,
+     "Guillermo Rodriguez": 0.112,
+     "Harry Shum Jr.": 0.008,
+     "Jackson Olson": -0.048,
+     "Jenna Dewan": 0.007,
+     "Julia Stiles": 0.007,
+     "Maura Higgins": 0.054,
+     "Sarah Jane Nader": -0.084,
+     "Tatyana Ali": 0.076,
+     "Taylor Hanson": -0.099,
+     "Tyler Cameron": 0.001
+    }
+   },
+   "0.5": {
+    "mean": [
+     0.0347,
+     0.0854,
+     0.0044,
+     -0.0015,
+     -0.0015,
+     0.0522,
+     0.0886
+    ],
+    "chol": [
+     [
+      0.07595,
       0.0,
       0.0,
       0.0,
@@ -2846,36 +3519,1066 @@
       0.0
      ],
      [
+      0.00249,
+      0.06721,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00325,
+      0.00112,
+      0.0893,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00131,
+      0.00125,
       0.00024,
+      0.0943,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00144,
+      0.00045,
+      0.00032,
+      9e-05,
+      0.09425,
+      0.0,
+      0.0
+     ],
+     [
+      0.01154,
+      0.00307,
+      0.0028,
+      0.00111,
+      0.00126,
+      0.06995,
+      0.0
+     ],
+     [
+      0.00543,
+      0.00416,
+      0.00175,
+      0.00083,
+      0.00139,
+      0.00574,
+      0.06009
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1303,
+      "p50": 0.1418,
+      "p90": 0.1549
+     },
+     "Connor Wood": {
+      "p10": 0.138,
+      "p50": 0.1497,
+      "p90": 0.1614
+     },
+     "Ezra Frech": {
+      "p10": 0.1241,
+      "p50": 0.1377,
+      "p90": 0.1528
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1227,
+      "p50": 0.1369,
+      "p90": 0.1529
+     },
+     "Jenna Dewan": {
+      "p10": 0.1226,
+      "p50": 0.1368,
+      "p90": 0.1528
+     },
+     "Maura Higgins": {
+      "p10": 0.1334,
+      "p50": 0.1446,
+      "p90": 0.1565
+     },
+     "Tatyana Ali": {
+      "p10": 0.1394,
+      "p50": 0.15,
+      "p90": 0.1609
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.035,
+     "Ciara Miller": -0.1,
+     "Conner Leavitt": -0.036,
+     "Connor Wood": 0.085,
+     "Ezra Frech": 0.004,
+     "Giada De Laurentiis": -0.023,
+     "Guillermo Rodriguez": 0.157,
+     "Harry Shum Jr.": -0.001,
+     "Jackson Olson": -0.069,
+     "Jenna Dewan": -0.001,
+     "Julia Stiles": 0.003,
+     "Maura Higgins": 0.052,
+     "Sarah Jane Nader": -0.085,
+     "Tatyana Ali": 0.089,
+     "Taylor Hanson": -0.111,
+     "Tyler Cameron": 0.002
+    }
+   },
+   "0.6": {
+    "mean": [
+     0.0277,
+     0.0793,
+     -0.0027,
+     -0.0063,
+     -0.0063,
+     0.0497,
+     0.1109
+    ],
+    "chol": [
+     [
+      0.08161,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00091,
+      0.07532,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0013,
+      -0.00024,
+      0.09531,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00021,
+      -0.00031,
+      3e-05,
+      0.09823,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00028,
+      -0.00071,
+      6e-05,
+      4e-05,
+      0.09796,
+      0.0,
+      0.0
+     ],
+     [
+      0.01135,
+      0.00147,
+      0.00138,
+      0.00033,
+      0.00042,
+      0.07539,
+      0.0
+     ],
+     [
       0.00428,
+      0.00143,
+      0.00097,
+      0.00047,
+      0.00106,
+      0.00522,
+      0.06453
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1285,
+      "p50": 0.1409,
+      "p90": 0.1551
+     },
+     "Connor Wood": {
+      "p10": 0.136,
+      "p50": 0.1489,
+      "p90": 0.1622
+     },
+     "Ezra Frech": {
+      "p10": 0.1223,
+      "p50": 0.1368,
+      "p90": 0.153
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1217,
+      "p50": 0.1364,
+      "p90": 0.153
+     },
+     "Jenna Dewan": {
+      "p10": 0.1215,
+      "p50": 0.1362,
+      "p90": 0.1529
+     },
+     "Maura Higgins": {
+      "p10": 0.1322,
+      "p50": 0.1444,
+      "p90": 0.1573
+     },
+     "Tatyana Ali": {
+      "p10": 0.142,
+      "p50": 0.1536,
+      "p90": 0.1655
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.028,
+     "Ciara Miller": -0.108,
+     "Conner Leavitt": -0.044,
+     "Connor Wood": 0.079,
+     "Ezra Frech": -0.003,
+     "Giada De Laurentiis": -0.011,
+     "Guillermo Rodriguez": 0.192,
+     "Harry Shum Jr.": -0.006,
+     "Jackson Olson": -0.087,
+     "Jenna Dewan": -0.006,
+     "Julia Stiles": 0.002,
+     "Maura Higgins": 0.05,
+     "Sarah Jane Nader": -0.088,
+     "Tatyana Ali": 0.111,
+     "Taylor Hanson": -0.115,
+     "Tyler Cameron": 0.007
+    }
+   },
+   "0.7": {
+    "mean": [
+     0.018,
+     0.0552,
+     -0.0069,
+     -0.0084,
+     -0.0085,
+     0.0437,
+     0.1383
+    ],
+    "chol": [
+     [
+      0.08795,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00043,
+      0.08234,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00015,
+      -0.00056,
+      0.09829,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00019,
+      -0.00062,
+      4e-05,
+      0.09931,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00015,
+      -0.00084,
+      4e-05,
+      6e-05,
+      0.0992,
+      0.0,
+      0.0
+     ],
+     [
+      0.00902,
+      0.00119,
+      0.00031,
+      -0.00012,
+      -8e-05,
+      0.08218,
+      0.0
+     ],
+     [
+      0.00281,
+      0.00056,
+      0.00051,
+      0.0003,
+      0.00056,
+      0.00439,
+      0.07225
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1266,
+      "p50": 0.1399,
+      "p90": 0.1552
+     },
+     "Connor Wood": {
+      "p10": 0.132,
+      "p50": 0.1458,
+      "p90": 0.16
+     },
+     "Ezra Frech": {
+      "p10": 0.1216,
+      "p50": 0.1365,
+      "p90": 0.1533
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1214,
+      "p50": 0.1363,
+      "p90": 0.1533
+     },
+     "Jenna Dewan": {
+      "p10": 0.1213,
+      "p50": 0.1363,
+      "p90": 0.1531
+     },
+     "Maura Higgins": {
+      "p10": 0.1307,
+      "p50": 0.1439,
+      "p90": 0.1579
+     },
+     "Tatyana Ali": {
+      "p10": 0.145,
+      "p50": 0.1583,
+      "p90": 0.1719
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.018,
+     "Ciara Miller": -0.106,
+     "Conner Leavitt": -0.062,
+     "Connor Wood": 0.055,
+     "Ezra Frech": -0.007,
+     "Giada De Laurentiis": -0.007,
+     "Guillermo Rodriguez": 0.227,
+     "Harry Shum Jr.": -0.008,
+     "Jackson Olson": -0.095,
+     "Jenna Dewan": -0.009,
+     "Julia Stiles": -0.001,
+     "Maura Higgins": 0.044,
+     "Sarah Jane Nader": -0.094,
+     "Tatyana Ali": 0.138,
+     "Taylor Hanson": -0.108,
+     "Tyler Cameron": 0.014
+    }
+   },
+   "0.4|yt": {
+    "mean": [
+     0.0524,
+     0.078,
+     0.0444,
+     0.0482,
+     0.0288,
+     0.0708,
+     0.07
+    ],
+    "chol": [
+     [
+      0.07049,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00518,
+      0.06117,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0042,
+      0.00246,
+      0.08702,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00186,
+      0.00178,
+      0.00042,
+      0.09322,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00311,
+      0.00201,
+      0.00072,
+      0.00027,
+      0.08971,
+      0.0,
+      0.0
+     ],
+     [
+      0.01167,
+      0.0053,
+      0.00281,
+      0.0012,
+      0.00203,
+      0.06735,
+      0.0
+     ],
+     [
+      0.00878,
+      0.00738,
+      0.00237,
+      0.00109,
+      0.00196,
+      0.00722,
+      0.05534
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1312,
+      "p50": 0.1418,
+      "p90": 0.1539
+     },
+     "Connor Wood": {
+      "p10": 0.1356,
+      "p50": 0.1458,
+      "p90": 0.1562
+     },
+     "Ezra Frech": {
+      "p10": 0.1272,
+      "p50": 0.1408,
+      "p90": 0.1557
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.127,
+      "p50": 0.1413,
+      "p90": 0.1575
+     },
+     "Jenna Dewan": {
+      "p10": 0.1249,
+      "p50": 0.1385,
+      "p90": 0.1538
+     },
+     "Maura Higgins": {
+      "p10": 0.134,
+      "p50": 0.1447,
+      "p90": 0.156
+     },
+     "Tatyana Ali": {
+      "p10": 0.1352,
+      "p50": 0.1446,
+      "p90": 0.1543
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.052,
+     "Ciara Miller": -0.11,
+     "Conner Leavitt": -0.051,
+     "Connor Wood": 0.078,
+     "Ezra Frech": 0.044,
+     "Giada De Laurentiis": -0.067,
+     "Guillermo Rodriguez": 0.12,
+     "Harry Shum Jr.": 0.048,
+     "Jackson Olson": -0.057,
+     "Jenna Dewan": 0.029,
+     "Julia Stiles": 0.025,
+     "Maura Higgins": 0.071,
+     "Sarah Jane Nader": -0.111,
+     "Tatyana Ali": 0.07,
+     "Taylor Hanson": -0.128,
+     "Tyler Cameron": -0.014
+    }
+   },
+   "0.5|yt": {
+    "mean": [
+     0.0478,
+     0.0898,
+     0.038,
+     0.0437,
+     0.0222,
+     0.0711,
+     0.0787
+    ],
+    "chol": [
+     [
+      0.07517,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00338,
+      0.06552,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00241,
+      0.00107,
+      0.09286,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00063,
+      0.00076,
+      8e-05,
+      0.09705,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00126,
+      0.00062,
+      0.00018,
+      5e-05,
+      0.09561,
+      0.0,
+      0.0
+     ],
+     [
+      0.0124,
+      0.00375,
+      0.00185,
+      0.00057,
+      0.00102,
+      0.07111,
+      0.0
+     ],
+     [
+      0.00759,
+      0.00583,
+      0.0014,
+      0.00054,
+      0.00122,
+      0.00705,
+      0.05779
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1297,
+      "p50": 0.1411,
+      "p90": 0.154
+     },
+     "Connor Wood": {
+      "p10": 0.1364,
+      "p50": 0.1475,
+      "p90": 0.159
+     },
+     "Ezra Frech": {
+      "p10": 0.1254,
+      "p50": 0.1398,
+      "p90": 0.1558
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1258,
+      "p50": 0.1407,
+      "p90": 0.1575
+     },
+     "Jenna Dewan": {
+      "p10": 0.123,
+      "p50": 0.1376,
+      "p90": 0.154
+     },
+     "Maura Higgins": {
+      "p10": 0.1333,
+      "p50": 0.1447,
+      "p90": 0.1568
+     },
+     "Tatyana Ali": {
+      "p10": 0.1359,
+      "p50": 0.1459,
+      "p90": 0.1561
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.048,
+     "Ciara Miller": -0.132,
+     "Conner Leavitt": -0.042,
+     "Connor Wood": 0.09,
+     "Ezra Frech": 0.038,
+     "Giada De Laurentiis": -0.053,
+     "Guillermo Rodriguez": 0.173,
+     "Harry Shum Jr.": 0.044,
+     "Jackson Olson": -0.083,
+     "Jenna Dewan": 0.022,
+     "Julia Stiles": 0.026,
+     "Maura Higgins": 0.071,
+     "Sarah Jane Nader": -0.114,
+     "Tatyana Ali": 0.079,
+     "Taylor Hanson": -0.146,
+     "Tyler Cameron": -0.021
+    }
+   },
+   "0.6|yt": {
+    "mean": [
+     0.0409,
+     0.0921,
+     0.0329,
+     0.0404,
+     0.0177,
+     0.0702,
+     0.0967
+    ],
+    "chol": [
+     [
+      0.08055,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00149,
+      0.07392,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00095,
+      -0.00018,
+      0.09661,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
       -1e-05,
-      0.09252,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00066,
-      0.00837,
-      0.00017,
-      0.00066,
-      0.07822,
-      0.0,
-      0.0,
+      -0.0003,
+      3e-05,
+      0.0988,
       0.0,
       0.0,
       0.0
      ],
      [
-      1e-05,
-      0.00099,
-      1e-05,
-      -2e-05,
+      0.00023,
+      -0.00057,
+      7e-05,
+      5e-05,
+      0.09828,
+      0.0,
+      0.0
+     ],
+     [
+      0.01239,
+      0.00193,
+      0.00098,
       0.00019,
-      0.09716,
+      0.00039,
+      0.07573,
+      0.0
+     ],
+     [
+      0.00595,
+      0.00267,
+      0.00085,
+      0.0004,
+      0.00104,
+      0.00643,
+      0.06196
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1279,
+      "p50": 0.1401,
+      "p90": 0.1539
+     },
+     "Connor Wood": {
+      "p10": 0.1352,
+      "p50": 0.148,
+      "p90": 0.1609
+     },
+     "Ezra Frech": {
+      "p10": 0.1241,
+      "p50": 0.139,
+      "p90": 0.1557
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.125,
+      "p50": 0.1401,
+      "p90": 0.1573
+     },
+     "Jenna Dewan": {
+      "p10": 0.122,
+      "p50": 0.1369,
+      "p90": 0.1536
+     },
+     "Maura Higgins": {
+      "p10": 0.1323,
+      "p50": 0.1446,
+      "p90": 0.1576
+     },
+     "Tatyana Ali": {
+      "p10": 0.1375,
+      "p50": 0.1484,
+      "p90": 0.1597
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.041,
+     "Ciara Miller": -0.15,
+     "Conner Leavitt": -0.042,
+     "Connor Wood": 0.092,
+     "Ezra Frech": 0.033,
+     "Giada De Laurentiis": -0.041,
+     "Guillermo Rodriguez": 0.223,
+     "Harry Shum Jr.": 0.04,
+     "Jackson Olson": -0.111,
+     "Jenna Dewan": 0.018,
+     "Julia Stiles": 0.031,
+     "Maura Higgins": 0.07,
+     "Sarah Jane Nader": -0.118,
+     "Tatyana Ali": 0.097,
+     "Taylor Hanson": -0.155,
+     "Tyler Cameron": -0.028
+    }
+   },
+   "0.7|yt": {
+    "mean": [
+     0.0309,
+     0.0679,
+     0.0299,
+     0.0386,
+     0.0154,
+     0.0667,
+     0.1253
+    ],
+    "chol": [
+     [
+      0.08689,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00066,
+      0.08224,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      6e-05,
+      -0.0007,
+      0.09853,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00029,
+      -0.00077,
+      4e-05,
+      0.09938,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00021,
+      -0.00103,
+      6e-05,
+      7e-05,
+      0.09921,
+      0.0,
+      0.0
+     ],
+     [
+      0.0104,
+      0.00135,
+      0.00025,
+      -0.00012,
+      -4e-05,
+      0.08191,
+      0.0
+     ],
+     [
+      0.00389,
+      0.00077,
+      0.00053,
+      0.00033,
+      0.0007,
+      0.00536,
+      0.06958
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1258,
+      "p50": 0.1389,
+      "p90": 0.1539
+     },
+     "Connor Wood": {
+      "p10": 0.131,
+      "p50": 0.1447,
+      "p90": 0.1589
+     },
+     "Ezra Frech": {
+      "p10": 0.1237,
+      "p50": 0.1388,
+      "p90": 0.1559
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1249,
+      "p50": 0.1401,
+      "p90": 0.1574
+     },
+     "Jenna Dewan": {
+      "p10": 0.1218,
+      "p50": 0.1369,
+      "p90": 0.1537
+     },
+     "Maura Higgins": {
+      "p10": 0.1311,
+      "p50": 0.1443,
+      "p90": 0.1584
+     },
+     "Tatyana Ali": {
+      "p10": 0.1407,
+      "p50": 0.1531,
+      "p90": 0.1659
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.031,
+     "Ciara Miller": -0.153,
+     "Conner Leavitt": -0.059,
+     "Connor Wood": 0.068,
+     "Ezra Frech": 0.03,
+     "Giada De Laurentiis": -0.037,
+     "Guillermo Rodriguez": 0.261,
+     "Harry Shum Jr.": 0.039,
+     "Jackson Olson": -0.129,
+     "Jenna Dewan": 0.015,
+     "Julia Stiles": 0.042,
+     "Maura Higgins": 0.067,
+     "Sarah Jane Nader": -0.124,
+     "Tatyana Ali": 0.125,
+     "Taylor Hanson": -0.149,
+     "Tyler Cameron": -0.027
+    }
+   },
+   "0.4|pr": {
+    "mean": [
+     0.0059,
+     0.0616,
+     0.0993,
+     0.0247,
+     0.0333,
+     0.0826,
+     0.0552
+    ],
+    "chol": [
+     [
+      0.06393,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00732,
+      0.05894,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      5e-05,
+      0.00064,
+      0.09778,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00253,
+      0.00229,
+      5e-05,
+      0.09177,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00202,
+      0.00124,
+      9e-05,
+      0.00018,
+      0.09348,
+      0.0,
+      0.0
+     ],
+     [
+      0.0097,
+      0.00305,
+      0.0004,
+      0.00081,
+      0.00075,
+      0.07974,
+      0.0
+     ],
+     [
+      0.0114,
+      0.00767,
+      0.0004,
+      0.00109,
+      0.00123,
+      0.00324,
+      0.05124
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1264,
+      "p50": 0.1359,
+      "p90": 0.1467
+     },
+     "Connor Wood": {
+      "p10": 0.134,
+      "p50": 0.1439,
+      "p90": 0.1541
+     },
+     "Ezra Frech": {
+      "p10": 0.1333,
+      "p50": 0.1493,
+      "p90": 0.167
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1246,
+      "p50": 0.1386,
+      "p90": 0.1543
+     },
+     "Jenna Dewan": {
+      "p10": 0.1253,
+      "p50": 0.1397,
+      "p90": 0.1559
+     },
+     "Maura Higgins": {
+      "p10": 0.1341,
+      "p50": 0.147,
+      "p90": 0.1608
+     },
+     "Tatyana Ali": {
+      "p10": 0.134,
+      "p50": 0.143,
+      "p90": 0.1522
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.006,
+     "Ciara Miller": -0.108,
+     "Conner Leavitt": -0.04,
+     "Connor Wood": 0.062,
+     "Ezra Frech": 0.099,
+     "Giada De Laurentiis": -0.055,
+     "Guillermo Rodriguez": 0.116,
+     "Harry Shum Jr.": 0.025,
+     "Jackson Olson": -0.06,
+     "Jenna Dewan": 0.033,
+     "Julia Stiles": 0.001,
+     "Maura Higgins": 0.083,
+     "Sarah Jane Nader": -0.092,
+     "Tatyana Ali": 0.055,
+     "Taylor Hanson": -0.145,
+     "Tyler Cameron": 0.021
+    }
+   },
+   "0.5|pr": {
+    "mean": [
+     -0.0074,
+     0.0706,
+     0.0971,
+     0.0192,
+     0.0287,
+     0.0824,
+     0.0644
+    ],
+    "chol": [
+     [
+      0.0705,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00432,
+      0.06556,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00043,
+      9e-05,
+      0.09859,
       0.0,
       0.0,
       0.0,
@@ -2883,361 +4586,110 @@
      ],
      [
       0.00038,
-      0.00507,
-      0.00011,
-      0.00036,
-      0.00153,
-      8e-05,
-      0.08549,
+      0.00076,
+      2e-05,
+      0.09686,
       0.0,
       0.0,
       0.0
      ],
      [
-      0.00022,
-      0.00415,
-      -1e-05,
-      0.00022,
-      0.00075,
-      -3e-05,
+      0.00025,
+      7e-05,
+      5e-05,
+      4e-05,
+      0.0974,
+      0.0,
+      0.0
+     ],
+     [
+      0.01008,
+      0.00183,
       0.00033,
-      0.09253,
-      0.0,
+      0.00045,
+      0.00044,
+      0.08169,
       0.0
      ],
      [
-      0.00119,
-      0.00828,
-      0.00021,
-      0.0007,
-      0.00234,
-      0.00064,
-      0.00182,
-      0.00107,
-      0.06633,
-      0.0
-     ],
-     [
-      0.00083,
-      0.0097,
-      0.0003,
-      0.00085,
-      0.00303,
-      0.00026,
-      0.00174,
-      0.00079,
-      0.00328,
-      0.07278
+      0.00903,
+      0.00556,
+      0.00035,
+      0.00051,
+      0.00093,
+      0.00324,
+      0.05473
      ]
     ],
     "share": {
      "Amber Glenn": {
-      "p10": 0.0875,
-      "p50": 0.0979,
-      "p90": 0.1095
+      "p10": 0.1237,
+      "p50": 0.1341,
+      "p90": 0.146
      },
      "Connor Wood": {
-      "p10": 0.0986,
-      "p50": 0.1066,
-      "p90": 0.1147
+      "p10": 0.1343,
+      "p50": 0.1454,
+      "p90": 0.1569
      },
      "Ezra Frech": {
-      "p10": 0.0867,
-      "p50": 0.0973,
-      "p90": 0.1093
+      "p10": 0.1329,
+      "p50": 0.1491,
+      "p90": 0.167
      },
      "Harry Shum Jr.": {
-      "p10": 0.0872,
-      "p50": 0.0977,
-      "p90": 0.109
-     },
-     "Jackson Olson": {
-      "p10": 0.0909,
-      "p50": 0.0997,
-      "p90": 0.1093
+      "p10": 0.1232,
+      "p50": 0.1379,
+      "p90": 0.1546
      },
      "Jenna Dewan": {
-      "p10": 0.0866,
-      "p50": 0.0976,
-      "p90": 0.1101
-     },
-     "Julia Stiles": {
-      "p10": 0.089,
-      "p50": 0.0987,
-      "p90": 0.1094
+      "p10": 0.1242,
+      "p50": 0.1391,
+      "p90": 0.156
      },
      "Maura Higgins": {
-      "p10": 0.0876,
-      "p50": 0.0978,
-      "p90": 0.109
+      "p10": 0.1339,
+      "p50": 0.1471,
+      "p90": 0.1614
      },
      "Tatyana Ali": {
-      "p10": 0.0948,
-      "p50": 0.103,
-      "p90": 0.1116
-     },
-     "Tyler Cameron": {
-      "p10": 0.0923,
-      "p50": 0.1006,
-      "p90": 0.1104
+      "p10": 0.1347,
+      "p50": 0.1444,
+      "p90": 0.1543
      }
     },
     "strength_all": {
-     "Amber Glenn": 0.0,
-     "Ciara Miller": -0.077,
-     "Conner Leavitt": -0.034,
-     "Connor Wood": 0.084,
-     "Ezra Frech": -0.002,
-     "Giada De Laurentiis": -0.035,
-     "Guillermo Rodriguez": 0.124,
-     "Harry Shum Jr.": 0.002,
-     "Jackson Olson": 0.02,
-     "Jenna Dewan": -0.002,
-     "Julia Stiles": 0.009,
-     "Maura Higgins": 0.002,
-     "Sarah Jane Nader": -0.085,
-     "Tatyana Ali": 0.054,
-     "Taylor Hanson": -0.09,
-     "Tyler Cameron": 0.03
-    }
-   },
-   "0.5": {
-    "mean": [
-     -0.0046,
-     0.0921,
-     -0.0046,
-     -0.0034,
-     0.0106,
-     -0.005,
-     0.0007,
-     -0.0038,
-     0.0664,
-     0.025
-    ],
-    "chol": [
-     [
-      0.09865,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00018,
-      0.06998,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      1e-05,
-      -0.00016,
-      0.09923,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -1e-05,
-      0.00122,
-      -1e-05,
-      0.0979,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      2e-05,
-      0.00551,
-      2e-05,
-      7e-05,
-      0.08588,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.0,
-      -0.00037,
-      3e-05,
-      -1e-05,
-      -1e-05,
-      0.09919,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -1e-05,
-      0.00199,
-      2e-05,
-      2e-05,
-      0.00057,
-      -1e-05,
-      0.09321,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -2e-05,
-      0.00101,
-      -0.0,
-      -1e-05,
-      6e-05,
-      -2e-05,
-      -1e-05,
-      0.09784,
-      0.0,
-      0.0
-     ],
-     [
-      0.0007,
-      0.00483,
-      6e-05,
-      0.00011,
-      0.00115,
-      0.00066,
-      0.00108,
-      0.0007,
-      0.07042,
-      0.0
-     ],
-     [
-      0.00011,
-      0.00713,
-      0.00016,
-      0.00021,
-      0.00243,
-      0.0001,
-      0.00098,
-      0.00017,
-      0.00235,
-      0.07822
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0868,
-      "p50": 0.0976,
-      "p90": 0.1097
-     },
-     "Connor Wood": {
-      "p10": 0.0987,
-      "p50": 0.1076,
-      "p90": 0.1169
-     },
-     "Ezra Frech": {
-      "p10": 0.0864,
-      "p50": 0.0972,
-      "p90": 0.1095
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0862,
-      "p50": 0.0973,
-      "p90": 0.1093
-     },
-     "Jackson Olson": {
-      "p10": 0.0895,
-      "p50": 0.0989,
-      "p90": 0.1096
-     },
-     "Jenna Dewan": {
-      "p10": 0.0863,
-      "p50": 0.0975,
-      "p90": 0.1102
-     },
-     "Julia Stiles": {
-      "p10": 0.0876,
-      "p50": 0.098,
-      "p90": 0.1098
-     },
-     "Maura Higgins": {
-      "p10": 0.0867,
-      "p50": 0.0974,
-      "p90": 0.1093
-     },
-     "Tatyana Ali": {
-      "p10": 0.0957,
-      "p50": 0.1045,
-      "p90": 0.1139
-     },
-     "Tyler Cameron": {
-      "p10": 0.0914,
-      "p50": 0.1003,
-      "p90": 0.1109
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.005,
-     "Ciara Miller": -0.094,
-     "Conner Leavitt": -0.031,
-     "Connor Wood": 0.092,
-     "Ezra Frech": -0.005,
-     "Giada De Laurentiis": -0.021,
+     "Amber Glenn": -0.007,
+     "Ciara Miller": -0.132,
+     "Conner Leavitt": -0.027,
+     "Connor Wood": 0.071,
+     "Ezra Frech": 0.097,
+     "Giada De Laurentiis": -0.037,
      "Guillermo Rodriguez": 0.166,
-     "Harry Shum Jr.": -0.003,
-     "Jackson Olson": 0.011,
-     "Jenna Dewan": -0.005,
-     "Julia Stiles": 0.001,
-     "Maura Higgins": -0.004,
-     "Sarah Jane Nader": -0.091,
-     "Tatyana Ali": 0.066,
-     "Taylor Hanson": -0.102,
-     "Tyler Cameron": 0.025
+     "Harry Shum Jr.": 0.019,
+     "Jackson Olson": -0.086,
+     "Jenna Dewan": 0.029,
+     "Julia Stiles": -0.005,
+     "Maura Higgins": 0.082,
+     "Sarah Jane Nader": -0.094,
+     "Tatyana Ali": 0.064,
+     "Taylor Hanson": -0.173,
+     "Tyler Cameron": 0.031
     }
    },
-   "0.6": {
+   "0.6|pr": {
     "mean": [
-     -0.0065,
-     0.08,
-     -0.0058,
-     -0.0057,
-     0.0047,
-     -0.0065,
-     -0.0037,
-     -0.0064,
-     0.0882,
-     0.0248
+     -0.0239,
+     0.065,
+     0.0949,
+     0.0157,
+     0.0254,
+     0.0821,
+     0.0826
     ],
     "chol": [
      [
-      0.09961,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00078,
-      0.07864,
-      0.0,
-      0.0,
+      0.07764,
       0.0,
       0.0,
       0.0,
@@ -3246,11 +4698,8 @@
       0.0
      ],
      [
-      5e-05,
-      -0.00073,
-      0.0996,
-      0.0,
-      0.0,
+      0.0016,
+      0.07554,
       0.0,
       0.0,
       0.0,
@@ -3258,181 +4707,523 @@
       0.0
      ],
      [
-      5e-05,
+      -0.00065,
+      -0.00075,
+      0.09903,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.0005,
       -0.00056,
-      3e-05,
-      0.09954,
-      0.0,
-      0.0,
-      0.0,
+      4e-05,
+      0.09889,
       0.0,
       0.0,
       0.0
      ],
      [
-      3e-05,
-      0.00115,
-      8e-05,
+      -0.00049,
+      -0.001,
       6e-05,
-      0.09162,
-      0.0,
-      0.0,
-      0.0,
+      4e-05,
+      0.09888,
       0.0,
       0.0
      ],
      [
-      6e-05,
-      -0.00105,
-      5e-05,
-      4e-05,
-      6e-05,
-      0.09957,
-      0.0,
-      0.0,
-      0.0,
+      0.00991,
+      0.00042,
+      0.00029,
+      0.00028,
+      0.0003,
+      0.08399,
       0.0
      ],
      [
-      4e-05,
-      -0.00052,
-      5e-05,
-      4e-05,
-      0.00039,
-      4e-05,
-      0.09714,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      -0.00087,
-      4e-05,
-      4e-05,
-      5e-05,
-      4e-05,
-      4e-05,
-      0.09949,
-      0.0,
-      0.0
-     ],
-     [
-      0.00067,
-      0.00063,
-      8e-05,
-      7e-05,
-      0.00058,
-      0.00068,
-      0.0008,
-      0.00067,
-      0.0761,
-      0.0
-     ],
-     [
-      0.00011,
-      0.0026,
-      0.00022,
-      0.00019,
-      0.00285,
-      0.00017,
-      0.00086,
-      0.00014,
-      0.00153,
-      0.08265
+      0.00664,
+      0.00195,
+      0.00042,
+      0.0004,
+      0.00088,
+      0.0032,
+      0.06059
      ]
     ],
     "share": {
      "Amber Glenn": {
-      "p10": 0.0866,
-      "p50": 0.0975,
-      "p90": 0.1097
+      "p10": 0.1208,
+      "p50": 0.1322,
+      "p90": 0.145
      },
      "Connor Wood": {
-      "p10": 0.0965,
-      "p50": 0.1066,
-      "p90": 0.117
+      "p10": 0.1322,
+      "p50": 0.1449,
+      "p90": 0.158
      },
      "Ezra Frech": {
-      "p10": 0.0863,
-      "p50": 0.0971,
-      "p90": 0.1095
+      "p10": 0.1327,
+      "p50": 0.1489,
+      "p90": 0.1671
      },
      "Harry Shum Jr.": {
-      "p10": 0.0859,
-      "p50": 0.0972,
-      "p90": 0.1094
-     },
-     "Jackson Olson": {
-      "p10": 0.0884,
-      "p50": 0.0983,
-      "p90": 0.1098
+      "p10": 0.1227,
+      "p50": 0.1376,
+      "p90": 0.1546
      },
      "Jenna Dewan": {
-      "p10": 0.0862,
-      "p50": 0.0974,
-      "p90": 0.1102
-     },
-     "Julia Stiles": {
-      "p10": 0.0869,
-      "p50": 0.0976,
-      "p90": 0.1099
+      "p10": 0.1237,
+      "p50": 0.1389,
+      "p90": 0.1559
      },
      "Maura Higgins": {
-      "p10": 0.0864,
-      "p50": 0.0973,
-      "p90": 0.1093
+      "p10": 0.1336,
+      "p50": 0.1473,
+      "p90": 0.1619
      },
      "Tatyana Ali": {
-      "p10": 0.0972,
-      "p50": 0.1069,
-      "p90": 0.1171
-     },
-     "Tyler Cameron": {
-      "p10": 0.091,
-      "p50": 0.1004,
-      "p90": 0.1115
+      "p10": 0.1367,
+      "p50": 0.1473,
+      "p90": 0.1585
      }
     },
     "strength_all": {
-     "Amber Glenn": -0.006,
-     "Ciara Miller": -0.103,
-     "Conner Leavitt": -0.043,
-     "Connor Wood": 0.08,
-     "Ezra Frech": -0.006,
-     "Giada De Laurentiis": -0.01,
-     "Guillermo Rodriguez": 0.196,
-     "Harry Shum Jr.": -0.006,
-     "Jackson Olson": 0.005,
-     "Jenna Dewan": -0.006,
-     "Julia Stiles": -0.004,
-     "Maura Higgins": -0.006,
-     "Sarah Jane Nader": -0.097,
-     "Tatyana Ali": 0.088,
-     "Taylor Hanson": -0.107,
-     "Tyler Cameron": 0.025
+     "Amber Glenn": -0.024,
+     "Ciara Miller": -0.149,
+     "Conner Leavitt": -0.026,
+     "Connor Wood": 0.065,
+     "Ezra Frech": 0.095,
+     "Giada De Laurentiis": -0.013,
+     "Guillermo Rodriguez": 0.212,
+     "Harry Shum Jr.": 0.016,
+     "Jackson Olson": -0.112,
+     "Jenna Dewan": 0.025,
+     "Julia Stiles": -0.009,
+     "Maura Higgins": 0.082,
+     "Sarah Jane Nader": -0.094,
+     "Tatyana Ali": 0.083,
+     "Taylor Hanson": -0.196,
+     "Tyler Cameron": 0.047
     }
    },
-   "0.7": {
+   "0.7|pr": {
     "mean": [
-     -0.0074,
-     0.053,
-     -0.007,
-     -0.007,
-     0.0012,
-     -0.0074,
-     -0.0058,
-     -0.0074,
-     0.1103,
-     0.0262
+     -0.0446,
+     0.0333,
+     0.0933,
+     0.0138,
+     0.0238,
+     0.0819,
+     0.1049
     ],
     "chol": [
      [
-      0.09967,
+      0.08529,
       0.0,
       0.0,
       0.0,
       0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0009,
+      0.08311,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00073,
+      -0.00099,
+      0.0993,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00071,
+      -0.00091,
+      5e-05,
+      0.09944,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.0007,
+      -0.00118,
+      5e-05,
+      5e-05,
+      0.0994,
+      0.0,
+      0.0
+     ],
+     [
+      0.00814,
+      0.00021,
+      0.00016,
+      0.00013,
+      0.00016,
+      0.08734,
+      0.0
+     ],
+     [
+      0.00428,
+      0.00047,
+      0.00031,
+      0.00026,
+      0.00026,
+      0.00271,
+      0.07057
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1177,
+      "p50": 0.13,
+      "p90": 0.1441
+     },
+     "Connor Wood": {
+      "p10": 0.1275,
+      "p50": 0.1411,
+      "p90": 0.1551
+     },
+     "Ezra Frech": {
+      "p10": 0.1331,
+      "p50": 0.1493,
+      "p90": 0.1676
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1229,
+      "p50": 0.138,
+      "p90": 0.1551
+     },
+     "Jenna Dewan": {
+      "p10": 0.124,
+      "p50": 0.1393,
+      "p90": 0.1564
+     },
+     "Maura Higgins": {
+      "p10": 0.1336,
+      "p50": 0.1479,
+      "p90": 0.1631
+     },
+     "Tatyana Ali": {
+      "p10": 0.1389,
+      "p50": 0.1514,
+      "p90": 0.1644
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": -0.045,
+     "Ciara Miller": -0.149,
+     "Conner Leavitt": -0.043,
+     "Connor Wood": 0.033,
+     "Ezra Frech": 0.093,
+     "Giada De Laurentiis": 0.002,
+     "Guillermo Rodriguez": 0.249,
+     "Harry Shum Jr.": 0.014,
+     "Jackson Olson": -0.122,
+     "Jenna Dewan": 0.024,
+     "Julia Stiles": -0.013,
+     "Maura Higgins": 0.082,
+     "Sarah Jane Nader": -0.093,
+     "Tatyana Ali": 0.105,
+     "Taylor Hanson": -0.207,
+     "Tyler Cameron": 0.069
+    }
+   },
+   "0.4|yt|pr": {
+    "mean": [
+     0.0143,
+     0.0617,
+     0.1371,
+     0.0689,
+     0.0567,
+     0.1007,
+     0.0482
+    ],
+    "chol": [
+     [
+      0.06485,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00828,
+      0.05873,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00045,
+      0.0005,
+      0.09911,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00055,
+      0.00104,
+      3e-05,
+      0.09704,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00113,
+      0.00095,
+      6e-05,
+      8e-05,
+      0.0961,
+      0.0,
+      0.0
+     ],
+     [
+      0.00831,
+      0.00285,
+      0.00029,
+      0.00041,
+      0.0005,
+      0.08381,
+      0.0
+     ],
+     [
+      0.01358,
+      0.00874,
+      0.00017,
+      0.00043,
+      0.00081,
+      0.00282,
+      0.05026
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1249,
+      "p50": 0.1346,
+      "p90": 0.1455
+     },
+     "Connor Wood": {
+      "p10": 0.1315,
+      "p50": 0.1413,
+      "p90": 0.1514
+     },
+     "Ezra Frech": {
+      "p10": 0.1357,
+      "p50": 0.1522,
+      "p90": 0.1707
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1271,
+      "p50": 0.1423,
+      "p90": 0.1593
+     },
+     "Jenna Dewan": {
+      "p10": 0.1255,
+      "p50": 0.1404,
+      "p90": 0.1572
+     },
+     "Maura Higgins": {
+      "p10": 0.1334,
+      "p50": 0.147,
+      "p90": 0.1614
+     },
+     "Tatyana Ali": {
+      "p10": 0.1306,
+      "p50": 0.1394,
+      "p90": 0.1485
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.014,
+     "Ciara Miller": -0.132,
+     "Conner Leavitt": -0.054,
+     "Connor Wood": 0.062,
+     "Ezra Frech": 0.137,
+     "Giada De Laurentiis": -0.083,
+     "Guillermo Rodriguez": 0.123,
+     "Harry Shum Jr.": 0.069,
+     "Jackson Olson": -0.071,
+     "Jenna Dewan": 0.057,
+     "Julia Stiles": 0.014,
+     "Maura Higgins": 0.101,
+     "Sarah Jane Nader": -0.117,
+     "Tatyana Ali": 0.048,
+     "Taylor Hanson": -0.175,
+     "Tyler Cameron": 0.008
+    }
+   },
+   "0.5|yt|pr": {
+    "mean": [
+     0.0032,
+     0.073,
+     0.1352,
+     0.0662,
+     0.0535,
+     0.1017,
+     0.054
+    ],
+    "chol": [
+     [
+      0.07081,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00523,
+      0.06463,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00069,
+      0.00019,
+      0.09925,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00033,
+      0.00042,
+      0.0,
+      0.09863,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -2e-05,
+      0.00022,
+      3e-05,
+      3e-05,
+      0.09829,
+      0.0,
+      0.0
+     ],
+     [
+      0.00901,
+      0.002,
+      0.00027,
+      0.00031,
+      0.00035,
+      0.08436,
+      0.0
+     ],
+     [
+      0.011,
+      0.00702,
+      0.00017,
+      0.00023,
+      0.00069,
+      0.00304,
+      0.05331
+     ]
+    ],
+    "share": {
+     "Amber Glenn": {
+      "p10": 0.1226,
+      "p50": 0.133,
+      "p90": 0.1448
+     },
+     "Connor Wood": {
+      "p10": 0.1322,
+      "p50": 0.143,
+      "p90": 0.1542
+     },
+     "Ezra Frech": {
+      "p10": 0.1354,
+      "p50": 0.1519,
+      "p90": 0.1704
+     },
+     "Harry Shum Jr.": {
+      "p10": 0.1265,
+      "p50": 0.1418,
+      "p90": 0.1593
+     },
+     "Jenna Dewan": {
+      "p10": 0.1247,
+      "p50": 0.14,
+      "p90": 0.1571
+     },
+     "Maura Higgins": {
+      "p10": 0.1335,
+      "p50": 0.1472,
+      "p90": 0.1619
+     },
+     "Tatyana Ali": {
+      "p10": 0.1309,
+      "p50": 0.1402,
+      "p90": 0.1498
+     }
+    },
+    "strength_all": {
+     "Amber Glenn": 0.003,
+     "Ciara Miller": -0.161,
+     "Conner Leavitt": -0.037,
+     "Connor Wood": 0.073,
+     "Ezra Frech": 0.135,
+     "Giada De Laurentiis": -0.067,
+     "Guillermo Rodriguez": 0.181,
+     "Harry Shum Jr.": 0.066,
+     "Jackson Olson": -0.101,
+     "Jenna Dewan": 0.054,
+     "Julia Stiles": 0.014,
+     "Maura Higgins": 0.102,
+     "Sarah Jane Nader": -0.121,
+     "Tatyana Ali": 0.054,
+     "Taylor Hanson": -0.208,
+     "Tyler Cameron": 0.014
+    }
+   },
+   "0.6|yt|pr": {
+    "mean": [
+     -0.0121,
+     0.076,
+     0.1324,
+     0.0631,
+     0.0499,
+     0.102,
+     0.0675
+    ],
+    "chol": [
+     [
+      0.0776,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.00238,
+      0.07458,
       0.0,
       0.0,
       0.0,
@@ -3441,2481 +5232,119 @@
      ],
      [
       -0.0008,
-      0.08528,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      -0.00071,
-      0.09964,
-      0.0,
-      0.0,
-      0.0,
+      -0.00056,
+      0.09931,
       0.0,
       0.0,
       0.0,
       0.0
      ],
      [
-      5e-05,
-      -0.00071,
-      4e-05,
-      0.09966,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -1e-05,
-      0.00022,
-      1e-05,
-      1e-05,
-      0.09483,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      8e-05,
-      -0.00094,
-      4e-05,
-      4e-05,
-      -1e-05,
-      0.09964,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      7e-05,
-      -0.00075,
-      3e-05,
-      3e-05,
-      0.00014,
-      6e-05,
-      0.09861,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      8e-05,
-      -0.00093,
-      4e-05,
-      4e-05,
-      -1e-05,
-      7e-05,
-      6e-05,
-      0.09965,
-      0.0,
-      0.0
-     ],
-     [
-      0.00012,
-      -0.00051,
-      5e-05,
-      5e-05,
-      0.0001,
-      0.00011,
-      0.00012,
-      0.00011,
-      0.08543,
-      0.0
-     ],
-     [
-      -7e-05,
-      0.00212,
+      -0.00072,
+      -0.00045,
       2e-05,
-      1e-05,
-      0.00231,
-      -4e-05,
-      0.0004,
-      -5e-05,
+      0.09927,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00056,
+      -0.0007,
+      4e-05,
+      4e-05,
+      0.0991,
+      0.0,
+      0.0
+     ],
+     [
+      0.00947,
+      0.00076,
+      0.00027,
+      0.00025,
       0.00028,
-      0.08623
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0866,
-      "p50": 0.0976,
-      "p90": 0.1098
-     },
-     "Connor Wood": {
-      "p10": 0.0933,
-      "p50": 0.1039,
-      "p90": 0.1149
-     },
-     "Ezra Frech": {
-      "p10": 0.0862,
-      "p50": 0.0971,
-      "p90": 0.1095
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0859,
-      "p50": 0.0972,
-      "p90": 0.1094
-     },
-     "Jackson Olson": {
-      "p10": 0.0878,
-      "p50": 0.0981,
-      "p90": 0.1101
-     },
-     "Jenna Dewan": {
-      "p10": 0.0862,
-      "p50": 0.0974,
-      "p90": 0.1102
-     },
-     "Julia Stiles": {
-      "p10": 0.0866,
-      "p50": 0.0975,
-      "p90": 0.1099
-     },
-     "Maura Higgins": {
-      "p10": 0.0863,
-      "p50": 0.0973,
-      "p90": 0.1094
-     },
-     "Tatyana Ali": {
-      "p10": 0.0983,
-      "p50": 0.1093,
-      "p90": 0.1211
-     },
-     "Tyler Cameron": {
-      "p10": 0.0909,
-      "p50": 0.1006,
-      "p90": 0.1123
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.007,
-     "Ciara Miller": -0.103,
-     "Conner Leavitt": -0.062,
-     "Connor Wood": 0.053,
-     "Ezra Frech": -0.007,
-     "Giada De Laurentiis": -0.007,
-     "Guillermo Rodriguez": 0.23,
-     "Harry Shum Jr.": -0.007,
-     "Jackson Olson": 0.001,
-     "Jenna Dewan": -0.007,
-     "Julia Stiles": -0.006,
-     "Maura Higgins": -0.007,
-     "Sarah Jane Nader": -0.103,
-     "Tatyana Ali": 0.11,
-     "Taylor Hanson": -0.104,
-     "Tyler Cameron": 0.026
-    }
-   },
-   "0.4|yt": {
-    "mean": [
-     0.0094,
-     0.0746,
-     0.0392,
-     0.0418,
-     -0.018,
-     0.0211,
-     0.1048,
-     0.0222,
-     0.0338,
-     -0.002
-    ],
-    "chol": [
-     [
-      0.09658,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00121,
-      0.06322,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.0,
-      0.00039,
-      0.09929,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      4e-05,
-      0.00137,
-      -0.0,
-      0.09778,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00046,
-      0.01321,
-      -0.0002,
-      4e-05,
-      0.06895,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -1e-05,
-      0.00049,
-      1e-05,
-      1e-05,
-      -0.00023,
-      0.09889,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.0,
-      0.00039,
-      3e-05,
-      2e-05,
-      -0.0003,
-      1e-05,
-      0.09902,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      0.00212,
-      -1e-05,
-      2e-05,
-      0.00034,
-      -2e-05,
-      -1e-05,
-      0.09642,
-      0.0,
-      0.0
-     ],
-     [
-      0.0009,
-      0.01062,
-      -4e-05,
-      0.00015,
-      0.0044,
-      0.00041,
-      0.00042,
-      0.00069,
-      0.06514,
-      0.0
-     ],
-     [
-      0.00058,
-      0.0141,
-      -0.00011,
-      0.00014,
-      0.00605,
-      -6e-05,
-      -0.0001,
-      0.00033,
-      0.00462,
-      0.06603
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0869,
-      "p50": 0.0975,
-      "p90": 0.1094
-     },
-     "Connor Wood": {
-      "p10": 0.0964,
-      "p50": 0.1042,
-      "p90": 0.1121
-     },
-     "Ezra Frech": {
-      "p10": 0.0889,
-      "p50": 0.1001,
-      "p90": 0.1126
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0889,
-      "p50": 0.1003,
-      "p90": 0.1126
-     },
-     "Jackson Olson": {
-      "p10": 0.0871,
-      "p50": 0.0948,
-      "p90": 0.1029
-     },
-     "Jenna Dewan": {
-      "p10": 0.0872,
-      "p50": 0.0986,
-      "p90": 0.1114
-     },
-     "Julia Stiles": {
-      "p10": 0.0953,
-      "p50": 0.1071,
-      "p90": 0.1207
-     },
-     "Maura Higgins": {
-      "p10": 0.0878,
-      "p50": 0.0985,
-      "p90": 0.1103
-     },
-     "Tatyana Ali": {
-      "p10": 0.0919,
-      "p50": 0.0996,
-      "p90": 0.108
-     },
-     "Tyler Cameron": {
-      "p10": 0.0888,
-      "p50": 0.0962,
-      "p90": 0.1048
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": 0.009,
-     "Ciara Miller": -0.105,
-     "Conner Leavitt": -0.047,
-     "Connor Wood": 0.075,
-     "Ezra Frech": 0.039,
-     "Giada De Laurentiis": -0.064,
-     "Guillermo Rodriguez": 0.126,
-     "Harry Shum Jr.": 0.042,
-     "Jackson Olson": -0.018,
-     "Jenna Dewan": 0.021,
-     "Julia Stiles": 0.105,
-     "Maura Higgins": 0.022,
-     "Sarah Jane Nader": -0.115,
-     "Tatyana Ali": 0.034,
-     "Taylor Hanson": -0.122,
-     "Tyler Cameron": -0.002
-    }
-   },
-   "0.5|yt": {
-    "mean": [
-     0.0059,
-     0.0868,
-     0.0374,
-     0.0393,
-     -0.0349,
-     0.0189,
-     0.1028,
-     0.0188,
-     0.0433,
-     -0.0127
-    ],
-    "chol": [
-     [
-      0.09896,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00022,
-      0.06814,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      1e-05,
-      -7e-05,
-      0.09965,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      1e-05,
-      0.0004,
-      0.0,
-      0.09912,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00016,
-      0.01075,
-      -0.00026,
-      -0.0002,
-      0.07816,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -1e-05,
-      -0.00016,
-      2e-05,
-      1e-05,
-      -0.00034,
-      0.09954,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.0,
-      -8e-05,
-      3e-05,
-      2e-05,
-      -0.00033,
-      1e-05,
-      0.09926,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -1e-05,
-      0.00058,
-      1e-05,
-      0.0,
-      -0.00021,
-      -1e-05,
-      -0.0,
-      0.09871,
-      0.0,
-      0.0
-     ],
-     [
-      0.00061,
-      0.00735,
-      -6e-05,
-      -2e-05,
-      0.00201,
-      0.00055,
-      0.00061,
-      0.0006,
-      0.06924,
-      0.0
-     ],
-     [
-      -6e-05,
-      0.01203,
-      -0.00013,
-      -6e-05,
-      0.00397,
-      -0.00015,
-      -0.00014,
-      -5e-05,
-      0.00286,
-      0.07285
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0865,
-      "p50": 0.0973,
-      "p90": 0.1095
-     },
-     "Connor Wood": {
-      "p10": 0.0971,
-      "p50": 0.1056,
-      "p90": 0.1144
-     },
-     "Ezra Frech": {
-      "p10": 0.0889,
-      "p50": 0.1001,
-      "p90": 0.1127
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0887,
-      "p50": 0.1003,
-      "p90": 0.1127
-     },
-     "Jackson Olson": {
-      "p10": 0.0849,
-      "p50": 0.0933,
-      "p90": 0.1025
-     },
-     "Jenna Dewan": {
-      "p10": 0.0871,
-      "p50": 0.0986,
-      "p90": 0.1115
-     },
-     "Julia Stiles": {
-      "p10": 0.0952,
-      "p50": 0.107,
-      "p90": 0.1207
-     },
-     "Maura Higgins": {
-      "p10": 0.0874,
-      "p50": 0.0983,
-      "p90": 0.1105
-     },
-     "Tatyana Ali": {
-      "p10": 0.0923,
-      "p50": 0.1008,
-      "p90": 0.1097
-     },
-     "Tyler Cameron": {
-      "p10": 0.0873,
-      "p50": 0.0953,
-      "p90": 0.1048
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": 0.006,
-     "Ciara Miller": -0.13,
-     "Conner Leavitt": -0.038,
-     "Connor Wood": 0.087,
-     "Ezra Frech": 0.037,
-     "Giada De Laurentiis": -0.051,
-     "Guillermo Rodriguez": 0.177,
-     "Harry Shum Jr.": 0.039,
-     "Jackson Olson": -0.035,
-     "Jenna Dewan": 0.019,
-     "Julia Stiles": 0.103,
-     "Maura Higgins": 0.019,
-     "Sarah Jane Nader": -0.123,
-     "Tatyana Ali": 0.043,
-     "Taylor Hanson": -0.14,
-     "Tyler Cameron": -0.013
-    }
-   },
-   "0.6|yt": {
-    "mean": [
-     0.0036,
-     0.0839,
-     0.0359,
-     0.0375,
-     -0.0501,
-     0.017,
-     0.1007,
-     0.0163,
-     0.0615,
-     -0.0205
-    ],
-    "chol": [
-     [
-      0.0996,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00075,
-      0.07812,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      -0.00078,
-      0.0997,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      -0.00067,
-      3e-05,
-      0.09962,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.0001,
-      0.0036,
-      -5e-05,
-      -5e-05,
-      0.08831,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      -0.00105,
-      5e-05,
-      5e-05,
-      -7e-05,
-      0.09964,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      6e-05,
-      -0.00107,
-      6e-05,
-      5e-05,
-      -5e-05,
-      5e-05,
-      0.09943,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      4e-05,
-      -0.00088,
-      4e-05,
-      4e-05,
-      -7e-05,
-      4e-05,
-      4e-05,
-      0.09952,
-      0.0,
-      0.0
-     ],
-     [
-      0.00064,
-      0.00198,
-      4e-05,
-      4e-05,
-      0.00072,
-      0.00067,
-      0.00074,
-      0.00067,
-      0.07562,
-      0.0
-     ],
-     [
-      -1e-05,
-      0.00481,
-      0.0001,
-      0.0001,
-      0.00369,
-      5e-05,
-      0.0001,
-      5e-05,
-      0.00168,
-      0.08054
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0863,
-      "p50": 0.0973,
-      "p90": 0.1095
-     },
-     "Connor Wood": {
-      "p10": 0.0958,
-      "p50": 0.1056,
-      "p90": 0.1158
-     },
-     "Ezra Frech": {
-      "p10": 0.0888,
-      "p50": 0.1,
-      "p90": 0.1127
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0886,
-      "p50": 0.1002,
-      "p90": 0.1127
-     },
-     "Jackson Olson": {
-      "p10": 0.0829,
-      "p50": 0.092,
-      "p90": 0.1023
-     },
-     "Jenna Dewan": {
-      "p10": 0.0871,
-      "p50": 0.0985,
-      "p90": 0.1114
-     },
-     "Julia Stiles": {
-      "p10": 0.0951,
-      "p50": 0.1069,
-      "p90": 0.1206
-     },
-     "Maura Higgins": {
-      "p10": 0.0872,
-      "p50": 0.0982,
-      "p90": 0.1104
-     },
-     "Tatyana Ali": {
-      "p10": 0.0934,
-      "p50": 0.1028,
-      "p90": 0.1126
-     },
-     "Tyler Cameron": {
-      "p10": 0.086,
-      "p50": 0.0947,
-      "p90": 0.105
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": 0.004,
-     "Ciara Miller": -0.148,
-     "Conner Leavitt": -0.041,
-     "Connor Wood": 0.084,
-     "Ezra Frech": 0.036,
-     "Giada De Laurentiis": -0.04,
-     "Guillermo Rodriguez": 0.223,
-     "Harry Shum Jr.": 0.037,
-     "Jackson Olson": -0.05,
-     "Jenna Dewan": 0.017,
-     "Julia Stiles": 0.101,
-     "Maura Higgins": 0.016,
-     "Sarah Jane Nader": -0.131,
-     "Tatyana Ali": 0.062,
-     "Taylor Hanson": -0.149,
-     "Tyler Cameron": -0.021
-    }
-   },
-   "0.7|yt": {
-    "mean": [
-     0.0028,
-     0.0535,
-     0.035,
-     0.0365,
-     -0.0564,
-     0.0163,
-     0.0999,
-     0.0154,
-     0.0834,
-     -0.0192
-    ],
-    "chol": [
-     [
-      0.09968,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.001,
-      0.08613,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      -0.0009,
-      0.09968,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      5e-05,
-      -0.00089,
-      3e-05,
-      0.09968,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -2e-05,
-      9e-05,
-      -1e-05,
-      -2e-05,
-      0.09363,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      8e-05,
-      -0.00117,
-      4e-05,
-      4e-05,
-      -2e-05,
-      0.09966,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      9e-05,
-      -0.00125,
-      5e-05,
-      5e-05,
-      1e-05,
-      8e-05,
-      0.09948,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      8e-05,
-      -0.00116,
-      4e-05,
-      4e-05,
-      -2e-05,
-      7e-05,
-      8e-05,
-      0.09966,
-      0.0,
-      0.0
-     ],
-     [
-      0.00012,
-      -0.0005,
-      5e-05,
-      5e-05,
-      0.00015,
-      0.00011,
-      0.00013,
-      0.00011,
-      0.08578,
-      0.0
-     ],
-     [
-      -1e-05,
-      0.00128,
-      5e-05,
-      4e-05,
-      0.00373,
-      1e-05,
-      8e-05,
-      0.0,
-      0.00045,
-      0.08573
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0863,
-      "p50": 0.0973,
-      "p90": 0.1096
-     },
-     "Connor Wood": {
-      "p10": 0.0921,
-      "p50": 0.1027,
-      "p90": 0.1138
-     },
-     "Ezra Frech": {
-      "p10": 0.0889,
-      "p50": 0.1001,
-      "p90": 0.1128
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0887,
-      "p50": 0.1003,
-      "p90": 0.1128
-     },
-     "Jackson Olson": {
-      "p10": 0.082,
-      "p50": 0.0915,
-      "p90": 0.1026
-     },
-     "Jenna Dewan": {
-      "p10": 0.0872,
-      "p50": 0.0986,
-      "p90": 0.1116
-     },
-     "Julia Stiles": {
-      "p10": 0.0952,
-      "p50": 0.1071,
-      "p90": 0.1207
-     },
-     "Maura Higgins": {
-      "p10": 0.0873,
-      "p50": 0.0984,
-      "p90": 0.1105
-     },
-     "Tatyana Ali": {
-      "p10": 0.0945,
-      "p50": 0.1052,
-      "p90": 0.1166
-     },
-     "Tyler Cameron": {
-      "p10": 0.0858,
-      "p50": 0.095,
-      "p90": 0.1059
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": 0.003,
-     "Ciara Miller": -0.151,
-     "Conner Leavitt": -0.06,
-     "Connor Wood": 0.053,
-     "Ezra Frech": 0.035,
-     "Giada De Laurentiis": -0.036,
-     "Guillermo Rodriguez": 0.26,
-     "Harry Shum Jr.": 0.036,
-     "Jackson Olson": -0.056,
-     "Jenna Dewan": 0.016,
-     "Julia Stiles": 0.1,
-     "Maura Higgins": 0.015,
-     "Sarah Jane Nader": -0.136,
-     "Tatyana Ali": 0.083,
-     "Taylor Hanson": -0.145,
-     "Tyler Cameron": -0.019
-    }
-   },
-   "0.4|pr": {
-    "mean": [
-     -0.071,
-     0.0635,
-     0.0992,
-     0.0217,
-     -0.0069,
-     0.0295,
-     -0.0078,
-     0.0635,
-     0.0202,
-     0.1059
-    ],
-    "chol": [
-     [
-      0.08329,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00764,
-      0.06167,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00044,
-      0.00018,
-      0.09978,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00021,
-      0.00208,
-      -2e-05,
-      0.09679,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00335,
-      0.01108,
-      -0.00015,
-      0.00019,
-      0.07547,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00039,
-      0.00032,
-      1e-05,
-      -0.0,
-      -0.00012,
-      0.0992,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00159,
-      0.00557,
-      -5e-05,
-      0.00011,
-      0.00154,
-      -5e-05,
-      0.08635,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00031,
-      0.00062,
-      2e-05,
-      1e-05,
-      -8e-05,
-      -0.0,
-      -4e-05,
-      0.09888,
-      0.0,
-      0.0
-     ],
-     [
-      0.00435,
-      0.01195,
-      -0.00011,
-      0.00026,
-      0.00323,
-      0.00038,
-      0.00195,
-      0.00042,
-      0.05974,
-      0.0
-     ],
-     [
-      1e-05,
-      0.00143,
-      3e-05,
-      5e-05,
-      0.00017,
-      5e-05,
-      0.00013,
-      6e-05,
-      0.0003,
-      0.09713
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0814,
-      "p50": 0.09,
-      "p90": 0.0993
-     },
-     "Connor Wood": {
-      "p10": 0.0955,
-      "p50": 0.103,
-      "p90": 0.1108
-     },
-     "Ezra Frech": {
-      "p10": 0.0945,
-      "p50": 0.1062,
-      "p90": 0.1196
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0872,
-      "p50": 0.0983,
-      "p90": 0.1103
-     },
-     "Jackson Olson": {
-      "p10": 0.0875,
-      "p50": 0.0958,
-      "p90": 0.1049
-     },
-     "Jenna Dewan": {
-      "p10": 0.0881,
-      "p50": 0.0994,
-      "p90": 0.1124
-     },
-     "Julia Stiles": {
-      "p10": 0.0862,
-      "p50": 0.0958,
-      "p90": 0.1064
-     },
-     "Maura Higgins": {
-      "p10": 0.0912,
-      "p50": 0.1027,
-      "p90": 0.1153
-     },
-     "Tatyana Ali": {
-      "p10": 0.0911,
-      "p50": 0.0983,
-      "p90": 0.106
-     },
-     "Tyler Cameron": {
-      "p10": 0.0957,
-      "p50": 0.1073,
-      "p90": 0.1209
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.071,
-     "Ciara Miller": -0.108,
-     "Conner Leavitt": -0.035,
-     "Connor Wood": 0.063,
-     "Ezra Frech": 0.099,
-     "Giada De Laurentiis": -0.054,
-     "Guillermo Rodriguez": 0.12,
-     "Harry Shum Jr.": 0.022,
-     "Jackson Olson": -0.007,
-     "Jenna Dewan": 0.03,
-     "Julia Stiles": -0.008,
-     "Maura Higgins": 0.064,
-     "Sarah Jane Nader": -0.1,
-     "Tatyana Ali": 0.02,
-     "Taylor Hanson": -0.141,
-     "Tyler Cameron": 0.106
-    }
-   },
-   "0.5|pr": {
-    "mean": [
-     -0.0865,
-     0.0752,
-     0.0974,
-     0.0185,
-     -0.0192,
-     0.0274,
-     -0.0162,
-     0.0613,
-     0.03,
-     0.1044
-    ],
-    "chol": [
-     [
-      0.09515,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00257,
-      0.06876,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00016,
-      -0.00035,
-      0.09975,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -9e-05,
-      0.00053,
-      -0.0,
-      0.09885,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00053,
-      0.00856,
-      -0.00016,
-      -8e-05,
-      0.08418,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00018,
-      -0.00046,
-      2e-05,
-      1e-05,
-      -0.00017,
-      0.09961,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      7e-05,
-      0.00253,
-      -3e-05,
-      -1e-05,
-      0.00041,
-      -6e-05,
-      0.09372,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00017,
-      -0.00025,
-      2e-05,
-      1e-05,
-      -0.00016,
-      1e-05,
-      -6e-05,
-      0.0994,
-      0.0,
-      0.0
-     ],
-     [
-      0.00122,
-      0.00878,
-      -7e-05,
-      1e-05,
-      0.00148,
-      0.00049,
-      0.00101,
-      0.00052,
-      0.06576,
-      0.0
-     ],
-     [
-      -2e-05,
-      0.001,
-      5e-05,
-      4e-05,
-      9e-05,
-      6e-05,
-      8e-05,
-      6e-05,
-      0.00026,
-      0.09719
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0792,
-      "p50": 0.0888,
-      "p90": 0.0996
-     },
-     "Connor Wood": {
-      "p10": 0.0959,
-      "p50": 0.1045,
-      "p90": 0.1134
-     },
-     "Ezra Frech": {
-      "p10": 0.0945,
-      "p50": 0.1062,
-      "p90": 0.1196
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0869,
-      "p50": 0.0981,
-      "p90": 0.1105
-     },
-     "Jackson Olson": {
-      "p10": 0.0857,
-      "p50": 0.0948,
-      "p90": 0.1049
-     },
-     "Jenna Dewan": {
-      "p10": 0.088,
-      "p50": 0.0994,
-      "p90": 0.1124
-     },
-     "Julia Stiles": {
-      "p10": 0.0849,
-      "p50": 0.0951,
-      "p90": 0.1067
-     },
-     "Maura Higgins": {
-      "p10": 0.0912,
-      "p50": 0.1027,
-      "p90": 0.1154
-     },
-     "Tatyana Ali": {
-      "p10": 0.0915,
-      "p50": 0.0995,
-      "p90": 0.108
-     },
-     "Tyler Cameron": {
-      "p10": 0.0958,
-      "p50": 0.1073,
-      "p90": 0.121
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.087,
-     "Ciara Miller": -0.133,
-     "Conner Leavitt": -0.023,
-     "Connor Wood": 0.075,
-     "Ezra Frech": 0.097,
-     "Giada De Laurentiis": -0.035,
-     "Guillermo Rodriguez": 0.172,
-     "Harry Shum Jr.": 0.019,
-     "Jackson Olson": -0.019,
-     "Jenna Dewan": 0.027,
-     "Julia Stiles": -0.016,
-     "Maura Higgins": 0.061,
-     "Sarah Jane Nader": -0.106,
-     "Tatyana Ali": 0.03,
-     "Taylor Hanson": -0.168,
-     "Tyler Cameron": 0.104
-    }
-   },
-   "0.6|pr": {
-    "mean": [
-     -0.0923,
-     0.0653,
-     0.0958,
-     0.0164,
-     -0.0294,
-     0.0258,
-     -0.0214,
-     0.0594,
-     0.0468,
-     0.1036
-    ],
-    "chol": [
-     [
-      0.09936,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00063,
-      0.07974,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      3e-05,
-      -0.00109,
-      0.09971,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      3e-05,
-      -0.00086,
-      3e-05,
-      0.09961,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      1e-05,
-      0.00188,
-      3e-05,
-      3e-05,
-      0.0923,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      4e-05,
-      -0.00135,
-      5e-05,
-      4e-05,
-      3e-05,
-      0.09967,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      3e-05,
-      -0.00066,
-      4e-05,
-      4e-05,
-      0.00021,
-      4e-05,
-      0.09785,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      4e-05,
-      -0.00133,
-      5e-05,
-      4e-05,
-      3e-05,
-      5e-05,
-      4e-05,
-      0.09963,
-      0.0,
-      0.0
-     ],
-     [
-      0.00043,
-      0.00205,
-      8e-05,
-      7e-05,
-      0.00061,
-      0.00048,
-      0.00057,
-      0.00049,
-      0.07536,
-      0.0
-     ],
-     [
-      9e-05,
-      -0.00035,
-      0.00012,
-      0.00011,
-      0.00039,
-      0.00011,
-      0.00016,
-      0.00011,
-      0.00039,
-      0.09702
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0784,
-      "p50": 0.0885,
-      "p90": 0.0997
-     },
-     "Connor Wood": {
-      "p10": 0.0938,
-      "p50": 0.1038,
-      "p90": 0.1141
-     },
-     "Ezra Frech": {
-      "p10": 0.0945,
-      "p50": 0.1063,
-      "p90": 0.1196
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0868,
-      "p50": 0.0982,
-      "p90": 0.1106
-     },
-     "Jackson Olson": {
-      "p10": 0.0843,
-      "p50": 0.0939,
-      "p90": 0.1051
-     },
-     "Jenna Dewan": {
-      "p10": 0.088,
-      "p50": 0.0994,
-      "p90": 0.1124
-     },
-     "Julia Stiles": {
-      "p10": 0.0843,
-      "p50": 0.0948,
-      "p90": 0.1069
-     },
-     "Maura Higgins": {
-      "p10": 0.0911,
-      "p50": 0.1027,
-      "p90": 0.1154
-     },
-     "Tatyana Ali": {
-      "p10": 0.0921,
-      "p50": 0.1013,
-      "p90": 0.1111
-     },
-     "Tyler Cameron": {
-      "p10": 0.0959,
-      "p50": 0.1074,
-      "p90": 0.1211
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.092,
-     "Ciara Miller": -0.15,
-     "Conner Leavitt": -0.025,
-     "Connor Wood": 0.065,
-     "Ezra Frech": 0.096,
-     "Giada De Laurentiis": -0.012,
-     "Guillermo Rodriguez": 0.214,
-     "Harry Shum Jr.": 0.016,
-     "Jackson Olson": -0.029,
-     "Jenna Dewan": 0.026,
-     "Julia Stiles": -0.021,
-     "Maura Higgins": 0.059,
-     "Sarah Jane Nader": -0.108,
-     "Tatyana Ali": 0.047,
-     "Taylor Hanson": -0.189,
-     "Tyler Cameron": 0.104
-    }
-   },
-   "0.7|pr": {
-    "mean": [
-     -0.093,
-     0.0296,
-     0.0948,
-     0.0153,
-     -0.0319,
-     0.0254,
-     -0.0226,
-     0.059,
-     0.0588,
-     0.1062
-    ],
-    "chol": [
-     [
-      0.09973,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00095,
-      0.08674,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      4e-05,
-      -0.00107,
-      0.09966,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      4e-05,
-      -0.00098,
-      3e-05,
-      0.09968,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      3e-05,
-      -0.00017,
-      5e-05,
-      5e-05,
-      0.09501,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      9e-05,
-      -0.00125,
-      3e-05,
-      3e-05,
-      4e-05,
-      0.09969,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      9e-05,
-      -0.00106,
-      3e-05,
-      3e-05,
-      0.00017,
-      8e-05,
-      0.09886,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      9e-05,
-      -0.00128,
-      3e-05,
-      3e-05,
-      4e-05,
-      9e-05,
-      9e-05,
-      0.09969,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00048,
-      -0.00052,
-      4e-05,
-      4e-05,
-      0.00015,
-      -0.00055,
-      -0.0005,
-      -0.00057,
-      0.09027,
-      0.0
-     ],
-     [
-      0.00013,
-      -0.0004,
-      0.00016,
-      0.00015,
-      0.00082,
-      0.00014,
-      0.00024,
-      0.00014,
-      0.00024,
-      0.09535
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0785,
-      "p50": 0.0886,
-      "p90": 0.1
-     },
-     "Connor Wood": {
-      "p10": 0.0899,
-      "p50": 0.1004,
-      "p90": 0.1115
-     },
-     "Ezra Frech": {
-      "p10": 0.0947,
-      "p50": 0.1064,
-      "p90": 0.1198
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0869,
-      "p50": 0.0983,
-      "p90": 0.1107
-     },
-     "Jackson Olson": {
-      "p10": 0.084,
-      "p50": 0.0939,
-      "p90": 0.1055
-     },
-     "Jenna Dewan": {
-      "p10": 0.0882,
-      "p50": 0.0996,
-      "p90": 0.1128
-     },
-     "Julia Stiles": {
-      "p10": 0.0843,
-      "p50": 0.0949,
-      "p90": 0.1071
-     },
-     "Maura Higgins": {
-      "p10": 0.0914,
-      "p50": 0.1029,
-      "p90": 0.1157
-     },
-     "Tatyana Ali": {
-      "p10": 0.0918,
-      "p50": 0.1027,
-      "p90": 0.1146
-     },
-     "Tyler Cameron": {
-      "p10": 0.0966,
-      "p50": 0.1079,
-      "p90": 0.1216
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.093,
-     "Ciara Miller": -0.147,
-     "Conner Leavitt": -0.043,
-     "Connor Wood": 0.03,
-     "Ezra Frech": 0.095,
-     "Giada De Laurentiis": 0.003,
-     "Guillermo Rodriguez": 0.25,
-     "Harry Shum Jr.": 0.015,
-     "Jackson Olson": -0.032,
-     "Jenna Dewan": 0.025,
-     "Julia Stiles": -0.023,
-     "Maura Higgins": 0.059,
-     "Sarah Jane Nader": -0.104,
-     "Tatyana Ali": 0.059,
-     "Taylor Hanson": -0.2,
-     "Tyler Cameron": 0.106
-    }
-   },
-   "0.4|yt|pr": {
-    "mean": [
-     -0.066,
-     0.0544,
-     0.1424,
-     0.0645,
-     -0.0419,
-     0.054,
-     0.0888,
-     0.087,
-     0.0019,
-     0.0576
-    ],
-    "chol": [
-     [
-      0.08747,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00566,
-      0.06208,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00029,
-      0.00012,
-      0.09992,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00015,
-      0.0006,
-      -2e-05,
-      0.09918,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00339,
-      0.01619,
-      -0.00039,
-      -0.00025,
-      0.06684,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00027,
-      0.0002,
-      1e-05,
-      1e-05,
-      -0.0005,
-      0.09966,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.0002,
-      0.00045,
-      2e-05,
-      2e-05,
-      -0.00039,
-      -0.0,
-      0.09906,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00025,
-      0.00033,
-      1e-05,
-      1e-05,
-      -0.00048,
-      -1e-05,
-      -0.0,
-      0.0995,
-      0.0,
+      0.08537,
       0.0
      ],
      [
-      0.00359,
-      0.01456,
-      -0.00021,
-      -9e-05,
-      0.00565,
-      0.00026,
-      0.00034,
+      0.00821,
+      0.00356,
       0.00029,
-      0.05863,
-      0.0
-     ],
-     [
-      0.00071,
-      0.00409,
-      3e-05,
-      6e-05,
-      0.00109,
-      6e-05,
-      8e-05,
-      7e-05,
-      0.00121,
-      0.09246
+      0.00027,
+      0.0008,
+      0.00323,
+      0.05854
      ]
     ],
     "share": {
      "Amber Glenn": {
-      "p10": 0.0803,
-      "p50": 0.0892,
-      "p90": 0.0991
+      "p10": 0.1198,
+      "p50": 0.1311,
+      "p90": 0.1439
      },
      "Connor Wood": {
-      "p10": 0.0933,
-      "p50": 0.1008,
-      "p90": 0.1084
+      "p10": 0.1312,
+      "p50": 0.1436,
+      "p90": 0.1565
      },
      "Ezra Frech": {
-      "p10": 0.0974,
-      "p50": 0.1095,
-      "p90": 0.1232
+      "p10": 0.1351,
+      "p50": 0.1516,
+      "p90": 0.1701
      },
      "Harry Shum Jr.": {
-      "p10": 0.0896,
-      "p50": 0.1012,
-      "p90": 0.1139
-     },
-     "Jackson Olson": {
-      "p10": 0.084,
-      "p50": 0.0913,
-      "p90": 0.0991
+      "p10": 0.1261,
+      "p50": 0.1414,
+      "p90": 0.1591
      },
      "Jenna Dewan": {
-      "p10": 0.089,
-      "p50": 0.1006,
-      "p90": 0.1137
-     },
-     "Julia Stiles": {
-      "p10": 0.0925,
-      "p50": 0.1041,
-      "p90": 0.1173
+      "p10": 0.1242,
+      "p50": 0.1396,
+      "p90": 0.1567
      },
      "Maura Higgins": {
-      "p10": 0.0921,
-      "p50": 0.1037,
-      "p90": 0.1167
+      "p10": 0.1335,
+      "p50": 0.1473,
+      "p90": 0.1622
      },
      "Tatyana Ali": {
-      "p10": 0.0884,
-      "p50": 0.0953,
-      "p90": 0.1029
-     },
-     "Tyler Cameron": {
-      "p10": 0.0904,
-      "p50": 0.1008,
-      "p90": 0.1131
+      "p10": 0.1321,
+      "p50": 0.1423,
+      "p90": 0.1528
      }
     },
     "strength_all": {
-     "Amber Glenn": -0.066,
-     "Ciara Miller": -0.134,
-     "Conner Leavitt": -0.051,
-     "Connor Wood": 0.054,
-     "Ezra Frech": 0.142,
-     "Giada De Laurentiis": -0.082,
-     "Guillermo Rodriguez": 0.124,
-     "Harry Shum Jr.": 0.064,
-     "Jackson Olson": -0.042,
-     "Jenna Dewan": 0.054,
-     "Julia Stiles": 0.089,
-     "Maura Higgins": 0.087,
-     "Sarah Jane Nader": -0.127,
-     "Tatyana Ali": 0.002,
-     "Taylor Hanson": -0.173,
-     "Tyler Cameron": 0.058
-    }
-   },
-   "0.5|yt|pr": {
-    "mean": [
-     -0.0768,
-     0.0682,
-     0.1406,
-     0.0625,
-     -0.0616,
-     0.0521,
-     0.0868,
-     0.0851,
-     0.0085,
-     0.0554
-    ],
-    "chol": [
-     [
-      0.09644,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00179,
-      0.06812,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.0001,
-      -0.00023,
-      0.09984,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -8e-05,
-      6e-05,
-      -2e-05,
-      0.09955,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.00048,
-      0.01407,
-      -0.00045,
-      -0.00038,
-      0.07627,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00012,
-      -0.00027,
-      1e-05,
-      0.0,
-      -0.00051,
-      0.09974,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.0001,
-      -6e-05,
-      1e-05,
-      1e-05,
-      -0.00045,
-      -1e-05,
-      0.09929,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00012,
-      -0.00016,
-      1e-05,
-      1e-05,
-      -0.00051,
-      -2e-05,
-      -1e-05,
-      0.09963,
-      0.0,
-      0.0
-     ],
-     [
-      0.00103,
-      0.0114,
-      -0.00018,
-      -0.00014,
-      0.00281,
-      0.00039,
-      0.00045,
-      0.00041,
-      0.06449,
-      0.0
-     ],
-     [
-      0.00014,
-      0.00332,
-      1e-05,
-      2e-05,
-      0.00044,
-      3e-05,
-      5e-05,
-      4e-05,
-      0.00064,
-      0.09411
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0788,
-      "p50": 0.0885,
-      "p90": 0.0994
-     },
-     "Connor Wood": {
-      "p10": 0.094,
-      "p50": 0.1024,
-      "p90": 0.111
-     },
-     "Ezra Frech": {
-      "p10": 0.0974,
-      "p50": 0.1095,
-      "p90": 0.1232
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0895,
-      "p50": 0.1012,
-      "p90": 0.114
-     },
-     "Jackson Olson": {
-      "p10": 0.0817,
-      "p50": 0.0897,
-      "p90": 0.0985
-     },
-     "Jenna Dewan": {
-      "p10": 0.0889,
-      "p50": 0.1006,
-      "p90": 0.1137
-     },
-     "Julia Stiles": {
-      "p10": 0.0925,
-      "p50": 0.104,
-      "p90": 0.1173
-     },
-     "Maura Higgins": {
-      "p10": 0.0921,
-      "p50": 0.1037,
-      "p90": 0.1167
-     },
-     "Tatyana Ali": {
-      "p10": 0.0884,
-      "p50": 0.0961,
-      "p90": 0.1043
-     },
-     "Tyler Cameron": {
-      "p10": 0.0901,
-      "p50": 0.1008,
-      "p90": 0.1133
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.077,
-     "Ciara Miller": -0.164,
-     "Conner Leavitt": -0.033,
-     "Connor Wood": 0.068,
-     "Ezra Frech": 0.141,
-     "Giada De Laurentiis": -0.065,
-     "Guillermo Rodriguez": 0.182,
+     "Amber Glenn": -0.012,
+     "Ciara Miller": -0.19,
+     "Conner Leavitt": -0.027,
+     "Connor Wood": 0.076,
+     "Ezra Frech": 0.132,
+     "Giada De Laurentiis": -0.044,
+     "Guillermo Rodriguez": 0.242,
      "Harry Shum Jr.": 0.063,
-     "Jackson Olson": -0.062,
-     "Jenna Dewan": 0.052,
-     "Julia Stiles": 0.087,
-     "Maura Higgins": 0.085,
-     "Sarah Jane Nader": -0.135,
-     "Tatyana Ali": 0.009,
-     "Taylor Hanson": -0.205,
-     "Tyler Cameron": 0.055
-    }
-   },
-   "0.6|yt|pr": {
-    "mean": [
-     -0.0819,
-     0.0674,
-     0.1382,
-     0.0601,
-     -0.0825,
-     0.0497,
-     0.0841,
-     0.0825,
-     0.0209,
-     0.0529
-    ],
-    "chol": [
-     [
-      0.09937,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00047,
-      0.07952,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      2e-05,
-      -0.001,
-      0.09974,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      1e-05,
-      -0.00084,
-      1e-05,
-      0.0997,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00015,
-      0.00585,
-      -0.00019,
-      -0.00017,
-      0.08813,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      1e-05,
-      -0.00115,
-      3e-05,
-      3e-05,
-      -0.00017,
-      0.09969,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      2e-05,
-      -0.00109,
-      3e-05,
-      3e-05,
-      -0.00016,
-      3e-05,
-      0.09947,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      1e-05,
-      -0.00114,
-      3e-05,
-      3e-05,
-      -0.00018,
-      3e-05,
-      3e-05,
-      0.09966,
-      0.0,
-      0.0
-     ],
-     [
-      0.00036,
-      0.00468,
-      -2e-05,
-      -1e-05,
-      0.00077,
-      0.00042,
-      0.00045,
-      0.00044,
-      0.07425,
-      0.0
-     ],
-     [
-      6e-05,
-      0.00103,
-      9e-05,
-      9e-05,
-      0.00043,
-      9e-05,
-      0.0001,
-      9e-05,
-      0.00042,
-      0.09547
-     ]
-    ],
-    "share": {
-     "Amber Glenn": {
-      "p10": 0.0783,
-      "p50": 0.0882,
-      "p90": 0.0995
-     },
-     "Connor Wood": {
-      "p10": 0.0929,
-      "p50": 0.1027,
-      "p90": 0.1128
-     },
-     "Ezra Frech": {
-      "p10": 0.0974,
-      "p50": 0.1095,
-      "p90": 0.1232
-     },
-     "Harry Shum Jr.": {
-      "p10": 0.0895,
-      "p50": 0.1013,
-      "p90": 0.1141
-     },
-     "Jackson Olson": {
-      "p10": 0.0791,
-      "p50": 0.088,
-      "p90": 0.098
-     },
-     "Jenna Dewan": {
-      "p10": 0.089,
-      "p50": 0.1005,
-      "p90": 0.1137
-     },
-     "Julia Stiles": {
-      "p10": 0.0924,
-      "p50": 0.104,
-      "p90": 0.1173
-     },
-     "Maura Higgins": {
-      "p10": 0.0921,
-      "p50": 0.1037,
-      "p90": 0.1167
-     },
-     "Tatyana Ali": {
-      "p10": 0.0887,
-      "p50": 0.0975,
-      "p90": 0.1069
-     },
-     "Tyler Cameron": {
-      "p10": 0.0901,
-      "p50": 0.1007,
-      "p90": 0.1135
-     }
-    },
-    "strength_all": {
-     "Amber Glenn": -0.082,
-     "Ciara Miller": -0.193,
-     "Conner Leavitt": -0.025,
-     "Connor Wood": 0.067,
-     "Ezra Frech": 0.138,
-     "Giada De Laurentiis": -0.043,
-     "Guillermo Rodriguez": 0.243,
-     "Harry Shum Jr.": 0.06,
-     "Jackson Olson": -0.083,
+     "Jackson Olson": -0.137,
      "Jenna Dewan": 0.05,
-     "Julia Stiles": 0.084,
-     "Maura Higgins": 0.083,
-     "Sarah Jane Nader": -0.14,
-     "Tatyana Ali": 0.021,
-     "Taylor Hanson": -0.233,
-     "Tyler Cameron": 0.053
+     "Julia Stiles": 0.016,
+     "Maura Higgins": 0.102,
+     "Sarah Jane Nader": -0.124,
+     "Tatyana Ali": 0.068,
+     "Taylor Hanson": -0.238,
+     "Tyler Cameron": 0.022
     }
    },
    "0.7|yt|pr": {
     "mean": [
-     -0.0828,
-     0.0314,
-     0.137,
-     0.059,
-     -0.0901,
-     0.0491,
-     0.0835,
-     0.0819,
-     0.0312,
-     0.0557
+     -0.032,
+     0.0474,
+     0.1305,
+     0.0611,
+     0.0477,
+     0.103,
+     0.0903
     ],
     "chol": [
      [
-      0.09974,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      -0.00112,
-      0.08902,
-      0.0,
-      0.0,
+      0.08509,
       0.0,
       0.0,
       0.0,
@@ -5924,330 +5353,149 @@
       0.0
      ],
      [
+      0.00113,
+      0.0843,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.00082,
+      -0.00113,
+      0.09938,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      -0.0008,
+      -0.00106,
       5e-05,
-      -0.00128,
-      0.09969,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
+      0.09949,
       0.0,
       0.0,
       0.0
      ],
      [
-      4e-05,
-      -0.00118,
-      2e-05,
-      0.09971,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      3e-05,
-      -0.00014,
-      3e-05,
-      3e-05,
-      0.09411,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.0001,
-      -0.00145,
-      4e-05,
-      3e-05,
-      4e-05,
-      0.09971,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.0001,
-      -0.00148,
-      4e-05,
-      4e-05,
+      -0.00074,
+      -0.00134,
       6e-05,
-      0.0001,
-      0.09957,
-      0.0,
-      0.0,
-      0.0
-     ],
-     [
-      0.0001,
-      -0.0015,
-      4e-05,
-      4e-05,
-      4e-05,
-      9e-05,
-      0.0001,
-      0.0997,
+      6e-05,
+      0.09941,
       0.0,
       0.0
      ],
      [
-      -0.00047,
-      -0.00016,
-      4e-05,
-      4e-05,
-      0.00019,
-      -0.00054,
-      -0.00055,
-      -0.00056,
-      0.09032,
-      0.0
-     ],
-     [
+      0.00854,
       0.00016,
-      -0.00049,
-      0.00019,
-      0.00018,
-      0.00123,
-      0.00018,
       0.0002,
-      0.00018,
-      0.0003,
-      0.09448
+      0.00017,
+      0.0002,
+      0.08768,
+      0.0
+     ],
+     [
+      0.00549,
+      0.00071,
+      0.00032,
+      0.00028,
+      0.00041,
+      0.00303,
+      0.0685
      ]
     ],
     "share": {
      "Amber Glenn": {
-      "p10": 0.0783,
-      "p50": 0.0884,
-      "p90": 0.0998
+      "p10": 0.1168,
+      "p50": 0.129,
+      "p90": 0.1429
      },
      "Connor Wood": {
-      "p10": 0.0888,
-      "p50": 0.0994,
-      "p90": 0.1106
+      "p10": 0.1265,
+      "p50": 0.1403,
+      "p90": 0.1545
      },
      "Ezra Frech": {
-      "p10": 0.0976,
-      "p50": 0.1097,
-      "p90": 0.1235
+      "p10": 0.1353,
+      "p50": 0.1519,
+      "p90": 0.1705
      },
      "Harry Shum Jr.": {
-      "p10": 0.0897,
-      "p50": 0.1015,
-      "p90": 0.1142
-     },
-     "Jackson Olson": {
-      "p10": 0.0783,
-      "p50": 0.0875,
-      "p90": 0.0983
+      "p10": 0.1263,
+      "p50": 0.1417,
+      "p90": 0.1594
      },
      "Jenna Dewan": {
-      "p10": 0.0892,
-      "p50": 0.1008,
-      "p90": 0.1141
-     },
-     "Julia Stiles": {
-      "p10": 0.0926,
-      "p50": 0.1043,
-      "p90": 0.1177
+      "p10": 0.1245,
+      "p50": 0.1398,
+      "p90": 0.157
      },
      "Maura Higgins": {
-      "p10": 0.0924,
-      "p50": 0.104,
-      "p90": 0.117
+      "p10": 0.1337,
+      "p50": 0.148,
+      "p90": 0.1634
      },
      "Tatyana Ali": {
-      "p10": 0.0882,
-      "p50": 0.0988,
-      "p90": 0.1102
-     },
-     "Tyler Cameron": {
-      "p10": 0.0907,
-      "p50": 0.1013,
-      "p90": 0.1141
+      "p10": 0.1343,
+      "p50": 0.1461,
+      "p90": 0.1585
      }
     },
     "strength_all": {
-     "Amber Glenn": -0.083,
-     "Ciara Miller": -0.197,
-     "Conner Leavitt": -0.039,
-     "Connor Wood": 0.031,
-     "Ezra Frech": 0.137,
-     "Giada De Laurentiis": -0.026,
-     "Guillermo Rodriguez": 0.287,
-     "Harry Shum Jr.": 0.059,
-     "Jackson Olson": -0.09,
-     "Jenna Dewan": 0.049,
-     "Julia Stiles": 0.084,
-     "Maura Higgins": 0.082,
-     "Sarah Jane Nader": -0.136,
-     "Tatyana Ali": 0.031,
-     "Taylor Hanson": -0.245,
-     "Tyler Cameron": 0.056
+     "Amber Glenn": -0.032,
+     "Ciara Miller": -0.199,
+     "Conner Leavitt": -0.038,
+     "Connor Wood": 0.047,
+     "Ezra Frech": 0.13,
+     "Giada De Laurentiis": -0.028,
+     "Guillermo Rodriguez": 0.289,
+     "Harry Shum Jr.": 0.061,
+     "Jackson Olson": -0.16,
+     "Jenna Dewan": 0.048,
+     "Julia Stiles": 0.025,
+     "Maura Higgins": 0.103,
+     "Sarah Jane Nader": -0.123,
+     "Tatyana Ali": 0.09,
+     "Taylor Hanson": -0.251,
+     "Tyler Cameron": 0.037
     }
    }
   }
  },
  "kalshi": {
-  "fetched": "2026-10-27T01:45+00:00",
-  "elimination": {
-   "event": "KXDWTSELIMINATION-26OCT28",
-   "closes": "2026-10-28T03:59:00Z",
-   "rules": "If Tyler Cameron and their partner are officially eliminated from Dancing with the Stars Season 35 before Oct 28, 2026, then the market resolves to Yes.",
-   "rows": [
-    {
-     "label": "Tyler Cameron",
-     "name": "Tyler Cameron",
-     "bid": 57,
-     "ask": 58,
-     "last": 58,
-     "volume": 14852,
-     "ticker": "KXDWTSELIMINATION-26OCT28-TCAM"
-    },
-    {
-     "label": "Tatyana Ali",
-     "name": "Tatyana Ali",
-     "bid": 31,
-     "ask": 32,
-     "last": 32,
-     "volume": 11129,
-     "ticker": "KXDWTSELIMINATION-26OCT28-TAT"
-    },
-    {
-     "label": "None",
-     "name": null,
-     "bid": 0,
-     "ask": 2,
-     "last": 1,
-     "volume": 5567,
-     "ticker": "KXDWTSELIMINATION-26OCT28-NON"
-    },
-    {
-     "label": "Maura Higgins",
-     "name": "Maura Higgins",
-     "bid": 4,
-     "ask": 5,
-     "last": 5,
-     "volume": 57719,
-     "ticker": "KXDWTSELIMINATION-26OCT28-MHIG"
-    },
-    {
-     "label": "Julia Stiles",
-     "name": "Julia Stiles",
-     "bid": 5,
-     "ask": 6,
-     "last": 6,
-     "volume": 13107,
-     "ticker": "KXDWTSELIMINATION-26OCT28-JSTIL"
-    },
-    {
-     "label": "Jackson Olson",
-     "name": "Jackson Olson",
-     "bid": 65,
-     "ask": 67,
-     "last": 67,
-     "volume": 25694,
-     "ticker": "KXDWTSELIMINATION-26OCT28-JOLS"
-    },
-    {
-     "label": "Jenna Dewan",
-     "name": "Jenna Dewan",
-     "bid": 5,
-     "ask": 6,
-     "last": 6,
-     "volume": 47186,
-     "ticker": "KXDWTSELIMINATION-26OCT28-JDEW"
-    },
-    {
-     "label": "Harry Shum Jr.",
-     "name": "Harry Shum Jr.",
-     "bid": 2,
-     "ask": 3,
-     "last": 3,
-     "volume": 27645,
-     "ticker": "KXDWTSELIMINATION-26OCT28-HSHU"
-    },
-    {
-     "label": "Ezra Frech",
-     "name": "Ezra Frech",
-     "bid": 0,
-     "ask": 1,
-     "last": 1,
-     "volume": 28431,
-     "ticker": "KXDWTSELIMINATION-26OCT28-EFRE"
-    },
-    {
-     "label": "Connor Wood",
-     "name": "Connor Wood",
-     "bid": 25,
-     "ask": 27,
-     "last": 27,
-     "volume": 9701,
-     "ticker": "KXDWTSELIMINATION-26OCT28-CWOO"
-    },
-    {
-     "label": "Amber Glenn",
-     "name": "Amber Glenn",
-     "bid": 0,
-     "ask": 1,
-     "last": 1,
-     "volume": 19235,
-     "ticker": "KXDWTSELIMINATION-26OCT28-AGLE"
-    }
-   ]
-  },
+  "fetched": "2026-11-03T03:09+00:00",
   "winner": {
    "event": "KXDANCINGWITHTHESTARS-26DEC31",
    "rows": [
     {
-     "label": "Tyler Cameron",
-     "name": "Tyler Cameron",
-     "bid": 0,
-     "ask": 1,
-     "last": 1,
-     "volume": 206060,
-     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-TCAM"
-    },
-    {
      "label": "Tatyana Ali",
      "name": "Tatyana Ali",
      "bid": 0,
      "ask": 1,
      "last": 1,
-     "volume": 104945,
+     "volume": 153232,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-TAT"
     },
     {
      "label": "Maura Higgins",
      "name": "Maura Higgins",
-     "bid": 8,
-     "ask": 9,
-     "last": 9,
-     "volume": 589350,
+     "bid": 2,
+     "ask": 3,
+     "last": 2,
+     "volume": 643266,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-MHIG"
     },
     {
      "label": "Julia Stiles",
      "name": "Julia Stiles",
-     "bid": 4,
-     "ask": 5,
-     "last": 5,
-     "volume": 400419,
+     "bid": 0,
+     "ask": 1,
+     "last": 1,
+     "volume": 467563,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-JSTIL"
-    },
-    {
-     "label": "Jackson Olson",
-     "name": "Jackson Olson",
-     "bid": 1,
-     "ask": 2,
-     "last": 2,
-     "volume": 322157,
-     "ticker": "KXDANCINGWITHTHESTARS-26DEC31-JOLS"
     },
     {
      "label": "Jenna Dewan",
@@ -6255,43 +5503,43 @@
      "bid": 5,
      "ask": 6,
      "last": 6,
-     "volume": 337355,
+     "volume": 421795,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-JDEW"
     },
     {
      "label": "Harry Shum Jr.",
      "name": "Harry Shum Jr.",
-     "bid": 3,
-     "ask": 4,
-     "last": 4,
-     "volume": 388793,
+     "bid": 18,
+     "ask": 19,
+     "last": 19,
+     "volume": 511831,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-HSHU"
     },
     {
      "label": "Ezra Frech",
      "name": "Ezra Frech",
-     "bid": 62,
-     "ask": 63,
-     "last": 63,
-     "volume": 632041,
+     "bid": 57,
+     "ask": 58,
+     "last": 58,
+     "volume": 679154,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-EFRE"
     },
     {
      "label": "Connor Wood",
      "name": "Connor Wood",
-     "bid": 1,
-     "ask": 2,
-     "last": 2,
-     "volume": 403492,
+     "bid": 4,
+     "ask": 5,
+     "last": 5,
+     "volume": 527382,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-CWOO"
     },
     {
      "label": "Amber Glenn",
      "name": "Amber Glenn",
-     "bid": 11,
-     "ask": 13,
-     "last": 13,
-     "volume": 477924,
+     "bid": 14,
+     "ask": 15,
+     "last": 15,
+     "volume": 547565,
      "ticker": "KXDANCINGWITHTHESTARS-26DEC31-AGLE"
     }
    ]
@@ -6299,26 +5547,26 @@
  },
  "blend": {
   "model_weight": 0.3,
-  "eliminations": 4,
+  "eliminations": 5,
   "logloss": {
-   "model": 2.248,
-   "kalshi": 1.969,
-   "blend": 1.904,
-   "blend_loo": 2.457,
-   "even": 2.522
+   "model": 2.15,
+   "kalshi": 1.809,
+   "blend": 1.778,
+   "blend_loo": 2.121,
+   "even": 2.478
   },
   "curve": {
-   "0.0": 1.969,
-   "0.1": 1.934,
-   "0.2": 1.912,
-   "0.3": 1.904,
-   "0.4": 1.91,
-   "0.5": 1.93,
-   "0.6": 1.965,
-   "0.7": 2.015,
-   "0.8": 2.079,
-   "0.9": 2.157,
-   "1.0": 2.248
+   "0.0": 1.809,
+   "0.1": 1.787,
+   "0.2": 1.777,
+   "0.3": 1.778,
+   "0.4": 1.792,
+   "0.5": 1.819,
+   "0.6": 1.859,
+   "0.7": 1.912,
+   "0.8": 1.979,
+   "0.9": 2.058,
+   "1.0": 2.15
   },
   "rows": [
    {
@@ -6334,7 +5582,7 @@
     "gone": [
      "Taylor Hanson"
     ],
-    "model_p": 0.139,
+    "model_p": 0.148,
     "kalshi_p": 0.04524886877828055
    },
    {
@@ -6342,7 +5590,7 @@
     "gone": [
      "Ciara Miller"
     ],
-    "model_p": 0.11325,
+    "model_p": 0.1105,
     "kalshi_p": 0.12669683257918554
    },
    {
@@ -6350,8 +5598,17 @@
     "gone": [
      "Guillermo Rodriguez"
     ],
-    "model_p": 0.27325,
+    "model_p": 0.2685,
     "kalshi_p": 0.18702290076335876
+   },
+   {
+    "date": "2026-10-27",
+    "gone": [
+     "Tyler Cameron",
+     "Jackson Olson"
+    ],
+    "model_p": 0.3295,
+    "kalshi_p": 0.583941605839416
    }
   ]
  },
